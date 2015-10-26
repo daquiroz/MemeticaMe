@@ -11,6 +11,16 @@ public class Contact {
     private String estado;
     private String contactphoto;
 
+    public Contact (String name, String mail, String estado, String contactphoto)
+    {
+        this.name =name;
+        this.mail = mail;
+        this.estado = estado;
+        this.contactphoto = contactphoto;
+    }
+
+    public Contact() {}
+
     public String getContactphoto() {
         return contactphoto;
     }

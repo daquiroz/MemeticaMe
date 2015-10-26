@@ -11,6 +11,19 @@ public class Chat {
     private String idchat;
     private String fecha;
 
+
+    public Chat (String namechat, String idcreador, String idcontact, String idchat, String fecha)
+    {
+        this.fecha = fecha;
+        this.idcreador = idcreador;
+        this.idcontact = idcontact;
+        this.idchat = idchat;
+        this.fecha = fecha;
+
+    }
+
+    public Chat() {}
+
     public String getFecha() {
         return fecha;
     }

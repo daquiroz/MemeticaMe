@@ -11,6 +11,13 @@ public class Mensaje {
     private String idreceiver;
     private String idchat;
 
+    public Mensaje(String text, String status, String idsender, String idreceiver, String idchat) {
+        this.text = text;
+        this.status = status;
+        this.idsender = idsender;
+        this.idreceiver = idreceiver;
+        this.idchat = idchat;
+    }
 
     public String getIdchat() {
         return idchat;
