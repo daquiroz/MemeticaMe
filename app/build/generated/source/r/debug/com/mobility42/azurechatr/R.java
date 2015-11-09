@@ -39,18 +39,22 @@ containing a value of this type.
         public static final int imageAspectRatioAdjust=0x7f010000;
     }
     public static final class color {
-        public static final int common_action_bar_splitter=0x7f070000;
-        public static final int common_signin_btn_dark_text_default=0x7f070001;
-        public static final int common_signin_btn_dark_text_disabled=0x7f070002;
-        public static final int common_signin_btn_dark_text_focused=0x7f070003;
-        public static final int common_signin_btn_dark_text_pressed=0x7f070004;
-        public static final int common_signin_btn_default_background=0x7f070005;
-        public static final int common_signin_btn_light_text_default=0x7f070006;
-        public static final int common_signin_btn_light_text_disabled=0x7f070007;
-        public static final int common_signin_btn_light_text_focused=0x7f070008;
-        public static final int common_signin_btn_light_text_pressed=0x7f070009;
-        public static final int common_signin_btn_text_dark=0x7f07000a;
-        public static final int common_signin_btn_text_light=0x7f07000b;
+        public static final int common_action_bar_splitter=0x7f080000;
+        public static final int common_signin_btn_dark_text_default=0x7f080001;
+        public static final int common_signin_btn_dark_text_disabled=0x7f080002;
+        public static final int common_signin_btn_dark_text_focused=0x7f080003;
+        public static final int common_signin_btn_dark_text_pressed=0x7f080004;
+        public static final int common_signin_btn_default_background=0x7f080005;
+        public static final int common_signin_btn_light_text_default=0x7f080006;
+        public static final int common_signin_btn_light_text_disabled=0x7f080007;
+        public static final int common_signin_btn_light_text_focused=0x7f080008;
+        public static final int common_signin_btn_light_text_pressed=0x7f080009;
+        public static final int common_signin_btn_text_dark=0x7f08000a;
+        public static final int common_signin_btn_text_light=0x7f08000b;
+    }
+    public static final class dimen {
+        public static final int activity_horizontal_margin=0x7f070000;
+        public static final int activity_vertical_margin=0x7f070001;
     }
     public static final class drawable {
         public static final int back=0x7f020000;
@@ -124,68 +128,74 @@ containing a value of this type.
         public static final int user=0x7f020044;
     }
     public static final class id {
-        public static final int LinearLayout1=0x7f0a0003;
-        public static final int adjust_height=0x7f0a0000;
-        public static final int adjust_width=0x7f0a0001;
-        public static final int attachment=0x7f0a0017;
-        public static final int back=0x7f0a000f;
-        public static final int bubble=0x7f0a000a;
-        public static final int buttonAddChat=0x7f0a0007;
-        public static final int clip=0x7f0a0014;
-        public static final int fav=0x7f0a0011;
-        public static final int feedChat=0x7f0a001e;
-        public static final int file=0x7f0a0018;
-        public static final int fileButton=0x7f0a0019;
-        public static final int forms_centralfragments_chat_chat_editLayout=0x7f0a0015;
-        public static final int id=0x7f0a001f;
-        public static final int image=0x7f0a0022;
-        public static final int imageView2=0x7f0a0010;
-        public static final int imagemaskframe=0x7f0a0021;
-        public static final int initials=0x7f0a0024;
-        public static final int iv_mask_op=0x7f0a0023;
-        public static final int linearLayout1=0x7f0a0025;
-        public static final int listViewChat=0x7f0a0008;
-        public static final int loadingProgressBar=0x7f0a0005;
-        public static final int menu=0x7f0a0013;
-        public static final int menu_refresh=0x7f0a0028;
-        public static final int message=0x7f0a0026;
-        public static final int name=0x7f0a0012;
-        public static final int none=0x7f0a0002;
-        public static final int notRead=0x7f0a0027;
-        public static final int picture=0x7f0a001c;
-        public static final int pictureButton=0x7f0a001d;
-        public static final int receiver=0x7f0a0020;
-        public static final int record=0x7f0a001a;
-        public static final int recordButton=0x7f0a001b;
-        public static final int relativeLayout1=0x7f0a000e;
-        public static final int status=0x7f0a000c;
-        public static final int textChatItem=0x7f0a000b;
-        public static final int textNewChat=0x7f0a0006;
-        public static final int textUsername=0x7f0a0009;
-        public static final int textViewTitle=0x7f0a0004;
-        public static final int time=0x7f0a000d;
-        public static final int touch=0x7f0a0016;
+        public static final int LinearLayout1=0x7f0b0003;
+        public static final int action_settings=0x7f0b0029;
+        public static final int adjust_height=0x7f0b0000;
+        public static final int adjust_width=0x7f0b0001;
+        public static final int attachment=0x7f0b0017;
+        public static final int back=0x7f0b000f;
+        public static final int bubble=0x7f0b000a;
+        public static final int buttonAddChat=0x7f0b0007;
+        public static final int clip=0x7f0b0014;
+        public static final int fav=0x7f0b0011;
+        public static final int feedChat=0x7f0b001e;
+        public static final int file=0x7f0b0018;
+        public static final int fileButton=0x7f0b0019;
+        public static final int forms_centralfragments_chat_chat_editLayout=0x7f0b0015;
+        public static final int id=0x7f0b001f;
+        public static final int image=0x7f0b0022;
+        public static final int imageView2=0x7f0b0010;
+        public static final int imagemaskframe=0x7f0b0021;
+        public static final int initials=0x7f0b0024;
+        public static final int iv_mask_op=0x7f0b0023;
+        public static final int linearLayout1=0x7f0b0025;
+        public static final int listViewChat=0x7f0b0008;
+        public static final int loadingProgressBar=0x7f0b0005;
+        public static final int menu=0x7f0b0013;
+        public static final int menu_refresh=0x7f0b0028;
+        public static final int message=0x7f0b0026;
+        public static final int name=0x7f0b0012;
+        public static final int none=0x7f0b0002;
+        public static final int notRead=0x7f0b0027;
+        public static final int picture=0x7f0b001c;
+        public static final int pictureButton=0x7f0b001d;
+        public static final int receiver=0x7f0b0020;
+        public static final int record=0x7f0b001a;
+        public static final int recordButton=0x7f0b001b;
+        public static final int relativeLayout1=0x7f0b000e;
+        public static final int status=0x7f0b000c;
+        public static final int textChatItem=0x7f0b000b;
+        public static final int textNewChat=0x7f0b0006;
+        public static final int textUsername=0x7f0b0009;
+        public static final int textViewTitle=0x7f0b0004;
+        public static final int time=0x7f0b000d;
+        public static final int touch=0x7f0b0016;
     }
     public static final class integer {
-        public static final int google_play_services_version=0x7f080000;
+        public static final int google_play_services_version=0x7f090000;
     }
     public static final class layout {
         public static final int activity_chat=0x7f030000;
-        public static final int bubble=0x7f030001;
-        public static final int chat=0x7f030002;
-        public static final int feed_chat=0x7f030003;
-        public static final int row_list_chat=0x7f030004;
+        public static final int activity_lista_chat=0x7f030001;
+        public static final int bubble=0x7f030002;
+        public static final int chat=0x7f030003;
+        public static final int feed_chat=0x7f030004;
+        public static final int lista_contactos=0x7f030005;
+        public static final int row_list_chat=0x7f030006;
     }
     public static final class menu {
-        public static final int activity_main=0x7f090000;
+        public static final int activity_main=0x7f0a0000;
+        public static final int menu_lista_chat=0x7f0a0001;
+        public static final int menu_lista_contactos=0x7f0a0002;
     }
     public static final class raw {
         public static final int gtm_analytics=0x7f040000;
     }
     public static final class string {
-        public static final int add_button_text=0x7f05001c;
-        public static final int add_textbox_hint=0x7f05001d;
-        public static final int app_name=0x7f05001e;
+        public static final int action_settings=0x7f05001c;
+        public static final int add_button_text=0x7f05001d;
+        public static final int add_textbox_hint=0x7f05001e;
+        public static final int app_name=0x7f05001f;
         public static final int common_android_wear_notification_needs_update_text=0x7f050000;
         public static final int common_android_wear_update_text=0x7f050001;
         public static final int common_android_wear_update_title=0x7f050002;
@@ -214,9 +224,12 @@ containing a value of this type.
         public static final int common_open_on_phone=0x7f050019;
         public static final int common_signin_button_text=0x7f05001a;
         public static final int common_signin_button_text_long=0x7f05001b;
-        public static final int menu_refresh=0x7f05001f;
-        public static final int mobile_services=0x7f050020;
-        public static final int textchatitem_text=0x7f050021;
+        public static final int hello_world=0x7f050020;
+        public static final int menu_refresh=0x7f050021;
+        public static final int mobile_services=0x7f050022;
+        public static final int textchatitem_text=0x7f050023;
+        public static final int title_activity_lista_chat=0x7f050024;
+        public static final int title_activity_lista_contactos=0x7f050025;
     }
     public static final class style {
         /**  API 11 theme customizations can go here. 
