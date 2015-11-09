@@ -18,6 +18,9 @@
         android:protectionLevel="signature" />
 
     <uses-permission android:name="com.mobility42.azurechatr.permission.C2D_MESSAGE" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.READ_PHONE_STATE" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
 
     <application
         android:allowBackup="true"
@@ -43,6 +46,15 @@
                 <category android:name="com.mobility42.azurechatr" />
             </intent-filter>
         </receiver>
+
+        <activity
+            android:name="com.mobility42.azurechatr.ListaChatActivity"
+            android:label="@string/title_activity_lista_chat" >
+        </activity>
+        <activity
+            android:name="com.mobility42.azurechatr.ListaContactosActivity"
+            android:label="@string/title_activity_lista_contactos" >
+        </activity>
 
         <meta-data
             android:name="com.google.android.gms.version"
