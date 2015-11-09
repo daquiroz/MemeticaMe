@@ -6,5 +6,10 @@
     <string name="mobile_services">Powered by Microsoft Azure</string>
     <string name="menu_refresh">Refresh</string>
     <string name="textchatitem_text">Item Text</string>
+    <string name="title_activity_lista_chat">ListaChatActivity</string>
+
+    <string name="hello_world">Hello world!</string>
+    <string name="action_settings">Settings</string>
+    <string name="title_activity_lista_contactos">ListaContactosActivity</string>
     
 </resources>
