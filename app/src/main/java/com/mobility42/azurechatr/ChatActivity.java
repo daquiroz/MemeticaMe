@@ -31,6 +31,7 @@ import com.microsoft.windowsazure.notifications.NotificationsManager;
 
 import java.net.MalformedURLException;
 import java.text.SimpleDateFormat;
+import java.util.ArrayList;
 import java.util.Date;
 import java.util.List;
 
@@ -77,6 +78,7 @@ public class ChatActivity extends Activity {
 	private ProgressBar mProgressBar;
 	private LinearLayout attachment;
 	private ListView listViewChat;
+	private ArrayList<FeedChat> lista;
 	/**
 	 * Initializes the activity
 	 */
@@ -105,10 +107,12 @@ public class ChatActivity extends Activity {
 			// Get the Mobile Service Table instance to use
 			mChatTable = mClient.getTable(ChatItem.class);
 
+			lista = new ArrayList<FeedChat>();
+
 			mTextNewChat = (EditText) findViewById(R.id.textNewChat);
 
 			// Create an adapter to bind the items with the view
-			mAdapter = new ChatItemAdapter(this, R.layout.bubble);
+			mAdapter = new ChatItemAdapter(this,lista);
 			listViewChat = (ListView) findViewById(R.id.listViewChat);
 			listViewChat.setAdapter(mAdapter);
 
@@ -182,7 +186,7 @@ public class ChatActivity extends Activity {
 
 		item.setText(mTextNewChat.getText().toString());
 		// This is temporary until we add authentication to the Android version
-		item.setUserName("Tito");
+		item.setUserName("Dani");
 
 		item.setStatus("waiting");
 
@@ -201,7 +205,7 @@ public class ChatActivity extends Activity {
 					String time = formatter.format(item.getTimeStamp());
 					fc.setStatus("sending");
 					fc.setTimeStamp(time);
-					mAdapter.add(fc);
+					lista.add(fc);
 					mAdapter.notifyDataSetChanged();
 					listViewChat.setSelection(mAdapter.getCount() - 1);
 				} else {
@@ -224,7 +228,7 @@ public class ChatActivity extends Activity {
 
 			public void onCompleted(List<ChatItem> result, int count, Exception exception, ServiceFilterResponse response) {
 				if (exception == null) {
-					mAdapter.clear();
+					lista.clear();
 
 					for (ChatItem item : result) {
 						FeedChat fc = new FeedChat(item.getText(), item.getUserName(), item.getId(), true);
@@ -233,11 +237,12 @@ public class ChatActivity extends Activity {
 						String time = formatter.format(item.getTimeStamp());
 
 						fc.setTimeStamp(time);
-						if(!item.getUserName().equals("Tito")) {
+						fc.setStatus(item.getStatus());
+						if(!item.getUserName().equals("Dani")) {
 							fc.setIsTheDeviceUser(false);
 						}
 
-						mAdapter.add(fc);
+						lista.add(fc);
 						mAdapter.notifyDataSetChanged();
 						listViewChat.setSelection(mAdapter.getCount() - 1);
 					}
@@ -319,20 +324,25 @@ public class ChatActivity extends Activity {
 					String newMessage = intent.getExtras().getString(EXTRA_MESSAGE);
 					String newUsername = intent.getExtras().getString(EXTRA_USERNAME);
 					String newTimeStamp = intent.getExtras().getString(TIME_STAMP);
-					String newStatus = intent.getExtras().getString(STATUS);
+					//String newStatus = intent.getExtras().getString(STATUS);
 					ChatItem item = new ChatItem();
 
 					item.setText(newMessage);
 					item.setUserName(newUsername);
-					item.setStatus(newStatus);
-					if(!item.getUserName().equals("Tito")) {
+					item.setStatus("sent");
+					if(!item.getUserName().equals("Dani")) {
 						FeedChat fc = new FeedChat(item.getText(), item.getUserName(), item.getId(), false);
 						fc.setTimeStamp(newTimeStamp);
-						fc.setStatus(newStatus);
-						mAdapter.add(fc);
+						fc.setStatus("sent");
+						lista.add(fc);
 						mAdapter.notifyDataSetChanged();
 						listViewChat.setSelection(mAdapter.getCount() - 1);
 
+					}
+					else
+					{
+						mAdapter.updateStatus();
+						mAdapter.notifyDataSetChanged();
 					}
 				}
 
