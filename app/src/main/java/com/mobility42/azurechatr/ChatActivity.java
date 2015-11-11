@@ -6,8 +6,10 @@ import android.content.BroadcastReceiver;
 import android.content.Context;
 import android.content.Intent;
 import android.content.IntentFilter;
+import android.media.MediaRecorder;
 import android.os.AsyncTask;
 import android.os.Bundle;
+import android.os.Environment;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
@@ -29,6 +31,7 @@ import com.microsoft.windowsazure.mobileservices.TableOperationCallback;
 import com.microsoft.windowsazure.mobileservices.TableQueryCallback;
 import com.microsoft.windowsazure.notifications.NotificationsManager;
 
+import java.io.IOException;
 import java.net.MalformedURLException;
 import java.text.SimpleDateFormat;
 import java.util.Date;
@@ -80,8 +83,25 @@ public class ChatActivity extends Activity {
 	/**
 	 * Initializes the activity
 	 */
+
+
+
+	int Option;
+
 	@Override
 	public void onCreate(Bundle savedInstanceState) {
+
+		try
+		{
+			Option =Integer.parseInt(getIntent().getStringExtra("Option"));
+			if(Option==0)
+			{
+				addItemImage();
+			}
+		}
+		catch(Exception e){}
+
+
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.chat);
 
@@ -172,17 +192,57 @@ public class ChatActivity extends Activity {
 	 * @param view
 	 *            The view that originated the call
 	 */
+
+
+	public void  browseMedia(View view)
+	{
+		Intent intent = new Intent(ChatActivity.this,MediaBrowser.class);
+		startActivity(intent);
+	}
+
+	public void startBlob(View view) {
+		attachment.setVisibility(attachment.VISIBLE);
+	}
+	public void attach(View view) throws IOException {
+		String name =getResources().getResourceName(view.getId());
+		String segments[] = name.split("/");
+		name = segments[segments.length - 1].toString();
+		if(name.equals("pictureButton"))
+		{
+			Intent intent = new Intent(ChatActivity.this,BlobActivity.class);
+			intent.putExtra("Option","0");
+			startActivity(intent);
+
+		}else if (name.equals("recordButton"))
+		{
+
+			Intent intent = new Intent(ChatActivity.this,BlobActivity.class);
+			intent.putExtra("Option", "1");
+			startActivity(intent);
+
+		}else
+		{
+			Intent intent = new Intent(ChatActivity.this,BlobActivity.class);
+			intent.putExtra("Option", "2");
+			startActivity(intent);
+
+		}
+	}
+
+
+
 	public void addItem(View view) {
 		if (mClient == null) {
 			return;
 		}
+
 
 		// Create a new item
 		final ChatItem item = new ChatItem();
 
 		item.setText(mTextNewChat.getText().toString());
 		// This is temporary until we add authentication to the Android version
-		item.setUserName("Tito");
+		item.setUserName("Felipe");
 
 		item.setStatus("waiting");
 
@@ -214,6 +274,48 @@ public class ChatActivity extends Activity {
 		mTextNewChat.setText("");
 	}
 
+	public void addItemImage() {
+		if (mClient == null) {
+			return;
+		}
+
+
+		// Create a new item
+		final ChatItem item = new ChatItem();
+
+		item.setText("Tu imágen se ha enviado");
+		// This is temporary until we add authentication to the Android version
+		item.setUserName("Felipe");
+
+		item.setStatus("waiting");
+
+		Date currentDate = new Date(System.currentTimeMillis());
+		item.setTimeStamp(currentDate);
+
+		// Insert the new item
+		mChatTable.insert(item, new TableOperationCallback<ChatItem>() {
+
+			public void onCompleted(ChatItem entity, Exception exception, ServiceFilterResponse response) {
+
+				if (exception == null) {
+					FeedChat fc = new FeedChat(entity.getText(),entity.getUserName(),entity.getId(),true);
+					SimpleDateFormat formatter=new SimpleDateFormat("HH:mm");
+					item.setStatus("sending");
+					String time = formatter.format(item.getTimeStamp());
+					fc.setStatus("sending");
+					fc.setTimeStamp(time);
+					mAdapter.add(fc);
+					mAdapter.notifyDataSetChanged();
+					listViewChat.setSelection(mAdapter.getCount() - 1);
+				} else {
+					createAndShowDialog(exception, "Error");
+				}
+
+			}
+		});
+
+		mTextNewChat.setText("");
+	}
 	/**
 	 * Refresh the list with the items in the Mobile Service Table
 	 */
@@ -233,7 +335,7 @@ public class ChatActivity extends Activity {
 						String time = formatter.format(item.getTimeStamp());
 
 						fc.setTimeStamp(time);
-						if(!item.getUserName().equals("Tito")) {
+						if(!item.getUserName().equals("Felipe")) {
 							fc.setIsTheDeviceUser(false);
 						}
 
@@ -325,7 +427,7 @@ public class ChatActivity extends Activity {
 					item.setText(newMessage);
 					item.setUserName(newUsername);
 					item.setStatus(newStatus);
-					if(!item.getUserName().equals("Tito")) {
+					if(!item.getUserName().equals("Felipe")) {
 						FeedChat fc = new FeedChat(item.getText(), item.getUserName(), item.getId(), false);
 						fc.setTimeStamp(newTimeStamp);
 						fc.setStatus(newStatus);
