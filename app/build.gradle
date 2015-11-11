@@ -25,4 +25,6 @@ dependencies {
     compile files('libs/notification-hubs-0.2.jar')
     compile 'com.google.android.gms:play-services-base:6.5.87'
     compile files('libs/notifications-1.0.1.jar')
+    compile 'com.microsoft.azure.android:azure-storage-android:0.7.0@aar'
+    compile files('libs/urlimageviewhelper-1.0.4.jar')
 }

@@ -23,6 +23,9 @@
     <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
     <uses-permission android:name="android.permission.WRITE_CONTACTS" />
     <uses-permission android:name="android.permission.READ_CONTACTS" />
+    <uses-permission android:name="android.permission.RECORD_AUDIO" />
+    
+    <uses-permission android:name="android.permission.GET_ACCOUNTS" />
 
     <application
         android:allowBackup="true"
@@ -72,6 +75,16 @@
         </activity>
         <activity
             android:name="com.mobility42.azurechatr.MemeViewer.MemeCreator"
+            android:configChanges="orientation|screenSize"
+            android:label="@string/title_activity_crear_chat" >
+        </activity>
+        <activity
+            android:name="com.mobility42.azurechatr.MediaBrowser"
+            android:configChanges="orientation|screenSize"
+            android:label="@string/title_activity_crear_chat" >
+        </activity>
+        <activity
+            android:name="com.mobility42.azurechatr.BlobActivity"
             android:configChanges="orientation|screenSize"
             android:label="@string/title_activity_crear_chat" >
         </activity>
