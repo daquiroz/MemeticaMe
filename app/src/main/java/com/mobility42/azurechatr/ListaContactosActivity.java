@@ -12,6 +12,7 @@ import android.view.MenuItem;
 import android.provider.ContactsContract;
 import android.view.View;
 import android.widget.AdapterView;
+import android.widget.EditText;
 import android.widget.ImageButton;
 import android.widget.ListView;
 import android.widget.Toast;
@@ -183,10 +184,19 @@ public class ListaContactosActivity extends Activity {
         });
 
 
+        ImageButton btnAddContact = (ImageButton)findViewById(R.id.btAgregarContacto);
+        btnAddContact.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(Intent.ACTION_INSERT,
+                        ContactsContract.Contacts.CONTENT_URI);
+                startActivity(intent);
+
+            }
+        });
     }
 
-    public synchronized String retornarIdChat2(Contact contactoSeleccionado)
-    {
+    public synchronized String retornarIdChat2(Contact contactoSeleccionado) {
         String id = "";
         List<String> idvalidos = new ArrayList<String>();
         List<Chat> chatQuePuedenSer = new ArrayList<Chat>();

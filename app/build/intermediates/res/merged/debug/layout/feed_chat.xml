@@ -63,7 +63,6 @@
             android:layout_marginRight="48dp" />
     </LinearLayout>
     <TextView
-        android:text="19:00"
         android:id="@+id/time"
         android:textStyle="normal"
         android:textColor="#999999"

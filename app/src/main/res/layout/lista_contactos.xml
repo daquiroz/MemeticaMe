@@ -58,6 +58,12 @@
             android:paddingRight="8dp"
             android:paddingLeft="8dp" />
     </RelativeLayout>
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"></LinearLayout>
+
     <ListView
         android:id="@+id/listviewcontact"
         android:layout_width="match_parent"

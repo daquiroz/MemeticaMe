@@ -67,14 +67,20 @@ public class ChatAdapter extends BaseAdapter {
         row.setTag(currentItem);
         final TextView nombreChat = (TextView) row.findViewById(R.id.nombrechat);
         ImageView imagen = (ImageView) row.findViewById(R.id.image);
+        TextView creado = (TextView) row.findViewById(R.id.message);
+
 
         if (currentItem.getNamechat()!= null) {
             nombreChat.setText(currentItem.getNamechat());
             imagen.setImageResource(R.drawable.users);
+            creado.setText("Creado por: " + currentItem.getIdcreador());
         }
         else {
             //String aux = BuscarNombre(currentItem.getIdcontact());
+            imagen.setImageResource(R.drawable.user);
             nombreChat.setText(currentItem.getIdcontact());
+            creado.setText("");
+
         }
 
 
