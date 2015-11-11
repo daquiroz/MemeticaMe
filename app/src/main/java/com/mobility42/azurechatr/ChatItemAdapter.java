@@ -103,12 +103,13 @@ public class ChatItemAdapter extends BaseAdapter {
 		{
 			ImageView status = (ImageView)row.findViewById(R.id.status);
 			status.setVisibility(status.VISIBLE);
-			if (currentItem.getStatus() == "waiting") {
+			if (currentItem.getStatus().equals("waiting")) {
 				status.setImageResource(R.drawable.clock);
-			} else if (currentItem.getStatus()== "sending") {
+				status.setColorFilter(Color.WHITE, PorterDuff.Mode.SRC_ATOP);
+			} else if (currentItem.getStatus().equals("sending")){
 				status.setImageResource(R.drawable.checkmark);
 				status.setColorFilter(Color.WHITE, PorterDuff.Mode.SRC_ATOP);
-			} else if (currentItem.getStatus() == "sent") {
+			} else if (currentItem.getStatus().equals ("sent")) {
 				status.setImageResource(R.drawable.checkmark);
 				status.setColorFilter(Color.GREEN,PorterDuff.Mode.SRC_ATOP);
 
@@ -143,8 +144,20 @@ public class ChatItemAdapter extends BaseAdapter {
 
 
 
+
 	}
-	public ArrayList<FeedChat> getItems(){
-		return items;
+
+	public void updateToSending() {
+
+		for (int i = 0; i < getCount(); i++) {
+			if (items.get(i).getStatus().equals("waiting")) {
+				items.get(i).setStatus("sending");
+			}
+		}
+
+
+
+
 	}
+
 }

@@ -19,6 +19,10 @@ public class ChatItem {
 	@com.google.gson.annotations.SerializedName("id")
 	private String mId;
 
+
+	@com.google.gson.annotations.SerializedName("idchat")
+	private String mIdChat;
+
 	/**
 	 * Indicates who sent the message
 	 */
@@ -146,5 +150,16 @@ public class ChatItem {
 	@Override
 	public boolean equals(Object o) {
 		return o instanceof ChatItem && ((ChatItem) o).mId == mId;
+	}
+
+	/**
+	 * Item Id
+	 */
+	public String getmIdChat() {
+		return mIdChat;
+	}
+
+	public void setmIdChat(String mIdChat) {
+		this.mIdChat = mIdChat;
 	}
 }

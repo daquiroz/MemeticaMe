@@ -41,7 +41,7 @@ public class ChatActivity extends Activity {
 	public static final String EXTRA_USERNAME = "username";
 	public static final String EXTRA_MESSAGE = "message";
 	public static final String TIME_STAMP = "time";
-	public static final String STATUS = "status";
+	public static final String ID = "id";
 	// Secret IDs, Azure App Keys and Connection Strings NOT to be shared with the public
 	private String AZUREMOBILESERVICES_URI = "https://memeticameapp.azure-mobile.net/";
 	private String AZUREMOBILESERVICES_APPKEY = "GTjbnmDzTewswxMxsTzKSVpFjvYrbS22";
@@ -52,14 +52,8 @@ public class ChatActivity extends Activity {
 	private GoogleCloudMessaging gcm;
 	private NotificationHub hub;
 
-	/**
-	 * Mobile Service Client reference
-	 */
 	private MobileServiceClient mClient;
 
-	/**
-	 * Mobile Service Table used to access data
-	 */
 	private MobileServiceTable<ChatItem> mChatTable;
 
 	/**
@@ -99,13 +93,13 @@ public class ChatActivity extends Activity {
 		try {
 			// Create the Mobile Service Client instance, using the provided
 			// Mobile Service URL and key
-			mClient = new MobileServiceClient(
+			setmClient(new MobileServiceClient(
 					AZUREMOBILESERVICES_URI,
 					AZUREMOBILESERVICES_APPKEY,
-					this).withFilter(new ProgressFilter());
+					this).withFilter(new ProgressFilter()));
 
 			// Get the Mobile Service Table instance to use
-			mChatTable = mClient.getTable(ChatItem.class);
+			setmChatTable(getmClient().getTable(ChatItem.class));
 
 			lista = new ArrayList<FeedChat>();
 
@@ -177,7 +171,7 @@ public class ChatActivity extends Activity {
 	 *            The view that originated the call
 	 */
 	public void addItem(View view) {
-		if (mClient == null) {
+		if (getmClient() == null) {
 			return;
 		}
 
@@ -193,21 +187,24 @@ public class ChatActivity extends Activity {
 		Date currentDate = new Date(System.currentTimeMillis());
 		item.setTimeStamp(currentDate);
 
+		FeedChat fc = new FeedChat(item.getText(),item.getUserName(),item.getId(),true);
+		SimpleDateFormat formatter=new SimpleDateFormat("HH:mm");
+		fc.setTimeStamp(formatter.format(item.getTimeStamp()));
+		fc.setStatus("waiting");
+		lista.add(fc);
+		mAdapter.notifyDataSetChanged();
+		listViewChat.setSelection(mAdapter.getCount() - 1);
+
 		// Insert the new item
-		mChatTable.insert(item, new TableOperationCallback<ChatItem>() {
+		getmChatTable().insert(item, new TableOperationCallback<ChatItem>() {
 
 			public void onCompleted(ChatItem entity, Exception exception, ServiceFilterResponse response) {
 
 				if (exception == null) {
-					FeedChat fc = new FeedChat(entity.getText(),entity.getUserName(),entity.getId(),true);
-					SimpleDateFormat formatter=new SimpleDateFormat("HH:mm");
-					item.setStatus("sending");
-					String time = formatter.format(item.getTimeStamp());
-					fc.setStatus("sending");
-					fc.setTimeStamp(time);
-					lista.add(fc);
+					mAdapter.updateToSending();
 					mAdapter.notifyDataSetChanged();
-					listViewChat.setSelection(mAdapter.getCount() - 1);
+					item.setStatus("sending");
+					updateItem(item);
 				} else {
 					createAndShowDialog(exception, "Error");
 				}
@@ -224,7 +221,7 @@ public class ChatActivity extends Activity {
 	private void refreshItemsFromTable() {
 
 		// Get all the chat items and add them in the adapter
-		mChatTable.execute(new TableQueryCallback<ChatItem>() {
+		getmChatTable().execute(new TableQueryCallback<ChatItem>() {
 
 			public void onCompleted(List<ChatItem> result, int count, Exception exception, ServiceFilterResponse response) {
 				if (exception == null) {
@@ -232,20 +229,21 @@ public class ChatActivity extends Activity {
 
 					for (ChatItem item : result) {
 						FeedChat fc = new FeedChat(item.getText(), item.getUserName(), item.getId(), true);
-						SimpleDateFormat formatter=new SimpleDateFormat("HH:mm");
+						SimpleDateFormat formatter = new SimpleDateFormat("HH:mm");
 
 						String time = formatter.format(item.getTimeStamp());
 
 						fc.setTimeStamp(time);
 						fc.setStatus(item.getStatus());
-						if(!item.getUserName().equals("Dani")) {
+						if (!item.getUserName().equals("Dani")) {
 							fc.setIsTheDeviceUser(false);
 						}
 
 						lista.add(fc);
-						mAdapter.notifyDataSetChanged();
-						listViewChat.setSelection(mAdapter.getCount() - 1);
 					}
+
+					mAdapter.notifyDataSetChanged();
+					listViewChat.setSelection(mAdapter.getCount() - 1);
 
 				} else {
 					createAndShowDialog(exception, "Error");
@@ -286,6 +284,28 @@ public class ChatActivity extends Activity {
 		builder.create().show();
 	}
 
+	/**
+	 * Mobile Service Client reference
+	 */
+	public MobileServiceClient getmClient() {
+		return mClient;
+	}
+
+	/**
+	 * Mobile Service Table used to access data
+	 */
+	public MobileServiceTable<ChatItem> getmChatTable() {
+		return mChatTable;
+	}
+
+	public void setmChatTable(MobileServiceTable<ChatItem> mChatTable) {
+		this.mChatTable = mChatTable;
+	}
+
+	public void setmClient(MobileServiceClient mClient) {
+		this.mClient = mClient;
+	}
+
 	private class ProgressFilter implements ServiceFilter {
 
 		@Override
@@ -324,12 +344,14 @@ public class ChatActivity extends Activity {
 					String newMessage = intent.getExtras().getString(EXTRA_MESSAGE);
 					String newUsername = intent.getExtras().getString(EXTRA_USERNAME);
 					String newTimeStamp = intent.getExtras().getString(TIME_STAMP);
+					String newId = intent.getExtras().getString(ID);
 					//String newStatus = intent.getExtras().getString(STATUS);
 					ChatItem item = new ChatItem();
 
 					item.setText(newMessage);
 					item.setUserName(newUsername);
-					item.setStatus("sent");
+					updateItemToSent(newId);
+
 					if(!item.getUserName().equals("Dani")) {
 						FeedChat fc = new FeedChat(item.getText(), item.getUserName(), item.getId(), false);
 						fc.setTimeStamp(newTimeStamp);
@@ -360,4 +382,36 @@ public class ChatActivity extends Activity {
 		super.onPause();
 		this.unregisterReceiver(mHandleMessageReceiver);
 	}
+
+	private void updateItem(final ChatItem item) {
+
+		getmChatTable().update(item, new TableOperationCallback<ChatItem>() {
+
+			public void onCompleted(ChatItem entity, Exception exception, ServiceFilterResponse response) {
+
+				if (exception == null) {
+				} else {
+					createAndShowDialog(exception, "Error");
+				}
+			}
+		});
+	}
+	private void updateItemToSent(final String id) {
+
+		getmChatTable().lookUp(id, new TableOperationCallback<ChatItem>() {
+
+			public void onCompleted(ChatItem entity, Exception exception, ServiceFilterResponse response) {
+
+				if (exception == null) {
+					entity.setStatus("sent");
+					updateItem(entity);
+				} else {
+					createAndShowDialog(exception, "Error");
+				}
+
+
+			}
+		});
+	}
+
 }

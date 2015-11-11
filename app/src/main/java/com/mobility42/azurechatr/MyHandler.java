@@ -17,6 +17,7 @@ public class MyHandler extends NotificationsHandler {
 	public static final String DISPLAY_MESSAGE_ACTION = "displaymessage";
 	public static final String EXTRA_MESSAGE = "message";
 	public static final String EXTRA_USERNAME = "username";
+	public static final String EXTRA_ID = "id";
 	public static final String STATUS = "status";
 	public static final String TIME_STAMP = "time";
 
@@ -30,9 +31,9 @@ public class MyHandler extends NotificationsHandler {
 	    ctx = context;
 	    String nhMessage = bundle.getString("message");
 	    String nhUsername = bundle.getString("username");
-		String nhTime = bundle.getString("time");
+		String nhid = bundle.getString("id");
 	    sendNotification(nhUsername + " - " + nhMessage);
-	    displayMessage(context, nhMessage, nhUsername);
+	    displayMessage(context, nhMessage, nhUsername, nhid);
 	}
 
 	private void sendNotification(String msg) {
@@ -54,10 +55,11 @@ public class MyHandler extends NotificationsHandler {
 	     mNotificationManager.notify(NOTIFICATION_ID, mBuilder.build());
 	}
 	
-	static void displayMessage(Context context, String message, String username) {
+	static void displayMessage(Context context, String message, String username, String id) {
 	    Intent intent = new Intent(DISPLAY_MESSAGE_ACTION);
 	    intent.putExtra(EXTRA_MESSAGE, message);
 	    intent.putExtra(EXTRA_USERNAME, username);
+		intent.putExtra(EXTRA_ID,id);
 		SimpleDateFormat formatter=new SimpleDateFormat("HH:mm");
 		Date currentDate = new Date(System.currentTimeMillis());
 		String time = formatter.format(currentDate);
