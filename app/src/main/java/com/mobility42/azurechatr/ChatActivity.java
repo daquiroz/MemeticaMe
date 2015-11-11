@@ -28,6 +28,7 @@ import com.microsoft.windowsazure.mobileservices.ServiceFilterResponseCallback;
 import com.microsoft.windowsazure.mobileservices.TableOperationCallback;
 import com.microsoft.windowsazure.mobileservices.TableQueryCallback;
 import com.microsoft.windowsazure.notifications.NotificationsManager;
+import com.mobility42.azurechatr.MemeViewer.MemeViewerActivity;
 
 import java.net.MalformedURLException;
 import java.text.SimpleDateFormat;
@@ -85,6 +86,11 @@ public class ChatActivity extends Activity {
 	@Override
 	public void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
+		Intent intent = new Intent(this, MemeViewerActivity.class);
+		startActivity(intent);
+
+
+
 		setContentView(R.layout.chat);
 
 		/*mProgressBar = (ProgressBar) findViewById(R.id.loadingProgressBar);

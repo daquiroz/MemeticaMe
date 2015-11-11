@@ -55,6 +55,10 @@
             android:name="com.mobility42.azurechatr.ListaContactosActivity"
             android:label="@string/title_activity_lista_contactos" >
         </activity>
+        <activity android:name="com.mobility42.azurechatr.MemeViewer.MemeViewerActivity" >
+        </activity>
+        <activity android:name="com.mobility42.azurechatr.MemeViewer.MemeCreator" >
+        </activity>
 
         <meta-data
             android:name="com.google.android.gms.version"
