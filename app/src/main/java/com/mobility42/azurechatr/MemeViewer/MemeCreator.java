@@ -17,6 +17,10 @@ import com.mobility42.azurechatr.R;
 
 import java.io.File;
 import java.io.FileOutputStream;
+import java.text.DateFormat;
+import java.text.SimpleDateFormat;
+import java.util.Date;
+import java.util.Random;
 
 public class MemeCreator extends Activity {
 
@@ -57,8 +61,16 @@ public class MemeCreator extends Activity {
         meme_layout.setDrawingCacheEnabled(true);
         Bitmap bimg = meme_layout.getDrawingCache();
 
-        File imgPath = new File("/sdcard/sample.png");
+        File mydir2 = new File(Environment.getExternalStoragePublicDirectory(Environment.DIRECTORY_PICTURES), "memeticame");
+        if (!mydir2.exists()) {
+            mydir2.mkdirs();
+        }
+        DateFormat dateFormat = new SimpleDateFormat("yyyy-MM-dd_HH-mm-ss");
+        String date = dateFormat.format(new Date()).toString().replace(" ", "");
+
+        File imgPath = new File(mydir2,"meme_"+date+".png");
         FileOutputStream fOs = null;
+
         try {
             fOs = new FileOutputStream(imgPath);
             bimg.compress(Bitmap.CompressFormat.PNG, 100, fOs);
@@ -69,6 +81,7 @@ public class MemeCreator extends Activity {
             e.printStackTrace();
 
         }
+
     }
 
     private void viewToImage() {
