@@ -12,6 +12,7 @@ import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.EditText;
+import android.widget.ImageButton;
 import android.widget.LinearLayout;
 import android.widget.ListView;
 import android.widget.ProgressBar;
@@ -28,12 +29,14 @@ import com.microsoft.windowsazure.mobileservices.ServiceFilterResponseCallback;
 import com.microsoft.windowsazure.mobileservices.TableOperationCallback;
 import com.microsoft.windowsazure.mobileservices.TableQueryCallback;
 import com.microsoft.windowsazure.notifications.NotificationsManager;
+import com.mobility42.azurechatr.MemeViewer.MemeViewerActivity;
 
 import java.net.MalformedURLException;
 import java.text.SimpleDateFormat;
 import java.util.ArrayList;
 import java.util.Date;
 import java.util.List;
+import java.util.Random;
 
 public class ChatActivity extends Activity {
 
@@ -135,6 +138,22 @@ public class ChatActivity extends Activity {
 		} catch (MalformedURLException e) {
 			createAndShowDialog(new Exception("There was an error creating the Mobile Service. Verify the URL"), "Error");
 		}
+
+
+
+
+		ImageButton boton = (ImageButton)findViewById(R.id.meme);
+		boton.setOnClickListener(new View.OnClickListener() {
+			@Override
+			public void onClick(View v) {
+
+				Intent intent = new Intent(ChatActivity.this, MemeViewerActivity.class);
+				intent.putExtra("idchat", idchat);
+				startActivity(intent);
+
+			}
+		});
+
 	}
 
 	@SuppressWarnings("unchecked")

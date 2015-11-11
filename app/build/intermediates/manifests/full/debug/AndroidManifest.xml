@@ -65,6 +65,16 @@
             android:configChanges="orientation|screenSize"
             android:label="@string/title_activity_crear_chat" >
         </activity>
+        <activity
+            android:name="com.mobility42.azurechatr.MemeViewer.MemeViewerActivity"
+            android:configChanges="orientation|screenSize"
+            android:label="@string/title_activity_crear_chat" >
+        </activity>
+        <activity
+            android:name="com.mobility42.azurechatr.MemeViewer.MemeCreator"
+            android:configChanges="orientation|screenSize"
+            android:label="@string/title_activity_crear_chat" >
+        </activity>
 
         <meta-data
             android:name="com.google.android.gms.version"

@@ -32,7 +32,7 @@
             android:src="@drawable/ic_favoritos"
             android:layout_width="48dp"
             android:layout_height="48dp"
-            android:id="@+id/fav"
+            android:id="@+id/meme"
             android:layout_alignParentRight="true"
             android:tint="#ffffffff"
             android:padding="7dp"
@@ -206,12 +206,4 @@
         </LinearLayout>
     </LinearLayout>
 
-    <Button
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="click"
-        android:id="@+id/boton"
-        android:layout_alignBottom="@+id/listviewcontact"
-        android:layout_alignRight="@+id/forms_centralfragments_chat_chat_editLayout"
-        android:layout_alignEnd="@+id/forms_centralfragments_chat_chat_editLayout" />
 </RelativeLayout><!-- From: file:/Users/Dani/Desktop/AppsAndroid/Memeticame-grupo3/app/src/main/res/layout/chat.xml -->
