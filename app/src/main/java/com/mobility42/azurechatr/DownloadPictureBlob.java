@@ -1,6 +1,7 @@
 package com.mobility42.azurechatr;
 
 import android.content.Context;
+import android.net.Uri;
 import android.os.AsyncTask;
 import android.widget.Toast;
 
@@ -16,6 +17,7 @@ import com.microsoft.azure.storage.blob.ListBlobItem;
 import java.io.File;
 import java.io.FileInputStream;
 import java.io.FileOutputStream;
+import java.net.URI;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.UUID;
@@ -31,14 +33,14 @@ public class DownloadPictureBlob extends AsyncTask<String, Void, Void> {
     Context context;
     int option;
     File filesDir;
-    List<String> files;
+    List<Uri> files;
     public boolean finished = false;
 
     public DownloadPictureBlob(Context context)
     {
         this.context =context;
         filesDir = context.getCacheDir();
-        files = new ArrayList<String>();
+        files = new ArrayList<Uri>();
     }
     @Override
     protected void onPostExecute(Void v) {
@@ -57,11 +59,8 @@ public class DownloadPictureBlob extends AsyncTask<String, Void, Void> {
              blobClient = account.createCloudBlobClient();
 
 
-            if(option==0)//Upload photo
-            {
+
                 downloadPhotos();
-            }
-            publishProgress();
 
 
         } catch (Throwable t) {
@@ -93,7 +92,9 @@ public class DownloadPictureBlob extends AsyncTask<String, Void, Void> {
                     CloudBlob blob = (CloudBlob) blobItem;
                     blob.download(new FileOutputStream(filesDir + blob.getName()));
                     blob.downloadToFile(filesDir + blob.getName());
-                    files.add(filesDir + blob.getName());
+                    File f = new File(filesDir + blob.getName());
+                    Uri uri = Uri.fromFile(f);
+                    files.add(uri);
                 }
             }
 

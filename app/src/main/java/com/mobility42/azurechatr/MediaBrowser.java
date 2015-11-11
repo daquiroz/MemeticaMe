@@ -1,11 +1,13 @@
 package com.mobility42.azurechatr;
 
+import android.net.Uri;
 import android.os.Bundle;
 import android.app.Activity;
 import android.app.Activity;
 import android.content.Context;
 import android.content.res.TypedArray;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.AdapterView;
@@ -16,6 +18,7 @@ import android.widget.ImageView;
 import android.widget.Toast;
 
 import java.io.File;
+import java.util.List;
 
 public class MediaBrowser extends Activity {
 
@@ -27,26 +30,49 @@ public class MediaBrowser extends Activity {
 
     };
     File filesDir;
+    List<Uri> photoUris;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         filesDir = this.getCacheDir();
+        final ImageAdapter IA =new ImageAdapter(this);
         // Note that Gallery view is deprecated in Android 4.1---
-        setContentView(R.layout.activity_media_browser);
-        Gallery gallery = (Gallery) findViewById(R.id.gallery);
-        ImageAdapter IA =new ImageAdapter(this);
-        gallery.setAdapter(IA);
-        gallery.setOnItemClickListener(new OnItemClickListener() {
-            public void onItemClick(AdapterView<?> parent, View v, int position, long id) {
-                Toast.makeText(getBaseContext(), "pic" + (position + 1) + " selected",
-                        Toast.LENGTH_SHORT).show();
-                // display the images selected
-                ImageView imageView = (ImageView) findViewById(R.id.image1);
-                imageView.setImageResource(imageIDs[position]);
+
+        final DownloadPictureBlob DPB = new DownloadPictureBlob(this);
+        DPB.execute();
+        Thread t = new Thread(new Runnable() {
+            public void run()
+            {
+                while (DPB.getfinished()==false)
+                {
+
+                }
+                MediaBrowser.this.runOnUiThread(new Runnable() {
+                    public void run() {
+                        Log.d("UI thread", "I am the UI thread");
+                        setContentView(R.layout.activity_media_browser);
+                        Gallery gallery = (Gallery) findViewById(R.id.gallery);
+                        photoUris = DPB.files;
+                        gallery.setAdapter(IA);
+                        gallery.setOnItemClickListener(new OnItemClickListener() {
+
+                            public void onItemClick(AdapterView<?> parent, View v, int position, long id) {
+                                Toast.makeText(getBaseContext(), "pic" + (position + 1) + " selected",
+                                        Toast.LENGTH_SHORT).show();
+                                // display the images selected
+                                ImageView imageView = (ImageView) findViewById(R.id.image1);
+                                //imageView.setImageResource(imageIDs[position]);
+                                imageView.setImageURI(photoUris.get(position));
+
+                            }
+                        });
+                    }
+                });
+
             }
         });
-        DownloadPictureBlob DPB = new DownloadPictureBlob(this);
+        t.start();
 
     }
 
@@ -63,7 +89,7 @@ public class MediaBrowser extends Activity {
         }
         // returns the number of images
         public int getCount() {
-            return imageIDs.length;
+            return photoUris.size();
         }
         // returns the ID of an item
         public Object getItem(int position) {
@@ -75,11 +101,16 @@ public class MediaBrowser extends Activity {
         }
         // returns an ImageView view
         public View getView(int position, View convertView, ViewGroup parent) {
-            ImageView imageView = new ImageView(context);
-            imageView.setImageResource(imageIDs[position]);
-            imageView.setLayoutParams(new Gallery.LayoutParams(100, 100));
-            imageView.setBackgroundResource(itemBackground);
-            return imageView;
+
+           try {
+               ImageView imageView = new ImageView(context);
+               //imageView.setImageResource(imageIDs[position]);
+               imageView.setImageURI(photoUris.get(position));
+               imageView.setLayoutParams(new Gallery.LayoutParams(100, 100));
+               imageView.setBackgroundResource(itemBackground);
+               return imageView;
+           }catch (Exception e){
+               e.printStackTrace();return null;}
         }
     }
 }
