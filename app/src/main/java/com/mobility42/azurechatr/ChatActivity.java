@@ -180,7 +180,7 @@ public class ChatActivity extends Activity {
 
 		item.setText(mTextNewChat.getText().toString());
 		// This is temporary until we add authentication to the Android version
-		item.setUserName("Dani");
+		item.setUserName("Tito");
 
 		item.setStatus("waiting");
 
@@ -235,7 +235,7 @@ public class ChatActivity extends Activity {
 
 						fc.setTimeStamp(time);
 						fc.setStatus(item.getStatus());
-						if (!item.getUserName().equals("Dani")) {
+						if (!item.getUserName().equals("Tito")) {
 							fc.setIsTheDeviceUser(false);
 						}
 
@@ -352,7 +352,7 @@ public class ChatActivity extends Activity {
 					item.setUserName(newUsername);
 					updateItemToSent(newId);
 
-					if(!item.getUserName().equals("Dani")) {
+					if(!item.getUserName().equals("Tito")) {
 						FeedChat fc = new FeedChat(item.getText(), item.getUserName(), item.getId(), false);
 						fc.setTimeStamp(newTimeStamp);
 						fc.setStatus("sent");
