@@ -19,12 +19,16 @@ public class ChatItem {
 	@com.google.gson.annotations.SerializedName("id")
 	private String mId;
 
+
+	@com.google.gson.annotations.SerializedName("idchat")
+	private String mIdChat;
+
 	/**
 	 * Indicates who sent the message
 	 */
 	@com.google.gson.annotations.SerializedName("username")
 	private String mUserName;
-	
+
 	/**
 	 * Indicates when the message was posted
 	 */
@@ -50,7 +54,7 @@ public class ChatItem {
 
 	/**
 	 * Initializes a new ChatItem
-	 * 
+	 *
 	 * @param text
 	 *            The item text
 	 * @param username
@@ -58,10 +62,11 @@ public class ChatItem {
 	 * @param id
 	 *            The item id
 	 */
-	public ChatItem(String text, String username, String id) {
+	public ChatItem(String text, String username, String id, String mIdChat) {
 		this.setText(text);
 		this.setUserName(username);
 		this.setId(id);
+		this.setmIdChat(mIdChat);
 	}
 
 	/**
@@ -73,7 +78,7 @@ public class ChatItem {
 
 	/**
 	 * Sets the item text
-	 * 
+	 *
 	 * @param text
 	 *            text to set
 	 */
@@ -90,7 +95,7 @@ public class ChatItem {
 
 	/**
 	 * Sets the item id
-	 * 
+	 *
 	 * @param id
 	 *            id to set
 	 */
@@ -118,14 +123,14 @@ public class ChatItem {
 
 	/**
 	 * Sets the item username
-	 * 
+	 *
 	 * @param username
 	 *            username to set
 	 */
 	public final void setUserName(String username) {
 		mUserName = username;
 	}
-	
+
 	/**
 	 * Returns the item TimeStamp
 	 */
@@ -135,7 +140,7 @@ public class ChatItem {
 
 	/**
 	 * Sets the item TimeStamp
-	 * 
+	 *
 	 * @param timestamp
 	 *            timestamp to set
 	 */
@@ -146,5 +151,16 @@ public class ChatItem {
 	@Override
 	public boolean equals(Object o) {
 		return o instanceof ChatItem && ((ChatItem) o).mId == mId;
+	}
+
+	/**
+	 * Item Id
+	 */
+	public String getmIdChat() {
+		return mIdChat;
+	}
+
+	public void setmIdChat(String mIdChat) {
+		this.mIdChat = mIdChat;
 	}
 }

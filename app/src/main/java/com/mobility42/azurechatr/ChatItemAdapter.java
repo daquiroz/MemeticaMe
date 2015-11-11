@@ -10,34 +10,47 @@ import android.view.Gravity;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.ArrayAdapter;
+import android.widget.BaseAdapter;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.RelativeLayout;
 import android.widget.TextView;
 
+import java.util.ArrayList;
+
 /**
  * Adapter to bind a ToDoItem List to a view
  */
-public class ChatItemAdapter extends ArrayAdapter<FeedChat> {
+public class ChatItemAdapter extends BaseAdapter {
 
-	/**
-	 * Adapter context
-	 */
-	Context mContext;
+	private ArrayList<FeedChat> items;
 
-	/**
-	 * Adapter View layout
-	 */
-	int mLayoutResourceId;
+	private final Context context;
 
-	public ChatItemAdapter(Context context, int layoutResourceId) {
-		super(context, layoutResourceId);
-
-		mContext = context;
-		mLayoutResourceId = layoutResourceId;
+	// the context is needed to inflate views in getView()
+	public ChatItemAdapter(Context context,ArrayList<FeedChat> items) {
+		this.context = context;
+		this.items = items;
 	}
 
+	@Override
+	public int getCount() {
+		return items.size();
+	}
+
+	// getItem(int) in Adapter returns Object but we can override
+	// it to BananaPhone thanks to Java return type covariance
+	@Override
+	public FeedChat getItem(int position) {
+		return items.get(position);
+	}
+
+	// getItemId() is often useless, I think this should be the default
+	// implementation in BaseAdapter
+	@Override
+	public long getItemId(int position) {
+		return position;
+	}
 	/**
 	 * Returns the view for a specific item on the list
 	 */
@@ -49,8 +62,8 @@ public class ChatItemAdapter extends ArrayAdapter<FeedChat> {
 		final FeedChat currentItem = getItem(position);
 
 		if (row == null) {
-			LayoutInflater inflater = ((Activity) mContext).getLayoutInflater();
-			row = inflater.inflate(mLayoutResourceId, parent, false);
+			LayoutInflater inflater = ((Activity) context).getLayoutInflater();
+			row = inflater.inflate(R.layout.bubble, parent, false);
 		}
 
 		row.setTag(currentItem);
@@ -90,13 +103,15 @@ public class ChatItemAdapter extends ArrayAdapter<FeedChat> {
 		{
 			ImageView status = (ImageView)row.findViewById(R.id.status);
 			status.setVisibility(status.VISIBLE);
-			if (currentItem.getStatus() == "waiting") {
+			if (currentItem.getStatus().equals("waiting")) {
 				status.setImageResource(R.drawable.clock);
-			} else if (currentItem.getStatus()== "sending") {
+				status.setColorFilter(Color.WHITE, PorterDuff.Mode.SRC_ATOP);
+			} else if (currentItem.getStatus().equals("sending")){
 				status.setImageResource(R.drawable.checkmark);
-			} else if (currentItem.getStatus() == "sent") {
+				status.setColorFilter(Color.WHITE, PorterDuff.Mode.SRC_ATOP);
+			} else if (currentItem.getStatus().equals ("sent")) {
 				status.setImageResource(R.drawable.checkmark);
-				status.setColorFilter(Color.parseColor("0x18F466"),PorterDuff.Mode.SRC_IN);
+				status.setColorFilter(Color.GREEN,PorterDuff.Mode.SRC_ATOP);
 
 			}
 			((LinearLayout)row).setGravity(Gravity.RIGHT);
@@ -116,6 +131,33 @@ public class ChatItemAdapter extends ArrayAdapter<FeedChat> {
 		}
 
 		return row;
+	}
+
+	public void updateStatus() {
+
+		for (int i = 0; i < getCount(); i++) {
+			if (items.get(i).getStatus().equals("sending")) {
+				items.get(i).setStatus("sent");
+			}
+		}
+
+
+
+
+
+	}
+
+	public void updateToSending() {
+
+		for (int i = 0; i < getCount(); i++) {
+			if (items.get(i).getStatus().equals("waiting")) {
+				items.get(i).setStatus("sending");
+			}
+		}
+
+
+
+
 	}
 
 }
