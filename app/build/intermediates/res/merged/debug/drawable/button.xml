@@ -1,0 +1,24 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<selector xmlns:android="http://schemas.android.com/apk/res/android">
+  <item android:state_pressed="true" >
+    <shape>
+      <solid
+          android:color="#6290DA" />  
+      <corners android:bottomRightRadius="24dip"
+    android:bottomLeftRadius="24dip"  
+    android:topRightRadius="24dip"
+    android:topLeftRadius="24dip"/> 
+    </shape>
+  </item> 
+  <item android:state_pressed="false" >
+    <shape>
+      <solid
+          android:color="#EF9B00" />  
+      <corners android:bottomRightRadius="24dip"
+    android:bottomLeftRadius="24dip"  
+    android:topRightRadius="24dip"
+    android:topLeftRadius="24dip"/> 
+    </shape>
+  </item> 
+
+</selector><!-- From: file:/Users/alberto/App%20Moviles/MemeticaMe/app/src/main/res/drawable/button.xml -->
