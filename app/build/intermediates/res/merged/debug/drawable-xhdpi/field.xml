@@ -7,4 +7,8 @@ android:shape="rectangle">
     android:topRightRadius="8dip"
     android:topLeftRadius="8dip"/> 
     </shape>
+<<<<<<< HEAD
 <!-- From: file:/Users/alberto/App%20Moviles/MemeticaMe/app/src/main/res/drawable-xhdpi/field.xml -->
+=======
+<!-- From: file:/Users/Dani/Desktop/AppsAndroid/MemeticaMe/app/src/main/res/drawable-xhdpi/field.xml -->
+>>>>>>> dani-branch

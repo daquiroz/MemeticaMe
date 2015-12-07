@@ -4,8 +4,11 @@
     <modules>
       <module fileurl="file://$PROJECT_DIR$/MemeticaMe.iml" filepath="$PROJECT_DIR$/MemeticaMe.iml" />
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
       <module fileurl="file://$PROJECT_DIR$/Memeticame-grupo3.iml" filepath="$PROJECT_DIR$/Memeticame-grupo3.iml" />
+>>>>>>> dani-branch
+=======
 >>>>>>> dani-branch
       <module fileurl="file://$PROJECT_DIR$/app/app.iml" filepath="$PROJECT_DIR$/app/app.iml" />
     </modules>
