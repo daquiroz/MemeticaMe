@@ -16,6 +16,8 @@ import android.widget.Toast;
 
 import com.microsoft.windowsazure.mobileservices.MobileServiceClient;
 import com.microsoft.windowsazure.mobileservices.MobileServiceTable;
+import com.microsoft.windowsazure.mobileservices.ServiceFilterResponse;
+import com.microsoft.windowsazure.mobileservices.TableQueryCallback;
 import com.mobility42.azurechatr.*;
 
 import java.net.MalformedURLException;
@@ -31,7 +33,7 @@ public class CanalActivity extends Activity{
 
 //    ContactAdapter contactadapter;
 //    ListView listviewcontactos;
-//    private ArrayList<Meme> listaMemes;
+    private ArrayList<Meme> listaMemes;
       public String miId = DB.miId;
       public DB db;
 
@@ -48,68 +50,10 @@ public class CanalActivity extends Activity{
         super.onCreate(savedInstanceState);
         setContentView(R.layout.canal_meme);
 
-        ImageButton btn = (ImageButton)findViewById(R.id.btVolverChat);
-        btn.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                startActivity(new Intent(ListaContactosActivity.this, ListaChatActivity.class));
-            }
-        });
 
         Uri uri = ContactsContract.CommonDataKinds.Phone.CONTENT_URI;
 
         db = new DB();
-
-        // Sets the columns to retrieve for the user profile
-        String[] projection = new String[]
-                {
-                        ContactsContract.Profile._ID,
-                        ContactsContract.CommonDataKinds.Phone.NUMBER,
-                        ContactsContract.Profile.LOOKUP_KEY,
-                        ContactsContract.Profile.PHOTO_THUMBNAIL_URI
-                };
-
-
-        CursorLoader cursor = new CursorLoader(
-                getApplicationContext(),  // The activity's context
-                uri,              // The entity content URI for a single contact
-                projection,               // The columns to retrieve
-                null,                     // Retrieve all the raw contacts and their data rows.
-                null,                     //
-                null);               // Sort by the raw contact ID.
-
-
-
-        ContentResolver cr = getContentResolver();
-
-        Cursor cur = cr.query(uri,
-                projection, //Columnas a devolver
-                null,       //Condición de la query
-                null,       //Argumentos variables de la query
-                null);      //Orden de los resultados
-
-
-        listaContactosCelular = new ArrayList<Contact>();
-        if (cur.moveToFirst())
-        {
-            int colid= cur.getColumnIndex(projection[0]);
-            int colname = cur.getColumnIndex(projection[1]);
-            int colkey = cur.getColumnIndex(projection[2]);
-            int colphoto = cur.getColumnIndex(projection[3]);
-
-            String nombre;
-            String mail = "";
-            String id;
-            String estado = "";
-            String contactphoto;
-
-            do
-            {
-                listaContactosCelular.add(new Contact(cur.getString(colname),
-                        mail, cur.getString(colid), estado,cur.getString(colphoto) ));
-            } while (cur.moveToNext());
-        }
-
 
         try {
             // Create the Mobile Service Client instance, using the provided
@@ -120,13 +64,11 @@ public class CanalActivity extends Activity{
                     this);
 
             // Get the Mobile Service Table instance to use
-            contactTable = mClient.getTable(Contact.class);
-            chatTable = mClient.getTable(Chat.class);
+            memesTable = mClient.getTable(Meme.class);
 
-            listaContactosAzure = new ArrayList<Contact>();
-            listachat = new ArrayList<Chat>();
+            listaMemes = new ArrayList<Meme>();
 
-            llenarTablaChat();
+            llenarTablaMemes();
             //listaFinal = new ArrayList<Contact>();
 
             //mTextNewChat = (EditText) findViewById(R.id.textNewChat);
@@ -184,5 +126,33 @@ public class CanalActivity extends Activity{
 
             }
         });
+    private synchronized void llenarTablaMemes() {
 
+        // Get all the chat items and add them in the adapter
+        memesTable.execute(new TableQueryCallback<Chat>() {
+
+            public void onCompleted(List<Chat> result, int count, Exception exception, ServiceFilterResponse response) {
+                if (exception == null) {
+                    listaMemes.clear();
+
+                    for (Meme item : result) {
+
+                        Meme c = new Meme(item.getUrl(), item.getRanking(), item.getEtiquetas(), item.get(), item.getFecha() );
+                        listachat.add(c);
+                    }
+                    //listaFinal = CompararListas(listaContactosCelular, listaContactosAzure);
+                    //contactadapter.notifyDataSetChanged();
+                    //listviewcontactos.setAdapter(contactadapter);
+
+
+                } else {
+                    //createAndShowDialog(exception, "Error");
+                }
+
+            }
+        });
+
+
+
+    }
 }
