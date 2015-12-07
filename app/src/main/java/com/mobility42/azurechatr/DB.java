@@ -10,7 +10,9 @@ public class DB {
 
     public static List<Contact> listaC;
     public static String miId;
+    public static String name;
 
+    public static String idChat;
 
 
 

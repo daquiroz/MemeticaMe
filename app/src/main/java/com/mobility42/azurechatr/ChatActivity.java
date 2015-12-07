@@ -31,6 +31,7 @@ import com.microsoft.windowsazure.mobileservices.TableQueryCallback;
 import com.microsoft.windowsazure.notifications.NotificationsManager;
 import com.mobility42.azurechatr.MemeViewer.MemeViewerActivity;
 
+import java.io.IOException;
 import java.net.MalformedURLException;
 import java.text.SimpleDateFormat;
 import java.util.ArrayList;
@@ -81,10 +82,25 @@ public class ChatActivity extends Activity {
 	/**
 	 * Initializes the activity
 	 */
+
+	int Option;
+
+
 	@Override
 	public void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.chat);
+
+		try
+		{
+			Option =Integer.parseInt(getIntent().getStringExtra("Option"));
+			if(Option==0)
+			{
+				addItemImage();
+			}
+		}
+		catch(Exception e){}
+
 
 		/*mProgressBar = (ProgressBar) findViewById(R.id.loadingProgressBar);
 		// Initialize the progress bar
@@ -156,6 +172,7 @@ public class ChatActivity extends Activity {
 
 	}
 
+
 	@SuppressWarnings("unchecked")
 	private void registerWithNotificationHubs() {
 		new AsyncTask() {
@@ -199,6 +216,45 @@ public class ChatActivity extends Activity {
 	 * @param view
 	 *            The view that originated the call
 	 */
+
+	public void  browseMedia(View view)
+	{
+		Intent intent = new Intent(ChatActivity.this,MediaBrowser.class);
+		startActivity(intent);
+	}
+
+	public void startBlob(View view) {
+		attachment.setVisibility(attachment.VISIBLE);
+	}
+	public void attach(View view) throws IOException {
+		String name =getResources().getResourceName(view.getId());
+		String segments[] = name.split("/");
+		name = segments[segments.length - 1].toString();
+		if(name.equals("pictureButton"))
+		{
+			Intent intent = new Intent(ChatActivity.this,BlobActivity.class);
+			intent.putExtra("Option","0");
+			startActivity(intent);
+
+		}else if (name.equals("recordButton"))
+		{
+
+			Intent intent = new Intent(ChatActivity.this,BlobActivity.class);
+			intent.putExtra("Option", "1");
+			startActivity(intent);
+
+		}else
+		{
+			Intent intent = new Intent(ChatActivity.this,BlobActivity.class);
+			intent.putExtra("Option", "2");
+			startActivity(intent);
+
+		}
+	}
+
+
+
+
 	public void addItem(View view) {
 		if (getmClient() == null) {
 			return;
@@ -268,7 +324,6 @@ public class ChatActivity extends Activity {
 
 						fc.setTimeStamp(time);
 						fc.setStatus(item.getStatus());
-
 						if (!item.getUserName().equals(miId)) {
 							fc.setIsTheDeviceUser(false);
 						}
@@ -371,6 +426,51 @@ public class ChatActivity extends Activity {
 		}
 	}
 
+
+	public void addItemImage() {
+		if (mClient == null) {
+			return;
+		}
+
+
+		// Create a new item
+		final ChatItem item = new ChatItem();
+
+		item.setText("Tu imágen se ha enviado");
+		// This is temporary until we add authentication to the Android version
+		item.setUserName("Felipe");
+
+		item.setStatus("waiting");
+
+		Date currentDate = new Date(System.currentTimeMillis());
+		item.setTimeStamp(currentDate);
+
+		// Insert the new item
+		mChatTable.insert(item, new TableOperationCallback<ChatItem>() {
+
+			public void onCompleted(ChatItem entity, Exception exception, ServiceFilterResponse response) {
+
+				if (exception == null) {
+					FeedChat fc = new FeedChat(entity.getText(),entity.getUserName(),entity.getId(),true);
+					SimpleDateFormat formatter=new SimpleDateFormat("HH:mm");
+					item.setStatus("sending");
+					String time = formatter.format(item.getTimeStamp());
+					fc.setStatus("sending");
+					fc.setTimeStamp(time);
+					//mAdapter.add(fc);
+					mAdapter.notifyDataSetChanged();
+					listViewChat.setSelection(mAdapter.getCount() - 1);
+				} else {
+					createAndShowDialog(exception, "Error");
+				}
+
+			}
+		});
+
+		mTextNewChat.setText("");
+	}
+
+
 	private final BroadcastReceiver mHandleMessageReceiver =
 			new BroadcastReceiver() {
 				@Override
@@ -447,4 +547,5 @@ public class ChatActivity extends Activity {
 			}
 		});
 	}
+
 }

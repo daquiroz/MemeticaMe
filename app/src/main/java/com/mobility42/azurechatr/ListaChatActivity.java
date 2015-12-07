@@ -11,12 +11,10 @@ import android.widget.AdapterView;
 import android.widget.ImageButton;
 import android.widget.ListView;
 import android.widget.Toast;
-
 import com.microsoft.windowsazure.mobileservices.MobileServiceClient;
 import com.microsoft.windowsazure.mobileservices.MobileServiceTable;
 import com.microsoft.windowsazure.mobileservices.ServiceFilterResponse;
 import com.microsoft.windowsazure.mobileservices.TableQueryCallback;
-
 import java.net.MalformedURLException;
 import java.util.ArrayList;
 import java.util.List;
@@ -46,7 +44,8 @@ public class ListaChatActivity extends Activity {
         setContentView(R.layout.activity_lista_chat);
 
         db = new DB();
-        db.miId = "56985003385";
+        db.miId = "56992773617";
+        db.name = "Fran";
 
         ImageButton btn = (ImageButton)findViewById(R.id.btCrearChat);
         btn.setOnClickListener(new View.OnClickListener() {
