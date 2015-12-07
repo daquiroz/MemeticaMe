@@ -40,4 +40,8 @@
         android:layout_alignParentEnd="true"
         android:layout_toRightOf="@+id/imagemaskframe"
         android:layout_toEndOf="@+id/imagemaskframe" />
+<<<<<<< HEAD
+</RelativeLayout><!-- From: file:/Users/alberto/App%20Moviles/MemeticaMe/app/src/main/res/layout/contacts_list_item.xml -->
+=======
 </RelativeLayout><!-- From: file:/Users/Dani/Desktop/AppsAndroid/MemeticaMe/app/src/main/res/layout/contacts_list_item.xml -->
+>>>>>>> master

@@ -8,6 +8,16 @@ public class Meme {
     @com.google.gson.annotations.SerializedName("url")
     private String url;
 
+<<<<<<< HEAD
+=======
+    public String getRanking() {
+        return ranking;
+    }
+
+    public void setRanking(int likes) {
+        this.ranking = ranking;
+    }
+>>>>>>> master
 
     public String getUrl() {
         return url;
@@ -33,6 +43,7 @@ public class Meme {
         this.categoria = categoria;
     }
 
+<<<<<<< HEAD
     public String getRanking() {
         return ranking;
     }
@@ -42,6 +53,9 @@ public class Meme {
     }
 
     @com.google.gson.annotations.SerializedName("ranking")
+=======
+    @com.google.gson.annotations.SerializedName("likes")
+>>>>>>> master
     private String ranking;
 
     @com.google.gson.annotations.SerializedName("etiquetas")
@@ -49,7 +63,4 @@ public class Meme {
 
     @com.google.gson.annotations.SerializedName("categoria")
     private String categoria;
-
-
-
 }
