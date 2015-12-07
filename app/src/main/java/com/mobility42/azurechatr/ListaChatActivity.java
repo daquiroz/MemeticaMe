@@ -44,7 +44,7 @@ public class ListaChatActivity extends Activity {
         setContentView(R.layout.activity_lista_chat);
 
         db = new DB();
-        db.miId = "56985003385";
+        db.miId = "56992773617";
 
         ImageButton btn = (ImageButton)findViewById(R.id.btCrearChat);
         btn.setOnClickListener(new View.OnClickListener() {
