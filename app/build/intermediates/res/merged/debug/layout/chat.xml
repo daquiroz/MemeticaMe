@@ -73,6 +73,7 @@
             android:tint="#ffffffff"
             android:padding="7dp"
             android:scaleType="fitCenter"
+            android:onClick="startBlob"
             android:background="@drawable/menubutton"
             android:layout_marginRight="84dp" />
     </RelativeLayout>
@@ -151,6 +152,7 @@
                 android:layout_height="80dp"
                 android:id="@+id/fileButton"
                 android:padding="10dp"
+                android:onClick="attach"
                 android:layout_gravity="center"
                 android:layout_marginTop="20dp" />
             <TextView
@@ -173,6 +175,7 @@
                 android:layout_height="80dp"
                 android:id="@+id/recordButton"
                 android:padding="10dp"
+                android:onClick="attach"
                 android:layout_gravity="center"
                 android:layout_marginTop="20dp" />
             <TextView
@@ -195,6 +198,7 @@
                 android:layout_height="80dp"
                 android:id="@+id/pictureButton"
                 android:padding="10dp"
+                android:onClick="attach"
                 android:layout_gravity="center"
                 android:layout_marginTop="20dp" />
             <TextView
@@ -204,6 +208,29 @@
                 android:layout_height="wrap_content"
                 android:layout_gravity="center" />
         </LinearLayout>
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:weightSum="1"
+            android:layout_weight="1">
+
+            <ImageView
+                android:layout_width="79dp"
+                android:layout_height="86dp"
+                android:id="@+id/imageMediaBrowser"
+                android:src="@drawable/stop"
+                android:onClick="browseMedia"
+                android:layout_gravity="center"
+                android:layout_marginTop="20dp" />
+
+            <TextView
+                android:layout_width="65dp"
+                android:layout_height="32dp"
+                android:textAppearance="?android:attr/textAppearanceMedium"
+                android:id="@+id/textView2"
+                android:text="MediaBrowser" />
+        </LinearLayout>
     </LinearLayout>
 
-</RelativeLayout><!-- From: file:/Users/alberto/App%20Moviles/MemeticaMe/app/src/main/res/layout/chat.xml -->
+</RelativeLayout><!-- From: file:/Users/Dani/Desktop/AppsAndroid/MemeticaMe/app/src/main/res/layout/chat.xml -->
