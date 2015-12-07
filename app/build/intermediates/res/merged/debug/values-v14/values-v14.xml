@@ -1,10 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-<<<<<<< HEAD
     <!-- From: file:/Users/alberto/App%20Moviles/MemeticaMe/app/src/main/res/values-v14/styles.xml -->
-=======
-    <!-- From: file:/Users/Dani/Desktop/AppsAndroid/MemeticaMe/app/src/main/res/values-v14/styles.xml -->
->>>>>>> master
     <eat-comment/>
     <style name="AppBaseTheme" parent="android:Theme.Holo.Light.DarkActionBar">
         <!-- API 14 theme customizations can go here. -->

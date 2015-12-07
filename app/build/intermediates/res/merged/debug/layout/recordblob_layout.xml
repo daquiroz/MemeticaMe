@@ -3,8 +3,4 @@
     android:orientation="vertical" android:layout_width="match_parent"
     android:layout_height="match_parent">
 
-<<<<<<< HEAD
 </LinearLayout><!-- From: file:/Users/alberto/App%20Moviles/MemeticaMe/app/src/main/res/layout/recordblob_layout.xml -->
-=======
-</LinearLayout><!-- From: file:/Users/Dani/Desktop/AppsAndroid/MemeticaMe/app/src/main/res/layout/recordblob_layout.xml -->
->>>>>>> master
