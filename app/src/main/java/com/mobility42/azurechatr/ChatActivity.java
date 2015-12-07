@@ -268,6 +268,7 @@ public class ChatActivity extends Activity {
 
 						fc.setTimeStamp(time);
 						fc.setStatus(item.getStatus());
+
 						if (!item.getUserName().equals(miId)) {
 							fc.setIsTheDeviceUser(false);
 						}
@@ -446,5 +447,4 @@ public class ChatActivity extends Activity {
 			}
 		});
 	}
-
 }

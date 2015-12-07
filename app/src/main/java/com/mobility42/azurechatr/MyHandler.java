@@ -28,12 +28,13 @@ public class MyHandler extends NotificationsHandler {
 
 	@Override
 	public void onReceive(Context context, Bundle bundle) {
-		ctx = context;
-		String nhMessage = bundle.getString("message");
-		String nhUsername = bundle.getString("username");
+	    ctx = context;
+	    String nhMessage = bundle.getString("message");
+	    String nhUsername = bundle.getString("username");
 		String nhid = bundle.getString("id");
-		sendNotification(nhUsername + " - " + nhMessage);
-		displayMessage(context, nhMessage, nhUsername, nhid);
+	    sendNotification(nhUsername + " - " + nhMessage);
+	    displayMessage(context, nhMessage, nhUsername, nhid);
+
 	}
 
 	private void sendNotification(String msg) {
