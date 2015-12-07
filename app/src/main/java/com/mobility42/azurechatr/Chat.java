@@ -19,6 +19,9 @@ public class Chat {
     @com.google.gson.annotations.SerializedName("fecha")
     private String fecha;
 
+    @com.google.gson.annotations.SerializedName("id")
+    private String id;
+
     public String getNamechat() {
         return namechat;
     }

@@ -12,6 +12,7 @@ import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.EditText;
+import android.widget.ImageButton;
 import android.widget.LinearLayout;
 import android.widget.ListView;
 import android.widget.ProgressBar;
@@ -28,12 +29,14 @@ import com.microsoft.windowsazure.mobileservices.ServiceFilterResponseCallback;
 import com.microsoft.windowsazure.mobileservices.TableOperationCallback;
 import com.microsoft.windowsazure.mobileservices.TableQueryCallback;
 import com.microsoft.windowsazure.notifications.NotificationsManager;
+import com.mobility42.azurechatr.MemeViewer.MemeViewerActivity;
 
 import java.net.MalformedURLException;
 import java.text.SimpleDateFormat;
 import java.util.ArrayList;
 import java.util.Date;
 import java.util.List;
+import java.util.Random;
 
 public class ChatActivity extends Activity {
 
@@ -48,6 +51,8 @@ public class ChatActivity extends Activity {
 	private String AZUREPUSHNOTIFHUB_NAME = "memeticameapphub";
 	private String AZUREPUSHNOTIFHUB_CNXSTRING = "Endpoint=sb://memeticameapphub-ns.servicebus.windows.net/;SharedAccessKeyName=DefaultFullSharedAccessSignature;SharedAccessKey=1oxnmbuBGmEEREVPqqIhwV1ATMWMsFu2tquHaR8lPEQ=";
 	private String GCMPUSH_SENDER_ID = "737194093634";
+	public String miId = DB.miId;
+	private String idchat;
 
 	private GoogleCloudMessaging gcm;
 	private NotificationHub hub;
@@ -82,12 +87,20 @@ public class ChatActivity extends Activity {
 		setContentView(R.layout.chat);
 
 		/*mProgressBar = (ProgressBar) findViewById(R.id.loadingProgressBar);
-
 		// Initialize the progress bar
 		mProgressBar.setVisibility(ProgressBar.GONE);*/
 		attachment = (LinearLayout) findViewById(R.id.attachment);
 
 		attachment.setVisibility(attachment.GONE);
+
+		try
+		{
+			idchat = getIntent().getExtras().getString("idchat");
+		}
+		catch(Exception excepcion)
+		{
+			idchat = "000000";
+		}
 
 
 		try {
@@ -125,6 +138,22 @@ public class ChatActivity extends Activity {
 		} catch (MalformedURLException e) {
 			createAndShowDialog(new Exception("There was an error creating the Mobile Service. Verify the URL"), "Error");
 		}
+
+
+
+
+		ImageButton boton = (ImageButton)findViewById(R.id.meme);
+		boton.setOnClickListener(new View.OnClickListener() {
+			@Override
+			public void onClick(View v) {
+
+				Intent intent = new Intent(ChatActivity.this, MemeViewerActivity.class);
+				intent.putExtra("idchat", idchat);
+				startActivity(intent);
+
+			}
+		});
+
 	}
 
 	@SuppressWarnings("unchecked")
@@ -180,9 +209,11 @@ public class ChatActivity extends Activity {
 
 		item.setText(mTextNewChat.getText().toString());
 		// This is temporary until we add authentication to the Android version
-		item.setUserName("Tito");
+		item.setUserName(miId);
 
 		item.setStatus("waiting");
+
+		item.setmIdChat(idchat);
 
 		Date currentDate = new Date(System.currentTimeMillis());
 		item.setTimeStamp(currentDate);
@@ -228,6 +259,8 @@ public class ChatActivity extends Activity {
 					lista.clear();
 
 					for (ChatItem item : result) {
+						if (item.getmIdChat().equals(idchat))
+						{
 						FeedChat fc = new FeedChat(item.getText(), item.getUserName(), item.getId(), true);
 						SimpleDateFormat formatter = new SimpleDateFormat("HH:mm");
 
@@ -235,11 +268,19 @@ public class ChatActivity extends Activity {
 
 						fc.setTimeStamp(time);
 						fc.setStatus(item.getStatus());
+<<<<<<< HEAD
 						if (!item.getUserName().equals("Tito")) {
 							fc.setIsTheDeviceUser(false);
 						}
 
 						lista.add(fc);
+=======
+						if (!item.getUserName().equals(miId)) {
+							fc.setIsTheDeviceUser(false);
+						}
+
+						lista.add(fc);}
+>>>>>>> dani-branch
 					}
 
 					mAdapter.notifyDataSetChanged();
@@ -352,7 +393,11 @@ public class ChatActivity extends Activity {
 					item.setUserName(newUsername);
 					updateItemToSent(newId);
 
+<<<<<<< HEAD
 					if(!item.getUserName().equals("Tito")) {
+=======
+					if(!item.getUserName().equals(miId)) {
+>>>>>>> dani-branch
 						FeedChat fc = new FeedChat(item.getText(), item.getUserName(), item.getId(), false);
 						fc.setTimeStamp(newTimeStamp);
 						fc.setStatus("sent");
@@ -414,4 +459,8 @@ public class ChatActivity extends Activity {
 		});
 	}
 
+<<<<<<< HEAD
 }
+=======
+}
+>>>>>>> dani-branch
