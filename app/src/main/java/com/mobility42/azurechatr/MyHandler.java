@@ -28,21 +28,13 @@ public class MyHandler extends NotificationsHandler {
 
 	@Override
 	public void onReceive(Context context, Bundle bundle) {
-<<<<<<< HEAD
 	    ctx = context;
 	    String nhMessage = bundle.getString("message");
 	    String nhUsername = bundle.getString("username");
 		String nhid = bundle.getString("id");
 	    sendNotification(nhUsername + " - " + nhMessage);
 	    displayMessage(context, nhMessage, nhUsername, nhid);
-=======
-		ctx = context;
-		String nhMessage = bundle.getString("message");
-		String nhUsername = bundle.getString("username");
-		String nhid = bundle.getString("id");
-		sendNotification(nhUsername + " - " + nhMessage);
-		displayMessage(context, nhMessage, nhUsername, nhid);
->>>>>>> dani-branch
+
 	}
 
 	private void sendNotification(String msg) {
@@ -63,19 +55,11 @@ public class MyHandler extends NotificationsHandler {
 		mBuilder.setContentIntent(contentIntent);
 		mNotificationManager.notify(NOTIFICATION_ID, mBuilder.build());
 	}
-<<<<<<< HEAD
-	
-	static void displayMessage(Context context, String message, String username, String id) {
-	    Intent intent = new Intent(DISPLAY_MESSAGE_ACTION);
-	    intent.putExtra(EXTRA_MESSAGE, message);
-	    intent.putExtra(EXTRA_USERNAME, username);
-=======
 
 	static void displayMessage(Context context, String message, String username, String id) {
 		Intent intent = new Intent(DISPLAY_MESSAGE_ACTION);
 		intent.putExtra(EXTRA_MESSAGE, message);
 		intent.putExtra(EXTRA_USERNAME, username);
->>>>>>> dani-branch
 		intent.putExtra(EXTRA_ID,id);
 		SimpleDateFormat formatter=new SimpleDateFormat("HH:mm");
 		Date currentDate = new Date(System.currentTimeMillis());

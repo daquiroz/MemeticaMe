@@ -160,8 +160,4 @@ public class ChatItemAdapter extends BaseAdapter {
 
 	}
 
-<<<<<<< HEAD
 }
-=======
-}
->>>>>>> dani-branch
