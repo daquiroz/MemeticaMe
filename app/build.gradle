@@ -1,0 +1,30 @@
+apply plugin: 'com.android.application'
+
+android {
+    compileSdkVersion 23
+    buildToolsVersion "23.0.1"
+
+    defaultConfig {
+        applicationId "com.mobility42.azurechatr"
+        minSdkVersion 15
+        targetSdkVersion 19
+    }
+
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.txt'
+        }
+    }
+}
+
+dependencies {
+    compile 'com.android.support:support-v4:23.1.0'
+    compile 'com.google.code.gson:gson:2.2.2'
+    compile files('libs/mobileservices-1.1.0.jar')
+    compile files('libs/notification-hubs-0.2.jar')
+    compile 'com.google.android.gms:play-services-base:6.5.87'
+    compile files('libs/notifications-1.0.1.jar')
+    compile 'com.microsoft.azure.android:azure-storage-android:0.7.0@aar'
+    compile files('libs/urlimageviewhelper-1.0.4.jar')
+}
