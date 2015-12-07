@@ -53,4 +53,4 @@
             android:layout_alignRight="@+id/textChatItem"
             android:minHeight="4dp" />
     </RelativeLayout>
-</LinearLayout><!-- From: file:/Users/Dani/Desktop/AppsAndroid/Memeticame-grupo3/app/src/main/res/layout/bubble.xml -->
+</LinearLayout><!-- From: file:/Users/Dani/Desktop/AppsAndroid/MemeticaMe/app/src/main/res/layout/bubble.xml -->

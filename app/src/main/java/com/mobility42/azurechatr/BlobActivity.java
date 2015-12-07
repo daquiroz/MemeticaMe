@@ -21,7 +21,7 @@ public class BlobActivity extends Activity {
     private int PICK_IMAGE_REQUEST = 1;
     File filesDir;
     int Option;
-
+    String idchat;
 
 
     @Override
@@ -29,6 +29,7 @@ public class BlobActivity extends Activity {
         super.onCreate(savedInstanceState);
         filesDir = this.getCacheDir();
         Option =Integer.parseInt(getIntent().getStringExtra("Option"));
+        idchat = getIntent().getStringExtra("idchat");
         if (Option == 0)
         {
             setContentView(R.layout.photoblob_layout);
@@ -73,7 +74,8 @@ public class BlobActivity extends Activity {
                final PictureBlob PB = new PictureBlob(persistImage(bitmap,"IMAGEEEEEEEEEN"),0,this);
                 PB.execute();
 
-                Intent intent = new Intent(BlobActivity.this,ChatActivity.class);
+                Intent intent = new Intent(BlobActivity.this, ChatActivity.class);
+                intent.putExtra("idchat",idchat);
                 intent.putExtra("Option", "0");
                 startActivity(intent);
 

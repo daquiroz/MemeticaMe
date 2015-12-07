@@ -117,8 +117,6 @@ public class ChatActivity extends Activity {
 		{
 			idchat = "000000";
 		}
-
-
 		try {
 			// Create the Mobile Service Client instance, using the provided
 			// Mobile Service URL and key
@@ -148,15 +146,11 @@ public class ChatActivity extends Activity {
 
 			String connectionString = AZUREPUSHNOTIFHUB_CNXSTRING;
 			hub = new NotificationHub(AZUREPUSHNOTIFHUB_NAME, connectionString, this);
-
 			registerWithNotificationHubs();
 
 		} catch (MalformedURLException e) {
 			createAndShowDialog(new Exception("There was an error creating the Mobile Service. Verify the URL"), "Error");
 		}
-
-
-
 
 		ImageButton boton = (ImageButton)findViewById(R.id.meme);
 		boton.setOnClickListener(new View.OnClickListener() {
@@ -234,6 +228,7 @@ public class ChatActivity extends Activity {
 		{
 			Intent intent = new Intent(ChatActivity.this,BlobActivity.class);
 			intent.putExtra("Option","0");
+			intent.putExtra("idchat", idchat);
 			startActivity(intent);
 
 		}else if (name.equals("recordButton"))
@@ -241,12 +236,16 @@ public class ChatActivity extends Activity {
 
 			Intent intent = new Intent(ChatActivity.this,BlobActivity.class);
 			intent.putExtra("Option", "1");
+			intent.putExtra("idchat", idchat);
+
 			startActivity(intent);
 
 		}else
 		{
 			Intent intent = new Intent(ChatActivity.this,BlobActivity.class);
 			intent.putExtra("Option", "2");
+			intent.putExtra("idchat", idchat);
+
 			startActivity(intent);
 
 		}
