@@ -126,74 +126,50 @@ containing a value of this type.
         public static final int splash=0x7f020042;
         public static final int stop=0x7f020043;
         public static final int user=0x7f020044;
-        public static final int users=0x7f020045;
     }
     public static final class id {
         public static final int LinearLayout1=0x7f0b0003;
-        public static final int action_settings=0x7f0b0040;
+        public static final int action_settings=0x7f0b0029;
         public static final int adjust_height=0x7f0b0000;
         public static final int adjust_width=0x7f0b0001;
-        public static final int attachment=0x7f0b0021;
-        public static final int back=0x7f0b000a;
-        public static final int btAgregarContacto=0x7f0b003b;
-        public static final int btCrearChat=0x7f0b000b;
-        public static final int btCrearChatOk=0x7f0b0031;
-        public static final int btPhotos=0x7f0b003d;
-        public static final int btVerContactos=0x7f0b000e;
-        public static final int btVolverChat=0x7f0b003a;
-        public static final int bubble=0x7f0b0017;
+        public static final int attachment=0x7f0b0017;
+        public static final int back=0x7f0b000f;
+        public static final int bubble=0x7f0b000a;
         public static final int buttonAddChat=0x7f0b0007;
-        public static final int checkcontacto=0x7f0b002a;
-        public static final int clip=0x7f0b001d;
-        public static final int editText=0x7f0b0030;
-        public static final int feedChat=0x7f0b002b;
-        public static final int feedmeme_leftmeme=0x7f0b0038;
-        public static final int feedmeme_rightmeme=0x7f0b0039;
-        public static final int file=0x7f0b0022;
-        public static final int fileButton=0x7f0b0023;
-        public static final int forms_centralfragments_chat_chat_editLayout=0x7f0b001f;
-        public static final int foto=0x7f0b002e;
-        public static final int gallery=0x7f0b000f;
-        public static final int id=0x7f0b0032;
-        public static final int image=0x7f0b002d;
-        public static final int image1=0x7f0b0010;
-        public static final int imageMediaBrowser=0x7f0b0028;
-        public static final int imageView=0x7f0b003e;
-        public static final int imageView2=0x7f0b001b;
-        public static final int imagemaskframe=0x7f0b002c;
-        public static final int linearLayout1=0x7f0b0034;
-        public static final int listViewChat=0x7f0b001e;
-        public static final int listviewcontact=0x7f0b0008;
+        public static final int clip=0x7f0b0014;
+        public static final int fav=0x7f0b0011;
+        public static final int feedChat=0x7f0b001e;
+        public static final int file=0x7f0b0018;
+        public static final int fileButton=0x7f0b0019;
+        public static final int forms_centralfragments_chat_chat_editLayout=0x7f0b0015;
+        public static final int id=0x7f0b001f;
+        public static final int image=0x7f0b0022;
+        public static final int imageView2=0x7f0b0010;
+        public static final int imagemaskframe=0x7f0b0021;
+        public static final int initials=0x7f0b0024;
+        public static final int iv_mask_op=0x7f0b0023;
+        public static final int linearLayout1=0x7f0b0025;
+        public static final int listViewChat=0x7f0b0008;
         public static final int loadingProgressBar=0x7f0b0005;
-        public static final int meme=0x7f0b001c;
-        public static final int memeView_list=0x7f0b003c;
-        public static final int meme_layout=0x7f0b0011;
-        public static final int memecreator_button=0x7f0b0015;
-        public static final int memecreator_image=0x7f0b0012;
-        public static final int memecreator_lowerText=0x7f0b0014;
-        public static final int memecreator_upperText=0x7f0b0013;
-        public static final int menu=0x7f0b000d;
-        public static final int menu_refresh=0x7f0b003f;
-        public static final int message=0x7f0b0036;
-        public static final int name=0x7f0b000c;
-        public static final int nombrechat=0x7f0b0035;
-        public static final int nombrecontacto=0x7f0b002f;
+        public static final int menu=0x7f0b0013;
+        public static final int menu_refresh=0x7f0b0028;
+        public static final int message=0x7f0b0026;
+        public static final int name=0x7f0b0012;
         public static final int none=0x7f0b0002;
-        public static final int notRead=0x7f0b0037;
-        public static final int picture=0x7f0b0026;
-        public static final int pictureButton=0x7f0b0027;
-        public static final int receiver=0x7f0b0033;
-        public static final int record=0x7f0b0024;
-        public static final int recordButton=0x7f0b0025;
-        public static final int relativeLayout1=0x7f0b0009;
-        public static final int status=0x7f0b0019;
-        public static final int textChatItem=0x7f0b0018;
+        public static final int notRead=0x7f0b0027;
+        public static final int picture=0x7f0b001c;
+        public static final int pictureButton=0x7f0b001d;
+        public static final int receiver=0x7f0b0020;
+        public static final int record=0x7f0b001a;
+        public static final int recordButton=0x7f0b001b;
+        public static final int relativeLayout1=0x7f0b000e;
+        public static final int status=0x7f0b000c;
+        public static final int textChatItem=0x7f0b000b;
         public static final int textNewChat=0x7f0b0006;
-        public static final int textUsername=0x7f0b0016;
-        public static final int textView2=0x7f0b0029;
+        public static final int textUsername=0x7f0b0009;
         public static final int textViewTitle=0x7f0b0004;
-        public static final int time=0x7f0b001a;
-        public static final int touch=0x7f0b0020;
+        public static final int time=0x7f0b000d;
+        public static final int touch=0x7f0b0016;
     }
     public static final class integer {
         public static final int google_play_services_version=0x7f090000;
@@ -201,26 +177,16 @@ containing a value of this type.
     public static final class layout {
         public static final int activity_chat=0x7f030000;
         public static final int activity_lista_chat=0x7f030001;
-        public static final int activity_media_browser=0x7f030002;
-        public static final int activity_meme_creator=0x7f030003;
-        public static final int bubble=0x7f030004;
-        public static final int chat=0x7f030005;
-        public static final int contact_select_item=0x7f030006;
-        public static final int contacts_list_item=0x7f030007;
-        public static final int crear_chat=0x7f030008;
-        public static final int feed_chat=0x7f030009;
-        public static final int feed_meme=0x7f03000a;
-        public static final int lista_contactos=0x7f03000b;
-        public static final int meme_view=0x7f03000c;
-        public static final int photoblob_layout=0x7f03000d;
-        public static final int recordblob_layout=0x7f03000e;
-        public static final int row_list_chat=0x7f03000f;
+        public static final int bubble=0x7f030002;
+        public static final int chat=0x7f030003;
+        public static final int feed_chat=0x7f030004;
+        public static final int lista_contactos=0x7f030005;
+        public static final int row_list_chat=0x7f030006;
     }
     public static final class menu {
         public static final int activity_main=0x7f0a0000;
-        public static final int menu_crear_chat=0x7f0a0001;
-        public static final int menu_lista_chat=0x7f0a0002;
-        public static final int menu_lista_contactos=0x7f0a0003;
+        public static final int menu_lista_chat=0x7f0a0001;
+        public static final int menu_lista_contactos=0x7f0a0002;
     }
     public static final class raw {
         public static final int gtm_analytics=0x7f040000;
@@ -262,9 +228,8 @@ containing a value of this type.
         public static final int menu_refresh=0x7f050021;
         public static final int mobile_services=0x7f050022;
         public static final int textchatitem_text=0x7f050023;
-        public static final int title_activity_crear_chat=0x7f050024;
-        public static final int title_activity_lista_chat=0x7f050025;
-        public static final int title_activity_lista_contactos=0x7f050026;
+        public static final int title_activity_lista_chat=0x7f050024;
+        public static final int title_activity_lista_contactos=0x7f050025;
     }
     public static final class style {
         /**  API 11 theme customizations can go here. 
@@ -344,24 +309,5 @@ containing a value of this type.
           @attr name com.mobility42.azurechatr:imageAspectRatioAdjust
         */
         public static final int LoadingImageView_imageAspectRatioAdjust = 0;
-        /** Attributes that can be used with a MyGallery.
-           <p>Includes the following attributes:</p>
-           <table>
-           <colgroup align="left" />
-           <colgroup align="left" />
-           <tr><th>Attribute</th><th>Description</th></tr>
-           <tr><td><code>{@link #MyGallery_android_galleryItemBackground android:galleryItemBackground}</code></td><td></td></tr>
-           </table>
-           @see #MyGallery_android_galleryItemBackground
-         */
-        public static final int[] MyGallery = {
-            0x0101004c
-        };
-        /**
-          <p>This symbol is the offset where the {@link android.R.attr#galleryItemBackground}
-          attribute's value can be found in the {@link #MyGallery} array.
-          @attr name android:galleryItemBackground
-        */
-        public static final int MyGallery_android_galleryItemBackground = 0;
     };
 }

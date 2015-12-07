@@ -11,6 +11,5 @@
     <string name="hello_world">Hello world!</string>
     <string name="action_settings">Settings</string>
     <string name="title_activity_lista_contactos">ListaContactosActivity</string>
-    <string name="title_activity_crear_chat">CrearChatActivity</string>
     
 </resources>

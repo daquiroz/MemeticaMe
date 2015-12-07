@@ -54,7 +54,7 @@
     </LinearLayout>
 
     <ListView
-        android:id="@+id/listviewcontact"
+        android:id="@+id/listViewChat"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:padding="6dip"
@@ -62,4 +62,4 @@
 
     </ListView>
 
-</LinearLayout><!-- From: file:/Users/Dani/Desktop/AppsAndroid/MemeticaMe/app/src/main/res/layout/activity_chat.xml -->
+</LinearLayout><!-- From: file:/Users/Dani/Desktop/AppsAndroid/Memeticame-grupo3/app/src/main/res/layout/activity_chat.xml -->

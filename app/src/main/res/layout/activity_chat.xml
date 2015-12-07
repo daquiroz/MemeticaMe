@@ -54,7 +54,7 @@
     </LinearLayout>
 
     <ListView
-        android:id="@+id/listviewcontact"
+        android:id="@+id/listViewChat"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:padding="6dip"
