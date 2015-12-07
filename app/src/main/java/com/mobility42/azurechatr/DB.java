@@ -14,8 +14,4 @@ public class DB {
 
     public static String idChat;
 
-
-
-
-
 }
