@@ -24,4 +24,8 @@
         android:layout_weight="1"
         android:clickable="true"
         android:onClick="createMeme" />
+<<<<<<< HEAD
 </LinearLayout><!-- From: file:/Users/alberto/App%20Moviles/MemeticaMe/app/src/main/res/layout/feed_meme.xml -->
+=======
+</LinearLayout><!-- From: file:/Users/Dani/Desktop/AppsAndroid/MemeticaMe/app/src/main/res/layout/feed_meme.xml -->
+>>>>>>> origin/master
