@@ -196,4 +196,8 @@
         android:gravity="center"
         android:layout_alignParentTop="false"
         android:layout_marginTop="35dp" />
+<<<<<<< HEAD:app/src/main/res/layout/feed_meme_channel.xml
 </RelativeLayout>
+=======
+</RelativeLayout><!-- From: file:/Users/Dani/Desktop/AppsAndroid/MemeticaMe/app/src/main/res/layout/feed_chat.xml -->
+>>>>>>> Daniela:app/build/intermediates/res/merged/debug/layout/feed_chat.xml

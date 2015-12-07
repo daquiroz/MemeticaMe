@@ -27,4 +27,8 @@ tools:context="com.mobility42.azurechatr.MediaBrowser"
         android:layout_weight="0.11"
         android:layout_gravity="center" />
 
+<<<<<<< HEAD
 </LinearLayout><!-- From: file:/Users/alberto/App%20Moviles/MemeticaMe/app/src/main/res/layout/activity_media_browser.xml -->
+=======
+</LinearLayout><!-- From: file:/Users/Dani/Desktop/AppsAndroid/MemeticaMe/app/src/main/res/layout/activity_media_browser.xml -->
+>>>>>>> master

@@ -110,22 +110,17 @@ public class ListaChatActivity extends Activity {
                 startActivity(intent);
             }
         });
-
     }
-
 
     private synchronized void refreshItemsFromTable() {
 
         // Get all the chat items and add them in the adapter
         chatTable.execute(new TableQueryCallback<Chat>() {
-
             public void onCompleted(List<Chat> result, int count, Exception exception, ServiceFilterResponse response) {
                 if (exception == null) {
                     listaChat.clear();
-
                     List<Chat> listatotal = result;
                     result = filtrarChat(result);
-
                     for (Chat item : result) {
                         Chat c = new Chat(item.getNamechat(), item.getIdcreador(), item.getIdcontact(), item.getIdchat(), item.getFecha());
                         if(item.getNamechat() == null)
@@ -140,11 +135,9 @@ public class ListaChatActivity extends Activity {
                         //String nombrechat = nombreChat(c.getIdchat(), result);
                         //if (nombrechat != "") {
                            //     c.setNamechat(nombrechat);
-
                             //}
                         }
                     }
-
 //                    for (Chat item : result) {
 //                        Chat c = new Chat(item.getNamechat(), item.getIdcreador(), item.getIdcontact(), item.getIdchat(), item.getFecha());
 //                        //Metodo que filtra si es un chat en donde estoy
@@ -157,19 +150,10 @@ public class ListaChatActivity extends Activity {
 //                            }
 //                        }
 //                    }
-
                     chatAdapter.notifyDataSetChanged();
                     listviewchat.setAdapter(chatAdapter);
-
-
-
-
-
             }
         });
-
-
-
     }
 
     private List<Chat> filtrarChat(List<Chat> result) {
@@ -184,14 +168,12 @@ public class ListaChatActivity extends Activity {
         }
         return lista;
     }
-
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
         // Inflate the menu; this adds items to the action bar if it is present.
         getMenuInflater().inflate(R.menu.menu_lista_chat, menu);
         return true;
     }
-
     @Override
     public boolean onOptionsItemSelected(MenuItem item) {
         // Handle action bar item clicks here. The action bar will
@@ -204,7 +186,6 @@ public class ListaChatActivity extends Activity {
         }
         return super.onOptionsItemSelected(item);
     }
-
     public boolean pertenezcoAlChat(Chat chat, String miId)
     {
         if (chat.getIdcontact().equals(miId))
@@ -213,11 +194,8 @@ public class ListaChatActivity extends Activity {
         }
         return false;
     }
-
-
     //Busco el chat con cierto id, tal que si es el chat que tengo con una persona me retorne el id de esa persona.
     // En caso que no exista retornara "".
-
     public String nombreChat(String idchat, List<Chat> listadechat)
     {
         for (Chat chat : listadechat)
@@ -227,16 +205,10 @@ public class ListaChatActivity extends Activity {
                 return chat.getIdcontact();
                  //   String enviar = BuscarNombre(chat.getIdcontact());
                  //   return enviar;
-
             }
         }
-
         return "";
-
     }
-
-
-
     private String BuscarNombre(String idcontact) {
 
         for (Contact c : db.listaC)
@@ -246,10 +218,5 @@ public class ListaChatActivity extends Activity {
         }
         return null;
     }
-
-
-
-
-
 
 }
