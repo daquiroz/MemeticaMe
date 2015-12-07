@@ -3,17 +3,11 @@ package com.mobility42.azurechatr;
 import android.annotation.TargetApi;
 import android.app.Activity;
 import android.content.Context;
-import android.graphics.Color;
-import android.graphics.PorterDuff;
 import android.os.Build;
-import android.view.Gravity;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.BaseAdapter;
-import android.widget.ImageView;
-import android.widget.LinearLayout;
-import android.widget.RelativeLayout;
 import android.widget.TextView;
 
 import java.util.ArrayList;
@@ -28,7 +22,7 @@ public class MemeChannelAdapter extends BaseAdapter {
 	private final Context context;
 
 	// the context is needed to inflate views in getView()
-	public MemeChannelAdapter(Context context, ArrayList<FeedChat> items) {
+	public MemeChannelAdapter(Context context, ArrayList<Meme> items) {
 		this.context = context;
 		this.items = items;
 	}
@@ -41,7 +35,7 @@ public class MemeChannelAdapter extends BaseAdapter {
 	// getItem(int) in Adapter returns Object but we can override
 	// it to BananaPhone thanks to Java return type covariance
 	@Override
-	public FeedChat getItem(int position) {
+	public Meme getItem(int position) {
 		return items.get(position);
 	}
 
@@ -59,105 +53,26 @@ public class MemeChannelAdapter extends BaseAdapter {
 	public View getView(int position, View convertView, ViewGroup parent) {
 		View row = convertView;
 
-		final FeedChat currentItem = getItem(position);
+		final Meme currentItem = getItem(position);
 
 		if (row == null) {
 			LayoutInflater inflater = ((Activity) context).getLayoutInflater();
-			row = inflater.inflate(R.layout.bubble, parent, false);
+			row = inflater.inflate(R.layout.feed_meme_channel, parent, false);
 		}
 
 		row.setTag(currentItem);
-		final TextView userName = (TextView) row.findViewById(R.id.textUsername);
+		final TextView categoria = (TextView) row.findViewById(R.id.categoria);
 
-		final TextView text = (TextView) row.findViewById(R.id.textChatItem);
+		final TextView ranking = (TextView) row.findViewById(R.id.ranking);
 
-		final TextView time = (TextView) row.findViewById(R.id.time);
+		final TextView etiquetas = (TextView) row.findViewById(R.id.etiquetas);
 
-		time.setText(currentItem.getTimeStamp());
+		categoria.setText(currentItem.getCategoria());
 
-		userName.setText(currentItem.getUserName());
+		ranking.setText(currentItem.getRanking());
 
-		text.setText(currentItem.getText());
-		text.setEnabled(true);
-		//time.setText(currentItem.getTimeStamp().toString());
-		userName.setVisibility(userName.GONE);
-		final RelativeLayout bubble = (RelativeLayout) row.findViewById(R.id.bubble);
-
-		if(!currentItem.isTheDeviceUser())
-		{
-			ImageView status = (ImageView)row.findViewById(R.id.status);
-			status.setVisibility(status.GONE);
-			((LinearLayout)row).setGravity(Gravity.LEFT);
-			//username.Visibility = ViewStates.Visible;
-			bubble.setBackgroundResource(R.drawable.bubble_yellow);
-			if(position>1)
-
-				if(!getItem (position- 1).isTheDeviceUser()){
-
-					//username.Visibility = ViewStates.Gone;
-					bubble.setBackgroundResource(R.drawable.bubble_orange);
-
-				}
-		}
-		else
-		{
-			ImageView status = (ImageView)row.findViewById(R.id.status);
-			status.setVisibility(status.VISIBLE);
-			if (currentItem.getStatus().equals("waiting")) {
-				status.setImageResource(R.drawable.clock);
-				status.setColorFilter(Color.WHITE, PorterDuff.Mode.SRC_ATOP);
-			} else if (currentItem.getStatus().equals("sending")){
-				status.setImageResource(R.drawable.checkmark);
-				status.setColorFilter(Color.WHITE, PorterDuff.Mode.SRC_ATOP);
-			} else if (currentItem.getStatus().equals ("sent")) {
-				status.setImageResource(R.drawable.checkmark);
-				status.setColorFilter(Color.GREEN,PorterDuff.Mode.SRC_ATOP);
-
-			}
-			((LinearLayout)row).setGravity(Gravity.RIGHT);
-
-			//username.Visibility = ViewStates.Visible;
-
-			bubble.setBackgroundResource(R.drawable.bubble_green);
-
-			if(position>1)
-
-				if(getItem (position- 1).isTheDeviceUser()){
-
-					//username.Visibility = ViewStates.Gone;
-					bubble.setBackgroundResource(R.drawable.bubble_blue);
-
-				}
-		}
-
+		etiquetas.setText(currentItem.getEtiquetas());
 		return row;
-	}
-
-	public void updateStatus() {
-
-		for (int i = 0; i < getCount(); i++) {
-			if (items.get(i).getStatus().equals("sending")) {
-				items.get(i).setStatus("sent");
-			}
-		}
-
-
-
-
-
-	}
-
-	public void updateToSending() {
-
-		for (int i = 0; i < getCount(); i++) {
-			if (items.get(i).getStatus().equals("waiting")) {
-				items.get(i).setStatus("sending");
-			}
-		}
-
-
-
-
 	}
 
 }

@@ -126,7 +126,7 @@
 
             <TextView
                 android:text="4.5"
-                android:id="@+id/promedio"
+                android:id="@+id/ranking"
                 android:textSize="17dp"
                 android:textStyle="bold"
                 android:singleLine="true"
@@ -196,8 +196,4 @@
         android:gravity="center"
         android:layout_alignParentTop="false"
         android:layout_marginTop="35dp" />
-<<<<<<< HEAD:app/src/main/res/layout/feed_meme_channel.xml
 </RelativeLayout>
-=======
-</RelativeLayout><!-- From: file:/Users/Dani/Desktop/AppsAndroid/MemeticaMe/app/src/main/res/layout/feed_chat.xml -->
->>>>>>> Daniela:app/build/intermediates/res/merged/debug/layout/feed_chat.xml
