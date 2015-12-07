@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="74.76dp"
+    android:descendantFocusability="blocksDescendants"
+    android:id="@+id/feedChat">
+
+    <FrameLayout
+        android:id="@+id/imagemaskframe"
+        android:layout_width="73dp"
+        android:layout_height="73dp">
+        <ImageView
+            android:layout_width="73dp"
+            android:layout_height="73dp"
+            android:src="@drawable/ic_circulo"
+            android:id="@+id/image"
+            android:cropToPadding="false"
+            android:scaleType="centerCrop"
+            android:padding="5dp" />
+
+        <TextView
+            android:text="AL"
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:id="@+id/foto"
+            android:textColor="#ffffffff"
+            android:gravity="center" />
+
+    </FrameLayout>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:text="nombre"
+        android:id="@+id/nombrecontacto"
+        android:layout_centerVertical="true"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true"
+        android:layout_toRightOf="@+id/imagemaskframe"
+        android:layout_toEndOf="@+id/imagemaskframe" />
+</RelativeLayout><!-- From: file:/Users/Dani/Desktop/AppsAndroid/MemeticaMe/app/src/main/res/layout/contacts_list_item.xml -->

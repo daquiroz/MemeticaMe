@@ -1,0 +1,10 @@
+﻿<shape xmlns:android="http://schemas.android.com/apk/res/android"
+android:shape="rectangle">
+      <solid
+          android:color="#FFFFFF" />  
+      <corners android:bottomRightRadius="8dip"
+    android:bottomLeftRadius="8dip"  
+    android:topRightRadius="8dip"
+    android:topLeftRadius="8dip"/> 
+    </shape>
+<!-- From: file:/Users/Dani/Desktop/AppsAndroid/MemeticaMe/app/src/main/res/drawable-xhdpi/field.xml -->
