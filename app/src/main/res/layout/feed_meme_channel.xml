@@ -16,17 +16,16 @@
         android:id="@+id/receiver" />
     <FrameLayout
         android:id="@+id/imagemaskframe"
-        android:layout_width="73dp"
-        android:layout_height="73dp">
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content">
         <ImageView
-            android:layout_width="50dp"
-            android:layout_height="50dp"
-            android:src="@drawable/user"
-            android:id="@+id/image"
+            android:layout_width="fill_parent"
+            android:layout_height="280dp"
+            android:id="@+id/meme_photo"
             android:cropToPadding="false"
-            android:scaleType="centerCrop"
-            android:padding="5dp"
-            android:layout_gravity="center" />
+            android:scaleType="fitCenter"
+            android:src="@drawable/meme"
+            android:background="#000000" />
 
     </FrameLayout>
     <LinearLayout
@@ -34,33 +33,144 @@
         android:minWidth="25px"
         android:minHeight="25px"
         android:layout_width="wrap_content"
-        android:layout_height="4000dp"
-        android:id="@+id/linearLayout1">
-        <TextView
-            android:text="Alberto León Salinas"
-            android:id="@+id/nombrechat"
-            android:textSize="17dp"
-            android:textStyle="bold"
-            android:textColor="#ff000000"
-            android:singleLine="true"
+        android:layout_height="wrap_content"
+        android:id="@+id/linearLayout1"
+        android:layout_below="@+id/imagemaskframe"
+        android:divider="#9b9b9b">
+
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <ImageView
+                android:layout_width="48dip"
+                android:layout_height="48dip"
+                android:src="@drawable/star"
+                android:id="@+id/star1"
+                android:cropToPadding="false"
+                android:scaleType="fitCenter"
+                android:layout_marginLeft="10dp"
+                android:padding="10dp" />
+
+            <ImageView
+                android:layout_width="48dp"
+                android:layout_height="48dp"
+                android:src="@drawable/star"
+                android:id="@+id/star2"
+                android:cropToPadding="false"
+                android:scaleType="fitCenter"
+                android:padding="10dp" />
+
+            <ImageView
+                android:layout_width="48dp"
+                android:layout_height="48dp"
+                android:src="@drawable/star"
+                android:id="@+id/star3"
+                android:cropToPadding="false"
+                android:scaleType="fitCenter"
+                android:padding="10dp" />
+
+            <ImageView
+                android:layout_width="48dp"
+                android:layout_height="48dp"
+                android:src="@drawable/star"
+                android:id="@+id/star4"
+                android:cropToPadding="false"
+                android:scaleType="fitCenter"
+                android:padding="10dp" />
+
+            <ImageView
+                android:layout_width="48dp"
+                android:layout_height="48dp"
+                android:src="@drawable/star"
+                android:id="@+id/star5"
+                android:cropToPadding="false"
+                android:scaleType="fitCenter"
+                android:padding="10dp" />
+
+            <ImageView
+                android:layout_width="48dip"
+                android:layout_height="48dip"
+                android:src="@drawable/download"
+                android:id="@+id/download"
+                android:cropToPadding="false"
+                android:scaleType="fitCenter"
+                android:padding="10dp"
+                android:layout_weight="1" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="0.1dip"
+            android:layout_gravity="center_horizontal"
+            android:background="#888888"
+            android:layout_marginBottom="10dp"></LinearLayout>
+
+        <LinearLayout
+            android:orientation="horizontal"
             android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginLeft="75dp"
-            android:layout_marginRight="10dp"
-            android:layout_marginTop="7dp" />
+            android:layout_height="match_parent" >
+
+            <ImageView
+                android:layout_width="25dp"
+                android:layout_height="31dp"
+                android:src="@drawable/star_filled"
+                android:id="@+id/imageView4"
+                android:cropToPadding="false"
+                android:scaleType="fitCenter"
+                android:layout_marginLeft="20dp"
+                android:padding="3dp" />
+
+            <TextView
+                android:text="4.5"
+                android:id="@+id/ranking"
+                android:textSize="17dp"
+                android:textStyle="bold"
+                android:singleLine="true"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="6dp"
+                android:textColor="#6290da"
+                android:layout_gravity="center_vertical" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:text="Categoría"
+                android:id="@+id/categoria"
+                android:textSize="17dp"
+                android:textStyle="bold"
+                android:textColor="#ff000000"
+                android:singleLine="true"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="left|center_vertical|right"
+                android:layout_marginLeft="20dp" />
+
+        </LinearLayout>
+
         <TextView
-            android:text="Muy buenos consejos los que me diste la otra vez me tinca que no sera lo mismo para la proxiam no te parece mejor esta froma"
-            android:id="@+id/message"
+            android:text="cdsajkdljasklclkcmdklsnvksdajnvñjadnsvkñjnsavkjnadksjvnweñjvndksñnvuwenvñkdsnvouw"
+            android:id="@+id/etiquetas"
             android:textSize="16dp"
             android:textStyle="normal"
             android:textColor="#999999"
             android:textIsSelectable="false"
-            android:lines="2"
             android:ellipsize="end"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginLeft="75dp"
-            android:layout_marginRight="48dp" />
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
+            android:layout_marginBottom="20dp"
+            android:layout_marginTop="3dp" />
+
     </LinearLayout>
     <TextView
         android:id="@+id/time"
@@ -86,8 +196,4 @@
         android:gravity="center"
         android:layout_alignParentTop="false"
         android:layout_marginTop="35dp" />
-<<<<<<< HEAD:app/src/main/res/layout/feed_meme_channel.xml
 </RelativeLayout>
-=======
-</RelativeLayout><!-- From: file:/Users/Dani/Desktop/AppsAndroid/MemeticaMe/app/src/main/res/layout/feed_chat.xml -->
->>>>>>> Daniela:app/build/intermediates/res/merged/debug/layout/feed_chat.xml

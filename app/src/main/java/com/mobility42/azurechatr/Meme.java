@@ -8,12 +8,12 @@ public class Meme {
     @com.google.gson.annotations.SerializedName("url")
     private String url;
 
-    public int getLikes() {
-        return likes;
+    public String getRanking() {
+        return ranking;
     }
 
-    public void setLikes(int likes) {
-        this.likes = likes;
+    public void setRanking(int likes) {
+        this.ranking = ranking;
     }
 
     public String getUrl() {
@@ -41,14 +41,11 @@ public class Meme {
     }
 
     @com.google.gson.annotations.SerializedName("likes")
-    private int likes;
+    private String ranking;
 
     @com.google.gson.annotations.SerializedName("etiquetas")
     private String etiquetas;
 
     @com.google.gson.annotations.SerializedName("categoria")
     private String categoria;
-
-
-
 }
