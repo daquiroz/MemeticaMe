@@ -5,8 +5,8 @@ package com.mobility42.azurechatr;
  */
 public class Meme {
 
-    @com.google.gson.annotations.SerializedName("url")
-    private String url;
+
+
 
     public String getRanking() {
         return ranking;
@@ -40,7 +40,17 @@ public class Meme {
         this.categoria = categoria;
     }
 
-    @com.google.gson.annotations.SerializedName("likes")
+    public Meme(String url, String ranking, String etiquetas, String categoria) {
+        this.url = url;
+        this.ranking = ranking;
+        this.etiquetas = etiquetas;
+        this.categoria = categoria;
+    }
+
+    @com.google.gson.annotations.SerializedName("url")
+    private String url;
+
+    @com.google.gson.annotations.SerializedName("ranking")
     private String ranking;
 
     @com.google.gson.annotations.SerializedName("etiquetas")
