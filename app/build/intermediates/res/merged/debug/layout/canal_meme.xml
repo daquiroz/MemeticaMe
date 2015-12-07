@@ -65,7 +65,7 @@
         android:layout_height="match_parent"></LinearLayout>
 
     <ListView
-        android:id="@+id/listviewcontact"
+        android:id="@+id/listviewMemes"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:layout_alignParentTop="true"
@@ -78,4 +78,4 @@
         android:paddingBottom="10dp"
         android:choiceMode="singleChoice" />
 
-</RelativeLayout><!-- From: file:/Users/alberto/App%20Moviles/MemeticaMe/app/src/main/res/layout/lista_contactos.xml -->
+</RelativeLayout><!-- From: file:/Users/alberto/App%20Moviles/MemeticaMe/app/src/main/res/layout/canal_meme.xml -->
