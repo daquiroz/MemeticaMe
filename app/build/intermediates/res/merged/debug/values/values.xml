@@ -13,7 +13,16 @@
     <color name="common_signin_btn_light_text_focused">#FF737373</color>
     <color name="common_signin_btn_light_text_pressed">@android:color/white</color>
     <declare-styleable name="LoadingImageView"><attr format="enum" name="imageAspectRatioAdjust"><enum name="none" value="0"/><enum name="adjust_width" value="1"/><enum name="adjust_height" value="2"/></attr><attr format="float" name="imageAspectRatio"/><attr format="boolean" name="circleCrop"/></declare-styleable>
+<<<<<<< HEAD
     <!-- From: file:/Users/Dani/Desktop/AppsAndroid/Memeticame-grupo3/app/src/main/res/values/dimens.xml -->
+=======
+    <declare-styleable name="MyGallery"><attr name="android:galleryItemBackground"/></declare-styleable>
+<<<<<<< HEAD
+    <!-- From: file:/Users/alberto/App%20Moviles/MemeticaMe/app/src/main/res/values/dimens.xml -->
+=======
+    <!-- From: file:/Users/Dani/Desktop/AppsAndroid/MemeticaMe/app/src/main/res/values/dimens.xml -->
+>>>>>>> origin/master
+>>>>>>> origin/master
     <eat-comment/>
     <dimen name="activity_horizontal_margin">16dp</dimen>
     <dimen name="activity_vertical_margin">16dp</dimen>
