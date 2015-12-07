@@ -15,11 +15,14 @@
         android:background="#6290DA">
         <ImageButton
             android:src="@drawable/back"
-            android:layout_width="78dp"
+            android:layout_width="40dp"
             android:layout_height="48dp"
             android:id="@+id/back"
             android:background="@drawable/menubutton"
-            android:paddingRight="38dp" />
+            android:padding="12dp"
+            android:paddingTop="10dp"
+            android:paddingBottom="10dp"
+            android:scaleType="fitCenter" />
 
         <ImageButton
             android:id="@+id/menu"
@@ -76,11 +79,9 @@
             android:src="@drawable/checkmark"
             android:onClick="addItem"
             android:background="@drawable/button"
-            android:tint="#ffffffff" />
+            android:tint="#ffffffff"
+            android:padding="12dp"
+            android:scaleType="fitCenter" />
     </LinearLayout>
 
-<<<<<<< HEAD
 </RelativeLayout><!-- From: file:/Users/alberto/App%20Moviles/MemeticaMe/app/src/main/res/layout/crear_chat.xml -->
-=======
-</RelativeLayout><!-- From: file:/Users/Dani/Desktop/AppsAndroid/MemeticaMe/app/src/main/res/layout/crear_chat.xml -->
->>>>>>> master

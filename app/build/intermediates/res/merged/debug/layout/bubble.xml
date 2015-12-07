@@ -31,12 +31,14 @@
         <ImageView
             android:src="@drawable/clock"
             android:id="@+id/status"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+            android:layout_width="12dp"
+            android:layout_height="12dp"
             android:tint="#ffffffff"
             android:layout_toRightOf="@+id/time"
-            android:layout_marginTop="2dp"
-            android:layout_below="@+id/textChatItem"/>
+            android:layout_marginTop="3dp"
+            android:layout_below="@+id/textChatItem"
+            android:scaleType="fitCenter"
+            android:layout_alignParentEnd="false" />
         <TextView
             android:text="19:00"
             android:textAppearance="?android:attr/textAppearanceSmall"
@@ -53,8 +55,4 @@
             android:layout_alignRight="@+id/textChatItem"
             android:minHeight="4dp" />
     </RelativeLayout>
-<<<<<<< HEAD
 </LinearLayout><!-- From: file:/Users/alberto/App%20Moviles/MemeticaMe/app/src/main/res/layout/bubble.xml -->
-=======
-</LinearLayout><!-- From: file:/Users/Dani/Desktop/AppsAndroid/MemeticaMe/app/src/main/res/layout/bubble.xml -->
->>>>>>> master

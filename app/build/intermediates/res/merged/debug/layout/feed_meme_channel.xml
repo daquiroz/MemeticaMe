@@ -126,7 +126,7 @@
 
             <TextView
                 android:text="4.5"
-                android:id="@+id/promedio"
+                android:id="@+id/ranking"
                 android:textSize="17dp"
                 android:textStyle="bold"
                 android:singleLine="true"

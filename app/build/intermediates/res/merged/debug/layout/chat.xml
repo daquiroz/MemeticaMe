@@ -15,11 +15,14 @@
         android:background="#6290DA">
         <ImageButton
             android:src="@drawable/back"
-            android:layout_width="78dp"
+            android:layout_width="40dp"
             android:layout_height="48dp"
             android:id="@+id/back"
             android:background="@drawable/menubutton"
-            android:paddingRight="38dp" />
+            android:paddingRight="30dp"
+            android:padding="12dp"
+            android:paddingLeft="10dp"
+            android:scaleType="fitCenter" />
         <ImageView
             android:src="@drawable/user"
             android:layout_width="48dp"
@@ -27,18 +30,22 @@
             android:id="@+id/imageView2"
             android:layout_marginLeft="30dp"
             android:scaleType="centerInside"
-            android:tint="#ffffffff" />
+            android:tint="#ffffffff"
+            android:paddingTop="12dp"
+            android:paddingBottom="12dp" />
         <ImageButton
-            android:src="@drawable/ic_favoritos"
+            android:src="@drawable/dog"
             android:layout_width="48dp"
             android:layout_height="48dp"
             android:id="@+id/meme"
             android:layout_alignParentRight="true"
             android:tint="#ffffffff"
-            android:padding="7dp"
+            android:padding="10dp"
             android:scaleType="fitCenter"
             android:background="@drawable/menubutton"
-            android:layout_marginRight="40dp" />
+            android:layout_marginRight="40dp"
+            android:paddingTop="12dp"
+            android:paddingBottom="12dp" />
         <TextView
             android:textAppearance="?android:attr/textAppearanceMedium"
             android:layout_width="match_parent"
@@ -122,7 +129,9 @@
             android:src="@drawable/send"
             android:onClick="addItem"
             android:background="@drawable/button"
-            android:tint="#ffffffff" />
+            android:tint="#ffffffff"
+            android:padding="12dp"
+            android:scaleType="fitCenter" />
     </LinearLayout>
     <ImageView
         android:src="@null"
@@ -233,8 +242,4 @@
         </LinearLayout>
     </LinearLayout>
 
-<<<<<<< HEAD
 </RelativeLayout><!-- From: file:/Users/alberto/App%20Moviles/MemeticaMe/app/src/main/res/layout/chat.xml -->
-=======
-</RelativeLayout><!-- From: file:/Users/Dani/Desktop/AppsAndroid/MemeticaMe/app/src/main/res/layout/chat.xml -->
->>>>>>> master
