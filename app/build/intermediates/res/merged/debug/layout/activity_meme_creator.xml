@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools" android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="com.mobility42.azurechatr.MemeViewer.MemeCreator"
+    android:background="#e9e9e9">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_gravity="center_horizontal"
+        android:layout_weight="10"
+        android:background="#000000"
+        android:id="@+id/meme_layout">
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:id="@+id/memecreator_image"
+            android:layout_centerVertical="true"
+            android:layout_centerHorizontal="true"
+            android:src="@drawable/splash"
+            android:adjustViewBounds="true"
+            android:clickable="true" />
+
+        <EditText
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/memecreator_upperText"
+            android:layout_alignTop="@+id/memecreator_image"
+            android:layout_centerHorizontal="true"
+            android:text="TEXTO 1"
+            android:textColor="#ffffff"
+            android:textSize="30dp"
+            android:textStyle="bold" />
+
+        <EditText
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/memecreator_lowerText"
+            android:layout_alignBottom="@+id/memecreator_image"
+            android:layout_centerHorizontal="true"
+            android:text="TEXTO 2"
+            android:foreground="#ffffff"
+            android:textColor="#ffffff"
+            android:textSize="30dp"
+            android:textStyle="bold"
+            android:textColorLink="#00ffffff" />
+    </RelativeLayout>
+
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="DONE!"
+        android:id="@+id/memecreator_button"
+        android:layout_gravity="center"
+        android:singleLine="false"
+        android:background="#6d6d6d"
+        android:gravity="center"
+        android:layout_weight="1"
+        android:textStyle="bold"
+        android:textAlignment="gravity"
+        android:foreground="#ffffff"
+        android:textColor="#ffffff"
+        android:onClick="click"
+        android:clickable="true"
+        android:focusable="true"
+        android:focusableInTouchMode="true" />
+
+</LinearLayout>
+<!-- From: file:/Users/Dani/Desktop/AppsAndroid/Memeticame-grupo3/app/src/main/res/layout/activity_meme_creator.xml -->

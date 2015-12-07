@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent" android:layout_height="match_parent">
+
+    <CheckBox
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="nombrecontacto"
+        android:id="@+id/checkcontacto"
+        android:checked="false"
+        android:focusable="false"
+        android:clickable="false"/>
+</LinearLayout>
+<!-- From: file:/Users/Dani/Desktop/AppsAndroid/Memeticame-grupo3/app/src/main/res/layout/contact_select_item.xml -->
