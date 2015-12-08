@@ -12,7 +12,6 @@
     <string name="action_settings">Settings</string>
     <string name="title_activity_lista_contactos">ListaContactosActivity</string>
     <string name="title_activity_crear_chat">CrearChatActivity</string>
-<<<<<<< HEAD
 
     <string name="start_new">New</string>
     <string name="brush">Brush</string>
@@ -36,8 +35,7 @@
         <item>Times New Roman</item>
         <item>Verdana</item>
     </string-array>
-=======
+
     <string name="title_activity_recorder">Recorder</string>
->>>>>>> 0a238b8b2ab6478a412dd08e9c83dce7dd67af48
     
 </resources>
