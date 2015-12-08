@@ -15,6 +15,7 @@
         android:background="#6290DA">
         <ImageButton
             android:src="@drawable/back"
+<<<<<<< HEAD
             android:layout_width="40dp"
             android:layout_height="48dp"
             android:id="@+id/back"
@@ -23,6 +24,13 @@
             android:paddingTop="10dp"
             android:paddingBottom="10dp"
             android:scaleType="fitCenter" />
+=======
+            android:layout_width="78dp"
+            android:layout_height="48dp"
+            android:id="@+id/back"
+            android:background="@drawable/menubutton"
+            android:paddingRight="38dp" />
+>>>>>>> FelipeBranch
 
         <ImageButton
             android:id="@+id/menu"
@@ -79,9 +87,16 @@
             android:src="@drawable/checkmark"
             android:onClick="addItem"
             android:background="@drawable/button"
+<<<<<<< HEAD
             android:tint="#ffffffff"
             android:padding="12dp"
             android:scaleType="fitCenter" />
     </LinearLayout>
 
 </RelativeLayout><!-- From: file:/Users/alberto/App%20Moviles/MemeticaMe/app/src/main/res/layout/crear_chat.xml -->
+=======
+            android:tint="#ffffffff" />
+    </LinearLayout>
+
+</RelativeLayout><!-- From: file:/Users/Felipe/Desktop/MemeticaMe/app/src/main/res/layout/crear_chat.xml -->
+>>>>>>> FelipeBranch

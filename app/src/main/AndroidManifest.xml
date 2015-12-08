@@ -21,11 +21,11 @@
     <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
     <uses-permission android:name="android.permission.READ_PHONE_STATE" />
     <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
-    <uses-permission android:name="android.permission.WRITE_CONTACTS"/>
-    <uses-permission android:name="android.permission.READ_CONTACTS"/>
+    <uses-permission android:name="android.permission.WRITE_CONTACTS" />
+    <uses-permission android:name="android.permission.READ_CONTACTS" />
     <uses-permission android:name="android.permission.RECORD_AUDIO" />
-    <uses-permission android:name="android.permission.GET_ACCOUNTS" />
-
+    
+    <uses-permission android:name="android.permission.GET_ACCOUNTS" />
 
     <application
         android:allowBackup="true"
@@ -34,8 +34,8 @@
         android:theme="@android:style/Theme.Holo.Light.NoActionBar" >
         <activity
             android:name=".ChatActivity"
-            android:label="@string/app_name"
-            android:configChanges="orientation|screenSize">
+            android:configChanges="orientation|screenSize"
+            android:label="@string/app_name" >
         </activity>
 
         <receiver
@@ -50,8 +50,8 @@
 
         <activity
             android:name=".ListaChatActivity"
-            android:label="@string/title_activity_lista_chat"
-            android:configChanges="orientation|screenSize">
+            android:configChanges="orientation|screenSize"
+            android:label="@string/title_activity_lista_chat" >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
@@ -60,33 +60,37 @@
         </activity>
         <activity
             android:name=".ListaContactosActivity"
-            android:label="@string/title_activity_lista_contactos"
-            android:configChanges="orientation|screenSize">
+            android:configChanges="orientation|screenSize"
+            android:label="@string/title_activity_lista_contactos" >
         </activity>
         <activity
             android:name=".CrearChatActivity"
-            android:label="@string/title_activity_crear_chat"
-            android:configChanges="orientation|screenSize">
+            android:configChanges="orientation|screenSize"
+            android:label="@string/title_activity_crear_chat" >
         </activity>
         <activity
             android:name=".MemeViewer.MemeViewerActivity"
-            android:label="@string/title_activity_crear_chat"
-            android:configChanges="orientation|screenSize">
+            android:configChanges="orientation|screenSize"
+            android:label="@string/title_activity_crear_chat" >
         </activity>
         <activity
             android:name=".MemeViewer.MemeCreator"
-            android:label="@string/title_activity_crear_chat"
-            android:configChanges="orientation|screenSize">
+            android:configChanges="orientation|screenSize"
+            android:label="@string/title_activity_crear_chat" >
         </activity>
         <activity
             android:name=".MediaBrowser"
-            android:label="@string/title_activity_crear_chat"
-            android:configChanges="orientation|screenSize">
+            android:configChanges="orientation|screenSize"
+            android:label="@string/title_activity_crear_chat" >
         </activity>
         <activity
             android:name=".BlobActivity"
-            android:label="@string/title_activity_crear_chat"
-            android:configChanges="orientation|screenSize">
+            android:configChanges="orientation|screenSize"
+            android:label="@string/title_activity_crear_chat" >
+        </activity>
+        <activity
+            android:name=".Recorder"
+            android:label="@string/title_activity_recorder" >
         </activity>
     </application>
 

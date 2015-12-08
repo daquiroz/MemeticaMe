@@ -88,6 +88,13 @@
             android:configChanges="orientation|screenSize"
             android:label="@string/title_activity_crear_chat" >
         </activity>
+<<<<<<< HEAD
+=======
+        <activity
+            android:name="com.mobility42.azurechatr.Recorder"
+            android:label="@string/title_activity_recorder" >
+        </activity>
+>>>>>>> FelipeBranch
 
         <meta-data
             android:name="com.google.android.gms.version"

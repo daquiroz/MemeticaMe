@@ -11,4 +11,8 @@
         android:focusable="false"
         android:clickable="false"/>
 </LinearLayout>
+<<<<<<< HEAD
 <!-- From: file:/Users/alberto/App%20Moviles/MemeticaMe/app/src/main/res/layout/contact_select_item.xml -->
+=======
+<!-- From: file:/Users/Felipe/Desktop/MemeticaMe/app/src/main/res/layout/contact_select_item.xml -->
+>>>>>>> FelipeBranch

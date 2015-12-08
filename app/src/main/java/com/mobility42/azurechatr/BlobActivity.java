@@ -21,7 +21,11 @@ public class BlobActivity extends Activity {
     private int PICK_IMAGE_REQUEST = 1;
     File filesDir;
     int Option;
+<<<<<<< HEAD
     String idchat;
+=======
+    String idchat = "";
+>>>>>>> FelipeBranch
 
 
     @Override
@@ -29,13 +33,23 @@ public class BlobActivity extends Activity {
         super.onCreate(savedInstanceState);
         filesDir = this.getCacheDir();
         Option =Integer.parseInt(getIntent().getStringExtra("Option"));
+<<<<<<< HEAD
         idchat = getIntent().getStringExtra("idchat");
+=======
+        idchat =getIntent().getStringExtra("idchat");
+        Toast.makeText(this, "id adquirido!!!! --->" + idchat, Toast.LENGTH_SHORT).show();
+
+
+>>>>>>> FelipeBranch
         if (Option == 0)
         {
             setContentView(R.layout.photoblob_layout);
         }else if (Option ==1)
         {
-            setContentView(R.layout.recordblob_layout);
+            setContentView(R.layout.activity_recorder);
+
+
+
         }else if (Option ==2)
         {
 
@@ -71,14 +85,14 @@ public class BlobActivity extends Activity {
                 imageView.setImageBitmap(bitmap);
 
 
-               final PictureBlob PB = new PictureBlob(persistImage(bitmap,"IMAGEEEEEEEEEN"),0,this);
+               final PictureBlob PB = new PictureBlob(persistImage(bitmap,"IMAGEEEEEEEEEN"),0,this,idchat);
                 PB.execute();
 
                 Intent intent = new Intent(BlobActivity.this, ChatActivity.class);
                 intent.putExtra("idchat",idchat);
                 intent.putExtra("Option", "0");
+                intent.putExtra("idchat", idchat);
                 startActivity(intent);
-
 
             } catch (IOException e) {
                 e.printStackTrace();

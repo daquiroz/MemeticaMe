@@ -86,4 +86,8 @@
         android:gravity="center"
         android:layout_alignParentTop="false"
         android:layout_marginTop="35dp" />
+<<<<<<< HEAD
 </RelativeLayout><!-- From: file:/Users/alberto/App%20Moviles/MemeticaMe/app/src/main/res/layout/feed_chat.xml -->
+=======
+</RelativeLayout><!-- From: file:/Users/Felipe/Desktop/MemeticaMe/app/src/main/res/layout/feed_chat.xml -->
+>>>>>>> FelipeBranch

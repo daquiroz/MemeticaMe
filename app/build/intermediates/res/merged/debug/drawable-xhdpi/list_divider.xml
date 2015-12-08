@@ -1,0 +1,13 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<inset xmlns:android="http://schemas.android.com/apk/res/android"
+    android:insetLeft="73dp"
+    android:insetRight="10dp" >
+
+ <shape>
+    <solid android:color="#C1C1C1" />
+    <corners android:radius="2.0dip" />
+</shape>
+
+</inset>
+
+<!-- From: file:/Users/Felipe/Desktop/MemeticaMe/app/src/main/res/drawable-xhdpi/list_divider.xml -->

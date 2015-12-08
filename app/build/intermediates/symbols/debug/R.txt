@@ -50,6 +50,7 @@ int drawable common_signin_btn_text_normal_dark 0x7f02001f
 int drawable common_signin_btn_text_normal_light 0x7f020020
 int drawable common_signin_btn_text_pressed_dark 0x7f020021
 int drawable common_signin_btn_text_pressed_light 0x7f020022
+<<<<<<< HEAD
 int drawable dog 0x7f020023
 int drawable download 0x7f020024
 int drawable field 0x7f020025
@@ -112,6 +113,60 @@ int id clip 0x7f0b0020
 int id download 0x7f0b0043
 int id editText 0x7f0b0033
 int id etiquetas 0x7f0b0047
+=======
+int drawable field 0x7f020023
+int drawable file 0x7f020024
+int drawable filepressed 0x7f020025
+int drawable fileselector 0x7f020026
+int drawable ic_circulo 0x7f020027
+int drawable ic_favoritos 0x7f020028
+int drawable ic_favoritossel 0x7f020029
+int drawable ic_launcher 0x7f02002a
+int drawable ic_plusone_medium_off_client 0x7f02002b
+int drawable ic_plusone_small_off_client 0x7f02002c
+int drawable ic_plusone_standard_off_client 0x7f02002d
+int drawable ic_plusone_tall_off_client 0x7f02002e
+int drawable list_divider 0x7f02002f
+int drawable mask 0x7f020030
+int drawable mask2 0x7f020031
+int drawable maskselect 0x7f020032
+int drawable menu 0x7f020033
+int drawable menubutton 0x7f020034
+int drawable pause 0x7f020035
+int drawable photo 0x7f020036
+int drawable photopressed 0x7f020037
+int drawable photoselector 0x7f020038
+int drawable play 0x7f020039
+int drawable plus 0x7f02003a
+int drawable rec 0x7f02003b
+int drawable record 0x7f02003c
+int drawable recordpressed 0x7f02003d
+int drawable recordselector 0x7f02003e
+int drawable refresh 0x7f02003f
+int drawable search 0x7f020040
+int drawable send 0x7f020041
+int drawable splash 0x7f020042
+int drawable stop 0x7f020043
+int drawable user 0x7f020044
+int drawable users 0x7f020045
+int id LinearLayout1 0x7f0b0003
+int id action_settings 0x7f0b0043
+int id adjust_height 0x7f0b0000
+int id adjust_width 0x7f0b0001
+int id attachment 0x7f0b0024
+int id back 0x7f0b000a
+int id btAgregarContacto 0x7f0b003e
+int id btCrearChat 0x7f0b000b
+int id btCrearChatOk 0x7f0b0034
+int id btPhotos 0x7f0b0040
+int id btVerContactos 0x7f0b000e
+int id btVolverChat 0x7f0b003d
+int id bubble 0x7f0b001a
+int id buttonAddChat 0x7f0b0007
+int id checkcontacto 0x7f0b002d
+int id clip 0x7f0b0020
+int id editText 0x7f0b0033
+>>>>>>> FelipeBranch
 int id feedChat 0x7f0b002e
 int id feedmeme_leftmeme 0x7f0b003b
 int id feedmeme_rightmeme 0x7f0b003c
@@ -119,6 +174,7 @@ int id file 0x7f0b0025
 int id fileButton 0x7f0b0026
 int id forms_centralfragments_chat_chat_editLayout 0x7f0b0022
 int id foto 0x7f0b0031
+<<<<<<< HEAD
 int id gallery 0x7f0b000d
 int id id 0x7f0b0035
 int id image 0x7f0b0030
@@ -145,12 +201,39 @@ int id menu 0x7f0b000b
 int id menu_refresh 0x7f0b004b
 int id message 0x7f0b0039
 int id name 0x7f0b001b
+=======
+int id gallery 0x7f0b000f
+int id id 0x7f0b0035
+int id image 0x7f0b0030
+int id image1 0x7f0b0010
+int id imageMediaBrowser 0x7f0b002b
+int id imageView 0x7f0b0041
+int id imageView2 0x7f0b001e
+int id imageView3 0x7f0b0018
+int id imagemaskframe 0x7f0b002f
+int id linearLayout1 0x7f0b0037
+int id listViewChat 0x7f0b0021
+int id listviewcontact 0x7f0b0008
+int id loadingProgressBar 0x7f0b0005
+int id meme 0x7f0b001f
+int id memeView_list 0x7f0b003f
+int id meme_layout 0x7f0b0012
+int id memecreator_button 0x7f0b0016
+int id memecreator_image 0x7f0b0013
+int id memecreator_lowerText 0x7f0b0015
+int id memecreator_upperText 0x7f0b0014
+int id menu 0x7f0b000d
+int id menu_refresh 0x7f0b0042
+int id message 0x7f0b0039
+int id name 0x7f0b000c
+>>>>>>> FelipeBranch
 int id nombrechat 0x7f0b0038
 int id nombrecontacto 0x7f0b0032
 int id none 0x7f0b0002
 int id notRead 0x7f0b003a
 int id picture 0x7f0b0029
 int id pictureButton 0x7f0b002a
+<<<<<<< HEAD
 int id ranking 0x7f0b0045
 int id receiver 0x7f0b0036
 int id record 0x7f0b0027
@@ -169,13 +252,34 @@ int id textView2 0x7f0b002c
 int id textViewTitle 0x7f0b0004
 int id time 0x7f0b0018
 int id touch 0x7f0b0023
+=======
+int id receiver 0x7f0b0036
+int id record 0x7f0b0027
+int id recordButton 0x7f0b0028
+int id recorder_linearlayout 0x7f0b0017
+int id relativeLayout1 0x7f0b0009
+int id status 0x7f0b001c
+int id textChatItem 0x7f0b001b
+int id textNewChat 0x7f0b0006
+int id textUsername 0x7f0b0019
+int id textView2 0x7f0b002c
+int id textViewTitle 0x7f0b0004
+int id time 0x7f0b001d
+int id touch 0x7f0b0023
+int id txtMediaBrowser 0x7f0b0011
+>>>>>>> FelipeBranch
 int integer google_play_services_version 0x7f090000
 int layout activity_chat 0x7f030000
 int layout activity_lista_chat 0x7f030001
 int layout activity_media_browser 0x7f030002
 int layout activity_meme_creator 0x7f030003
+<<<<<<< HEAD
 int layout bubble 0x7f030004
 int layout canal_meme 0x7f030005
+=======
+int layout activity_recorder 0x7f030004
+int layout bubble 0x7f030005
+>>>>>>> FelipeBranch
 int layout chat 0x7f030006
 int layout contact_select_item 0x7f030007
 int layout contacts_list_item 0x7f030008
@@ -186,8 +290,12 @@ int layout feed_meme_channel 0x7f03000c
 int layout lista_contactos 0x7f03000d
 int layout meme_view 0x7f03000e
 int layout photoblob_layout 0x7f03000f
+<<<<<<< HEAD
 int layout recordblob_layout 0x7f030010
 int layout row_list_chat 0x7f030011
+=======
+int layout row_list_chat 0x7f030010
+>>>>>>> FelipeBranch
 int menu activity_main 0x7f0a0000
 int menu menu_crear_chat 0x7f0a0001
 int menu menu_lista_chat 0x7f0a0002
@@ -233,6 +341,10 @@ int string textchatitem_text 0x7f050024
 int string title_activity_crear_chat 0x7f050025
 int string title_activity_lista_chat 0x7f050026
 int string title_activity_lista_contactos 0x7f050027
+<<<<<<< HEAD
+=======
+int string title_activity_recorder 0x7f050028
+>>>>>>> FelipeBranch
 int style AppBaseTheme 0x7f060000
 int style AppTheme 0x7f060001
 int[] styleable LoadingImageView { 0x7f010000, 0x7f010001, 0x7f010002 }

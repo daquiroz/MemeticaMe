@@ -16,6 +16,7 @@ import android.widget.ImageButton;
 import android.widget.LinearLayout;
 import android.widget.ListView;
 import android.widget.ProgressBar;
+import android.widget.Toast;
 
 import com.google.android.gms.gcm.GoogleCloudMessaging;
 import com.microsoft.windowsazure.messaging.NotificationHub;
@@ -112,6 +113,7 @@ public class ChatActivity extends Activity {
 		try
 		{
 			idchat = getIntent().getExtras().getString("idchat");
+
 		}
 		catch(Exception excepcion)
 		{
@@ -214,6 +216,7 @@ public class ChatActivity extends Activity {
 	public void  browseMedia(View view)
 	{
 		Intent intent = new Intent(ChatActivity.this,MediaBrowser.class);
+		intent.putExtra("idchat",idchat);
 		startActivity(intent);
 	}
 
@@ -228,24 +231,36 @@ public class ChatActivity extends Activity {
 		{
 			Intent intent = new Intent(ChatActivity.this,BlobActivity.class);
 			intent.putExtra("Option","0");
+<<<<<<< HEAD
 			intent.putExtra("idchat", idchat);
+=======
+			intent.putExtra("idchat",idchat);
+>>>>>>> FelipeBranch
 			startActivity(intent);
 
 		}else if (name.equals("recordButton"))
 		{
 
-			Intent intent = new Intent(ChatActivity.this,BlobActivity.class);
+			Intent intent = new Intent(ChatActivity.this,Recorder.class);
 			intent.putExtra("Option", "1");
+<<<<<<< HEAD
 			intent.putExtra("idchat", idchat);
 
+=======
+			intent.putExtra("idchat",idchat);
+>>>>>>> FelipeBranch
 			startActivity(intent);
 
 		}else
 		{
 			Intent intent = new Intent(ChatActivity.this,BlobActivity.class);
 			intent.putExtra("Option", "2");
+<<<<<<< HEAD
 			intent.putExtra("idchat", idchat);
 
+=======
+			intent.putExtra("idchat",idchat);
+>>>>>>> FelipeBranch
 			startActivity(intent);
 
 		}

@@ -92,6 +92,7 @@ containing a value of this type.
         public static final int common_signin_btn_text_normal_light=0x7f020020;
         public static final int common_signin_btn_text_pressed_dark=0x7f020021;
         public static final int common_signin_btn_text_pressed_light=0x7f020022;
+<<<<<<< HEAD
         public static final int dog=0x7f020023;
         public static final int download=0x7f020024;
         public static final int field=0x7f020025;
@@ -156,6 +157,62 @@ containing a value of this type.
         public static final int download=0x7f0b0043;
         public static final int editText=0x7f0b0033;
         public static final int etiquetas=0x7f0b0047;
+=======
+        public static final int field=0x7f020023;
+        public static final int file=0x7f020024;
+        public static final int filepressed=0x7f020025;
+        public static final int fileselector=0x7f020026;
+        public static final int ic_circulo=0x7f020027;
+        public static final int ic_favoritos=0x7f020028;
+        public static final int ic_favoritossel=0x7f020029;
+        public static final int ic_launcher=0x7f02002a;
+        public static final int ic_plusone_medium_off_client=0x7f02002b;
+        public static final int ic_plusone_small_off_client=0x7f02002c;
+        public static final int ic_plusone_standard_off_client=0x7f02002d;
+        public static final int ic_plusone_tall_off_client=0x7f02002e;
+        public static final int list_divider=0x7f02002f;
+        public static final int mask=0x7f020030;
+        public static final int mask2=0x7f020031;
+        public static final int maskselect=0x7f020032;
+        public static final int menu=0x7f020033;
+        public static final int menubutton=0x7f020034;
+        public static final int pause=0x7f020035;
+        public static final int photo=0x7f020036;
+        public static final int photopressed=0x7f020037;
+        public static final int photoselector=0x7f020038;
+        public static final int play=0x7f020039;
+        public static final int plus=0x7f02003a;
+        public static final int rec=0x7f02003b;
+        public static final int record=0x7f02003c;
+        public static final int recordpressed=0x7f02003d;
+        public static final int recordselector=0x7f02003e;
+        public static final int refresh=0x7f02003f;
+        public static final int search=0x7f020040;
+        public static final int send=0x7f020041;
+        public static final int splash=0x7f020042;
+        public static final int stop=0x7f020043;
+        public static final int user=0x7f020044;
+        public static final int users=0x7f020045;
+    }
+    public static final class id {
+        public static final int LinearLayout1=0x7f0b0003;
+        public static final int action_settings=0x7f0b0043;
+        public static final int adjust_height=0x7f0b0000;
+        public static final int adjust_width=0x7f0b0001;
+        public static final int attachment=0x7f0b0024;
+        public static final int back=0x7f0b000a;
+        public static final int btAgregarContacto=0x7f0b003e;
+        public static final int btCrearChat=0x7f0b000b;
+        public static final int btCrearChatOk=0x7f0b0034;
+        public static final int btPhotos=0x7f0b0040;
+        public static final int btVerContactos=0x7f0b000e;
+        public static final int btVolverChat=0x7f0b003d;
+        public static final int bubble=0x7f0b001a;
+        public static final int buttonAddChat=0x7f0b0007;
+        public static final int checkcontacto=0x7f0b002d;
+        public static final int clip=0x7f0b0020;
+        public static final int editText=0x7f0b0033;
+>>>>>>> FelipeBranch
         public static final int feedChat=0x7f0b002e;
         public static final int feedmeme_leftmeme=0x7f0b003b;
         public static final int feedmeme_rightmeme=0x7f0b003c;
@@ -163,6 +220,7 @@ containing a value of this type.
         public static final int fileButton=0x7f0b0026;
         public static final int forms_centralfragments_chat_chat_editLayout=0x7f0b0022;
         public static final int foto=0x7f0b0031;
+<<<<<<< HEAD
         public static final int gallery=0x7f0b000d;
         public static final int id=0x7f0b0035;
         public static final int image=0x7f0b0030;
@@ -189,12 +247,39 @@ containing a value of this type.
         public static final int menu_refresh=0x7f0b004b;
         public static final int message=0x7f0b0039;
         public static final int name=0x7f0b001b;
+=======
+        public static final int gallery=0x7f0b000f;
+        public static final int id=0x7f0b0035;
+        public static final int image=0x7f0b0030;
+        public static final int image1=0x7f0b0010;
+        public static final int imageMediaBrowser=0x7f0b002b;
+        public static final int imageView=0x7f0b0041;
+        public static final int imageView2=0x7f0b001e;
+        public static final int imageView3=0x7f0b0018;
+        public static final int imagemaskframe=0x7f0b002f;
+        public static final int linearLayout1=0x7f0b0037;
+        public static final int listViewChat=0x7f0b0021;
+        public static final int listviewcontact=0x7f0b0008;
+        public static final int loadingProgressBar=0x7f0b0005;
+        public static final int meme=0x7f0b001f;
+        public static final int memeView_list=0x7f0b003f;
+        public static final int meme_layout=0x7f0b0012;
+        public static final int memecreator_button=0x7f0b0016;
+        public static final int memecreator_image=0x7f0b0013;
+        public static final int memecreator_lowerText=0x7f0b0015;
+        public static final int memecreator_upperText=0x7f0b0014;
+        public static final int menu=0x7f0b000d;
+        public static final int menu_refresh=0x7f0b0042;
+        public static final int message=0x7f0b0039;
+        public static final int name=0x7f0b000c;
+>>>>>>> FelipeBranch
         public static final int nombrechat=0x7f0b0038;
         public static final int nombrecontacto=0x7f0b0032;
         public static final int none=0x7f0b0002;
         public static final int notRead=0x7f0b003a;
         public static final int picture=0x7f0b0029;
         public static final int pictureButton=0x7f0b002a;
+<<<<<<< HEAD
         public static final int ranking=0x7f0b0045;
         public static final int receiver=0x7f0b0036;
         public static final int record=0x7f0b0027;
@@ -213,6 +298,22 @@ containing a value of this type.
         public static final int textViewTitle=0x7f0b0004;
         public static final int time=0x7f0b0018;
         public static final int touch=0x7f0b0023;
+=======
+        public static final int receiver=0x7f0b0036;
+        public static final int record=0x7f0b0027;
+        public static final int recordButton=0x7f0b0028;
+        public static final int recorder_linearlayout=0x7f0b0017;
+        public static final int relativeLayout1=0x7f0b0009;
+        public static final int status=0x7f0b001c;
+        public static final int textChatItem=0x7f0b001b;
+        public static final int textNewChat=0x7f0b0006;
+        public static final int textUsername=0x7f0b0019;
+        public static final int textView2=0x7f0b002c;
+        public static final int textViewTitle=0x7f0b0004;
+        public static final int time=0x7f0b001d;
+        public static final int touch=0x7f0b0023;
+        public static final int txtMediaBrowser=0x7f0b0011;
+>>>>>>> FelipeBranch
     }
     public static final class integer {
         public static final int google_play_services_version=0x7f090000;
@@ -222,8 +323,13 @@ containing a value of this type.
         public static final int activity_lista_chat=0x7f030001;
         public static final int activity_media_browser=0x7f030002;
         public static final int activity_meme_creator=0x7f030003;
+<<<<<<< HEAD
         public static final int bubble=0x7f030004;
         public static final int canal_meme=0x7f030005;
+=======
+        public static final int activity_recorder=0x7f030004;
+        public static final int bubble=0x7f030005;
+>>>>>>> FelipeBranch
         public static final int chat=0x7f030006;
         public static final int contact_select_item=0x7f030007;
         public static final int contacts_list_item=0x7f030008;
@@ -234,8 +340,12 @@ containing a value of this type.
         public static final int lista_contactos=0x7f03000d;
         public static final int meme_view=0x7f03000e;
         public static final int photoblob_layout=0x7f03000f;
+<<<<<<< HEAD
         public static final int recordblob_layout=0x7f030010;
         public static final int row_list_chat=0x7f030011;
+=======
+        public static final int row_list_chat=0x7f030010;
+>>>>>>> FelipeBranch
     }
     public static final class menu {
         public static final int activity_main=0x7f0a0000;
@@ -287,6 +397,10 @@ containing a value of this type.
         public static final int title_activity_crear_chat=0x7f050025;
         public static final int title_activity_lista_chat=0x7f050026;
         public static final int title_activity_lista_contactos=0x7f050027;
+<<<<<<< HEAD
+=======
+        public static final int title_activity_recorder=0x7f050028;
+>>>>>>> FelipeBranch
     }
     public static final class style {
         /**  API 11 theme customizations can go here. 

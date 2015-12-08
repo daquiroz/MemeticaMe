@@ -15,6 +15,7 @@
         android:background="#6290DA">
         <ImageButton
             android:src="@drawable/back"
+<<<<<<< HEAD
             android:layout_width="40dp"
             android:layout_height="48dp"
             android:id="@+id/btVolverChat"
@@ -23,6 +24,13 @@
             android:scaleType="fitCenter"
             android:paddingRight="30dp"
             android:paddingLeft="10dp" />
+=======
+            android:layout_width="78dp"
+            android:layout_height="48dp"
+            android:id="@+id/btVolverChat"
+            android:background="@drawable/menubutton"
+            android:paddingRight="38dp" />
+>>>>>>> FelipeBranch
 
         <ImageButton
             android:src="@drawable/plus"
@@ -31,7 +39,11 @@
             android:id="@+id/btAgregarContacto"
             android:layout_alignParentRight="true"
             android:tint="#ffffffff"
+<<<<<<< HEAD
             android:padding="12dp"
+=======
+            android:padding="7dp"
+>>>>>>> FelipeBranch
             android:scaleType="fitCenter"
             android:background="@drawable/menubutton"
             android:layout_marginRight="40dp" />
@@ -81,4 +93,8 @@
         android:paddingBottom="10dp"
         android:choiceMode="singleChoice" />
 
+<<<<<<< HEAD
 </RelativeLayout><!-- From: file:/Users/alberto/App%20Moviles/MemeticaMe/app/src/main/res/layout/lista_contactos.xml -->
+=======
+</RelativeLayout><!-- From: file:/Users/Felipe/Desktop/MemeticaMe/app/src/main/res/layout/lista_contactos.xml -->
+>>>>>>> FelipeBranch

@@ -35,12 +35,13 @@ public class DownloadPictureBlob extends AsyncTask<String, Void, Void> {
     File filesDir;
     List<String> files;
     public boolean finished = false;
-
-    public DownloadPictureBlob(Context context)
-    {
+    String chatid;
+    public DownloadPictureBlob(Context context,String chatid)
+    {   this.chatid = chatid;
         this.context =context;
         filesDir = context.getCacheDir();
         files = new ArrayList<String>();
+
     }
     @Override
     protected void onPostExecute(Void v) {
@@ -82,7 +83,7 @@ public class DownloadPictureBlob extends AsyncTask<String, Void, Void> {
             CloudBlobClient blobClient = storageAccount.createCloudBlobClient();
 
             // Retrieve reference to a previously created container.
-            CloudBlobContainer container = blobClient.getContainerReference("photos");
+            CloudBlobContainer container = blobClient.getContainerReference("photos"+chatid);
 
 
             for (ListBlobItem blobItem : container.listBlobs()) {
@@ -97,9 +98,6 @@ public class DownloadPictureBlob extends AsyncTask<String, Void, Void> {
                     files.add(blob.getName());
                 }
             }
-
-
-
         }
         catch (Exception e)
         {
@@ -112,6 +110,7 @@ public class DownloadPictureBlob extends AsyncTask<String, Void, Void> {
     public boolean  getfinished(){
         return finished;
     }
+    public int getBlobsCount(){return files.size();}
 
 }
 /*        // Download the blob

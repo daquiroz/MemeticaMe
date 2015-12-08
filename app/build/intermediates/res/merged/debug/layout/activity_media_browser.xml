@@ -27,4 +27,15 @@ tools:context="com.mobility42.azurechatr.MediaBrowser"
         android:layout_weight="0.11"
         android:layout_gravity="center" />
 
+<<<<<<< HEAD
 </LinearLayout><!-- From: file:/Users/alberto/App%20Moviles/MemeticaMe/app/src/main/res/layout/activity_media_browser.xml -->
+=======
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="No se encontraron fotos"
+        android:id="@+id/txtMediaBrowser"
+        android:layout_gravity="center_horizontal" />
+
+</LinearLayout><!-- From: file:/Users/Felipe/Desktop/MemeticaMe/app/src/main/res/layout/activity_media_browser.xml -->
+>>>>>>> FelipeBranch
