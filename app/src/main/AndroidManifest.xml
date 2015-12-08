@@ -64,7 +64,27 @@
             android:configChanges="orientation|screenSize">
         </activity>
         <activity
+            android:name=".ListaCanales"
+            android:label="@string/title_activity_lista_contactos"
+            android:configChanges="orientation|screenSize">
+        </activity>
+        <activity
+            android:name=".CrearCanalActivity"
+            android:label="@string/title_activity_lista_contactos"
+            android:configChanges="orientation|screenSize">
+        </activity>
+        <activity
+            android:name=".CanalActivity"
+            android:label="@string/title_activity_crear_chat"
+            android:configChanges="orientation|screenSize">
+        </activity>
+        <activity
             android:name=".CrearChatActivity"
+            android:label="@string/title_activity_crear_chat"
+            android:configChanges="orientation|screenSize">
+        </activity>
+        <activity
+            android:name=".SubirMemeCanal"
             android:label="@string/title_activity_crear_chat"
             android:configChanges="orientation|screenSize">
         </activity>

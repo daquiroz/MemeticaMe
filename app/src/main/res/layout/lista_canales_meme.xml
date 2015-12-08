@@ -25,7 +25,7 @@
             android:src="@drawable/plus"
             android:layout_width="48dp"
             android:layout_height="48dp"
-            android:id="@+id/btAgregarContacto"
+            android:id="@+id/btAgregarCanal"
             android:layout_alignParentRight="true"
             android:tint="#ffffffff"
             android:padding="7dp"
@@ -43,7 +43,8 @@
             android:ellipsize="end"
             android:textColor="#ffffffff"
             android:layout_marginRight="128dp"
-            android:layout_centerVertical="true" />
+            android:layout_centerVertical="true"
+            android:text="Lista Canales" />
         <ImageButton
             android:id="@+id/menu"
             android:background="@drawable/menubutton"
@@ -62,12 +63,13 @@
     <LinearLayout
         android:orientation="vertical"
         android:layout_width="match_parent"
-        android:layout_height="match_parent">
+        android:layout_height="match_parent"
+        android:id="@+id/linearlayout6">
 
     </LinearLayout>
 
     <ListView
-        android:id="@+id/listviewcontact"
+        android:id="@+id/listaCanales"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:layout_alignParentTop="true"

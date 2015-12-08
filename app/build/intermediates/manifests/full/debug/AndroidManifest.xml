@@ -64,7 +64,27 @@
             android:label="@string/title_activity_lista_contactos" >
         </activity>
         <activity
+            android:name="com.mobility42.azurechatr.ListaCanales"
+            android:configChanges="orientation|screenSize"
+            android:label="@string/title_activity_lista_contactos" >
+        </activity>
+        <activity
+            android:name="com.mobility42.azurechatr.CrearCanalActivity"
+            android:configChanges="orientation|screenSize"
+            android:label="@string/title_activity_lista_contactos" >
+        </activity>
+        <activity
+            android:name="com.mobility42.azurechatr.CanalActivity"
+            android:configChanges="orientation|screenSize"
+            android:label="@string/title_activity_crear_chat" >
+        </activity>
+        <activity
             android:name="com.mobility42.azurechatr.CrearChatActivity"
+            android:configChanges="orientation|screenSize"
+            android:label="@string/title_activity_crear_chat" >
+        </activity>
+        <activity
+            android:name="com.mobility42.azurechatr.SubirMemeCanal"
             android:configChanges="orientation|screenSize"
             android:label="@string/title_activity_crear_chat" >
         </activity>

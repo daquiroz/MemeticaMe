@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:animateLayoutChanges="true"
+    android:background="#ffe7ecf5">
+    <!-- Displays the text chat -->
+    <RelativeLayout
+        android:minWidth="25px"
+        android:minHeight="25px"
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:id="@+id/relativeLayout1"
+        android:background="#6290DA">
+        <ImageButton
+            android:src="@drawable/back"
+            android:layout_width="40dp"
+            android:layout_height="48dp"
+            android:id="@+id/back"
+            android:background="@drawable/menubutton"
+            android:padding="12dp"
+            android:paddingTop="10dp"
+            android:paddingBottom="10dp"
+            android:scaleType="fitCenter" />
+
+        <ImageButton
+            android:id="@+id/menu"
+            android:background="@drawable/menubutton"
+            android:src="@drawable/menu"
+            android:layout_width="40dp"
+            android:layout_height="48dp"
+            android:scaleType="fitEnd"
+            android:layout_alignParentRight="true"
+            android:tint="#ffffffff"
+            android:paddingTop="12dp"
+            android:paddingBottom="12dp"
+            android:paddingRight="8dp"
+            android:paddingLeft="8dp" />
+    </RelativeLayout>
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Agregar Imagen"
+        android:id="@+id/btAgregarImagen"
+        android:layout_below="@+id/relativeLayout1"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true" />
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:inputType="textMultiLine"
+        android:ems="10"
+        android:id="@+id/agregarEtiquetas"
+        android:layout_below="@+id/btAgregarImagen"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true"
+        android:text="Agregar etiquetas separadas por coma" />
+
+    <ImageButton
+        android:layout_width="48dp"
+        android:layout_height="48dp"
+        android:id="@+id/listoMeme"
+        android:layout_below="@+id/agregarEtiquetas"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:scaleType="fitCenter"
+        android:background="@null"
+        android:src="@drawable/checkmark" />
+
+</RelativeLayout><!-- From: file:/Users/Dani/Desktop/AppsAndroid/MemeticaMe/app/src/main/res/layout/subir_meme_canal.xml -->
