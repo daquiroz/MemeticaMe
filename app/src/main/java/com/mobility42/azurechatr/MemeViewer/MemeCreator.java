@@ -2,7 +2,7 @@ package com.mobility42.azurechatr.MemeViewer;
 
 import android.app.Activity;
 import android.content.ContentValues;
-import android.content.Context;
+import android.content.Intent;
 import android.graphics.Bitmap;
 import android.graphics.Canvas;
 import android.graphics.Typeface;
@@ -10,7 +10,6 @@ import android.os.Bundle;
 import android.os.Environment;
 import android.provider.MediaStore;
 import android.view.View;
-import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.RelativeLayout;
@@ -33,11 +32,53 @@ public class MemeCreator extends Activity {
     private TextView upper_text;
     private TextView lower_text;
     private Button done_btn;
+    private String idchat;
+    private String idcanal;
+    private String modo;
+    private String categoria;
+    private String etiquetas;
+    File imgPath;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_meme_creator);
+        try
+        {
+            modo = getIntent().getExtras().getString("modo");
+        }
+        catch(Exception excepcion)
+        {
+            idchat = "Normal";
+        }
+        if(modo.equals("Normal")) {
+            try {
+
+                idchat = getIntent().getExtras().getString("idchat");
+
+            } catch (Exception excepcion) {
+
+                idchat = "000000";
+
+            }
+        }
+        else if(modo.equals("Canal")) {
+            try {
+
+                idcanal = getIntent().getExtras().getString("idcanal");
+                categoria = getIntent().getExtras().getString("categoria");
+                etiquetas = getIntent().getExtras().getString("categoria");
+
+            } catch (Exception excepcion) {
+
+                categoria = "000000";
+                etiquetas = "000000";
+                idcanal = "000000";
+            }
+
+        }
+
         memefont = Typeface.createFromAsset(getAssets(),FONT_PATH);
 
         meme_layout = (RelativeLayout) findViewById(R.id.meme_layout);
@@ -52,11 +93,28 @@ public class MemeCreator extends Activity {
     }
 
     public void click(View v) {
-        upper_text.clearFocus();
-        lower_text.clearFocus();
-        addImageToGallery();
+        if(modo.equals("Normal")) {
+            upper_text.clearFocus();
+            lower_text.clearFocus();
+            addImageToGallery();
+            String path = imgPath.getPath();
+            Intent setData = new Intent();
+            setData.putExtra("path", path);
+            setResult(RESULT_OK, setData);
+            finish();
 
-        finish();
+        }
+        else if(modo.equals("Canal")){
+            upper_text.clearFocus();
+            lower_text.clearFocus();
+            addImageToGallery();
+            String path = imgPath.getPath();
+            Intent canal = new Intent(this, MemeCreator.class);
+            canal.putExtra("etiquetas", etiquetas);
+            canal.putExtra("idcanal", idcanal);
+            canal.putExtra("path", path);
+            startActivity(canal);
+        }
 
     }
 
@@ -72,7 +130,7 @@ public class MemeCreator extends Activity {
         DateFormat dateFormat = new SimpleDateFormat("yyyy-MM-dd_HH-mm-ss");
         String date = dateFormat.format(new Date()).toString().replace(" ", "");
 
-        File imgPath = new File(mydir2,"meme_"+date+".png");
+        imgPath = new File(mydir2,"meme_"+date+".png");
         FileOutputStream fOs = null;
 
         try {

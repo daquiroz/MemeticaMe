@@ -163,4 +163,6 @@ public class ChatItem {
 	public void setmIdChat(String mIdChat) {
 		this.mIdChat = mIdChat;
 	}
+
+
 }

@@ -146,4 +146,16 @@ public class FeedChat {
     public void setStatus(String status) {
         this.status = status;
     }
+
+    private String imagePath;
+
+    public String getImagePath() {
+        return imagePath;
+    }
+
+    public void setImagePath(String imagePath) {
+        this.imagePath = imagePath;
+    }
+
+
 }

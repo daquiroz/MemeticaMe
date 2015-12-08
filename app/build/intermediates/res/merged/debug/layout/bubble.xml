@@ -28,17 +28,32 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:minWidth="48dp" />
+
+        <ImageView
+            android:layout_width="250dp"
+            android:layout_height="250dp"
+            android:id="@+id/imageViewChat"
+            android:scaleType="fitCenter"
+            android:src="@drawable/meme"
+            android:visibility="visible"
+            android:layout_below="@+id/textChatItem" />
+
         <ImageView
             android:src="@drawable/clock"
             android:id="@+id/status"
             android:layout_width="12dp"
             android:layout_height="12dp"
             android:tint="#ffffffff"
-            android:layout_toRightOf="@+id/time"
             android:layout_marginTop="3dp"
-            android:layout_below="@+id/textChatItem"
+            android:layout_below="@+id/imageViewChat"
             android:scaleType="fitCenter"
-            android:layout_alignParentEnd="false" />
+            android:layout_alignParentEnd="false"
+            android:layout_toRightOf="@+id/time"
+            android:layout_alignParentBottom="false"
+            android:layout_alignParentLeft="false"
+            android:layout_alignParentRight="false"
+            android:layout_alignParentTop="false"
+            android:baselineAlignBottom="false" />
         <TextView
             android:text="19:00"
             android:textAppearance="?android:attr/textAppearanceSmall"
@@ -51,8 +66,9 @@
             android:layout_marginTop="2dp"
             android:textColor="#ffffffff"
             android:layout_alignParentRight="false"
-            android:layout_below="@+id/textChatItem"
-            android:layout_alignRight="@+id/textChatItem"
-            android:minHeight="4dp" />
+            android:layout_below="@+id/imageViewChat"
+            android:minHeight="4dp"
+            android:layout_toRightOf="@+id/textChatItem" />
+
     </RelativeLayout>
 </LinearLayout><!-- From: file:/Users/alberto/App%20Moviles/MemeticaMe/app/src/main/res/layout/bubble.xml -->

@@ -6,9 +6,7 @@ import android.content.res.AssetManager;
 import android.content.res.Resources;
 import android.graphics.drawable.Drawable;
 import android.os.Bundle;
-import android.util.Log;
 import android.view.View;
-import android.widget.Adapter;
 import android.widget.ImageView;
 import android.widget.ListView;
 import android.widget.Toast;
@@ -25,12 +23,54 @@ public class MemeViewerActivity extends Activity {
     private ArrayList<Drawable> meme_list = new ArrayList<>();
     private ArrayList<FeedMeme> feedmeme_list = new ArrayList<>();
     private ListView meme_listview;
+    private String idchat;
+    private String modo;
+    private String idcanal;
+    private String categoria;
+    private String etiquetas;
 
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.meme_view);
+
+        try
+        {
+            modo = getIntent().getExtras().getString("modo");
+        }
+        catch(Exception excepcion)
+        {
+            idchat = "Normal";
+        }
+
+        if(modo.equals("Normal")) {
+            try {
+
+                idchat = getIntent().getExtras().getString("idchat");
+
+            } catch (Exception excepcion) {
+
+                idchat = "000000";
+
+            }
+        }
+        else if(modo.equals("Canal")) {
+            try {
+
+                idcanal = getIntent().getExtras().getString("idcanal");
+                categoria = getIntent().getExtras().getString("categoria");
+                etiquetas = getIntent().getExtras().getString("etiquetas");
+
+            } catch (Exception excepcion) {
+
+                categoria = "000000";
+                etiquetas = "000000";
+                idcanal = "000000";
+            }
+
+        }
+
 
         addListFiles(MEME_FILE_PATH);
         generateFeedMemeList();
@@ -49,9 +89,27 @@ public class MemeViewerActivity extends Activity {
         MemeViewerActivity.cosa_h = imageView.getHeight();
         MemeViewerActivity.cosa_w = imageView.getWidth();
         MemeViewerActivity.cosa = imageView.getDrawable();
-        Intent meme_editor = new Intent(this, MemeCreator.class);
-        startActivity(meme_editor);
+
+        Intent i = new Intent(this, MemeCreator.class);
+        i.putExtra("idchat", idchat);
+        i.putExtra("modo", "Normal");
+        startActivityForResult(i, 10);
     }
+
+    @Override
+    protected void onActivityResult(int requestCode, int resultCode, Intent data) {
+
+        if (requestCode == 10) {
+            if(resultCode == RESULT_OK){
+                String path =data.getStringExtra("path");
+                Intent setData = new Intent();
+                setData.putExtra("path", path);
+                setResult(RESULT_OK, setData);
+                finish();
+            }
+        }
+    }
+
 
     private void addListFiles(String dirFrom) {
 

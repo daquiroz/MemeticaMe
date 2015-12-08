@@ -16,6 +16,7 @@ import android.widget.ImageButton;
 import android.widget.LinearLayout;
 import android.widget.ListView;
 import android.widget.ProgressBar;
+import android.widget.Toast;
 
 import com.google.android.gms.gcm.GoogleCloudMessaging;
 import com.microsoft.windowsazure.messaging.NotificationHub;
@@ -37,7 +38,6 @@ import java.text.SimpleDateFormat;
 import java.util.ArrayList;
 import java.util.Date;
 import java.util.List;
-import java.util.Random;
 
 public class ChatActivity extends Activity {
 
@@ -157,13 +157,43 @@ public class ChatActivity extends Activity {
 			@Override
 			public void onClick(View v) {
 
-				Intent intent = new Intent(ChatActivity.this, MemeViewerActivity.class);
-				intent.putExtra("idchat", idchat);
-				startActivity(intent);
+
+				Intent i = new Intent(ChatActivity.this, MemeViewerActivity.class);
+				i.putExtra("idchat", idchat);
+				i.putExtra("modo", "Normal");
+				startActivityForResult(i, 10);
 
 			}
 		});
 
+	}
+	@Override
+	protected void onActivityResult(int requestCode, int resultCode, Intent data) {
+
+		if (requestCode == 10) {
+			if(resultCode == RESULT_OK){
+				String path =data.getStringExtra("path");
+				Toast.makeText(this,path,Toast.LENGTH_LONG).show();
+				final ChatItem item = new ChatItem();
+
+				item.setText("Imagen enviada:");
+				// This is temporary until we add authentication to the Android version
+				item.setUserName(miId);
+
+				item.setStatus("waiting");
+
+				item.setmIdChat(idchat);
+
+				Date currentDate = new Date(System.currentTimeMillis());
+				item.setTimeStamp(currentDate);
+				FeedChat fc = new FeedChat(item.getText(),item.getUserName(),item.getId(),true);
+				SimpleDateFormat formatter=new SimpleDateFormat("HH:mm");
+				fc.setImagePath(path);
+				fc.setTimeStamp(formatter.format(item.getTimeStamp()));
+				fc.setStatus("waiting");
+				lista.add(fc);
+			}
+		}
 	}
 
 
