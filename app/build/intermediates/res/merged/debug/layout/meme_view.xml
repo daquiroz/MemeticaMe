@@ -8,4 +8,4 @@
         android:layout_height="wrap_content"
         android:id="@+id/memeView_list"
         android:layout_gravity="center_horizontal" />
-</LinearLayout><!-- From: file:/Users/alberto/App%20Moviles/MemeticaMe/app/src/main/res/layout/meme_view.xml -->
+</LinearLayout><!-- From: file:/C:/Users/Francesca/Desktop/MemeticaMe/MemeticaMe/app/src/main/res/layout/meme_view.xml -->

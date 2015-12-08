@@ -1,189 +1,189 @@
 -- Merging decision tree log ---
 manifest
-ADDED from /Users/alberto/App Moviles/MemeticaMe/app/src/main/AndroidManifest.xml:2:1-92:12
-	package
-		ADDED from /Users/alberto/App Moviles/MemeticaMe/app/src/main/AndroidManifest.xml:3:5-40
-		INJECTED from /Users/alberto/App Moviles/MemeticaMe/app/src/main/AndroidManifest.xml
-		INJECTED from /Users/alberto/App Moviles/MemeticaMe/app/src/main/AndroidManifest.xml
-	android:versionName
-		ADDED from /Users/alberto/App Moviles/MemeticaMe/app/src/main/AndroidManifest.xml:5:5-30
-	android:versionCode
-		ADDED from /Users/alberto/App Moviles/MemeticaMe/app/src/main/AndroidManifest.xml:4:5-28
-		INJECTED from /Users/alberto/App Moviles/MemeticaMe/app/src/main/AndroidManifest.xml
-		INJECTED from /Users/alberto/App Moviles/MemeticaMe/app/src/main/AndroidManifest.xml
+ADDED from C:\Users\Francesca\Desktop\MemeticaMe\MemeticaMe\app\src\main\AndroidManifest.xml:2:1-92:12
 	xmlns:android
-		ADDED from /Users/alberto/App Moviles/MemeticaMe/app/src/main/AndroidManifest.xml:2:11-69
+		ADDED from C:\Users\Francesca\Desktop\MemeticaMe\MemeticaMe\app\src\main\AndroidManifest.xml:2:11-69
+	package
+		ADDED from C:\Users\Francesca\Desktop\MemeticaMe\MemeticaMe\app\src\main\AndroidManifest.xml:3:5-40
+		INJECTED from C:\Users\Francesca\Desktop\MemeticaMe\MemeticaMe\app\src\main\AndroidManifest.xml
+		INJECTED from C:\Users\Francesca\Desktop\MemeticaMe\MemeticaMe\app\src\main\AndroidManifest.xml
+	android:versionName
+		ADDED from C:\Users\Francesca\Desktop\MemeticaMe\MemeticaMe\app\src\main\AndroidManifest.xml:5:5-30
+	android:versionCode
+		ADDED from C:\Users\Francesca\Desktop\MemeticaMe\MemeticaMe\app\src\main\AndroidManifest.xml:4:5-28
+		INJECTED from C:\Users\Francesca\Desktop\MemeticaMe\MemeticaMe\app\src\main\AndroidManifest.xml
+		INJECTED from C:\Users\Francesca\Desktop\MemeticaMe\MemeticaMe\app\src\main\AndroidManifest.xml
 uses-sdk
-ADDED from /Users/alberto/App Moviles/MemeticaMe/app/src/main/AndroidManifest.xml:7:5-9:41
-MERGED from [com.android.support:support-v4:23.1.0] /Users/alberto/App Moviles/MemeticaMe/app/build/intermediates/exploded-aar/com.android.support/support-v4/23.1.0/AndroidManifest.xml:20:5-43
-MERGED from [com.google.android.gms:play-services-base:6.5.87] /Users/alberto/App Moviles/MemeticaMe/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-base/6.5.87/AndroidManifest.xml:18:5-42
-MERGED from [com.android.support:support-v4:23.1.0] /Users/alberto/App Moviles/MemeticaMe/app/build/intermediates/exploded-aar/com.android.support/support-v4/23.1.0/AndroidManifest.xml:20:5-43
-MERGED from [com.microsoft.azure.android:azure-storage-android:0.7.0] /Users/alberto/App Moviles/MemeticaMe/app/build/intermediates/exploded-aar/com.microsoft.azure.android/azure-storage-android/0.7.0/AndroidManifest.xml:14:38-16:41
+ADDED from C:\Users\Francesca\Desktop\MemeticaMe\MemeticaMe\app\src\main\AndroidManifest.xml:7:5-9:41
+MERGED from [com.android.support:support-v4:23.1.0] C:\Users\Francesca\Desktop\MemeticaMe\MemeticaMe\app\build\intermediates\exploded-aar\com.android.support\support-v4\23.1.0\AndroidManifest.xml:20:5-43
+MERGED from [com.google.android.gms:play-services-base:6.5.87] C:\Users\Francesca\Desktop\MemeticaMe\MemeticaMe\app\build\intermediates\exploded-aar\com.google.android.gms\play-services-base\6.5.87\AndroidManifest.xml:18:5-42
+MERGED from [com.android.support:support-v4:23.1.0] C:\Users\Francesca\Desktop\MemeticaMe\MemeticaMe\app\build\intermediates\exploded-aar\com.android.support\support-v4\23.1.0\AndroidManifest.xml:20:5-43
+MERGED from [com.microsoft.azure.android:azure-storage-android:0.7.0] C:\Users\Francesca\Desktop\MemeticaMe\MemeticaMe\app\build\intermediates\exploded-aar\com.microsoft.azure.android\azure-storage-android\0.7.0\AndroidManifest.xml:14:38-16:41
 	android:targetSdkVersion
-		ADDED from /Users/alberto/App Moviles/MemeticaMe/app/src/main/AndroidManifest.xml:9:9-38
-		INJECTED from /Users/alberto/App Moviles/MemeticaMe/app/src/main/AndroidManifest.xml
-		INJECTED from /Users/alberto/App Moviles/MemeticaMe/app/src/main/AndroidManifest.xml
+		ADDED from C:\Users\Francesca\Desktop\MemeticaMe\MemeticaMe\app\src\main\AndroidManifest.xml:9:9-38
+		INJECTED from C:\Users\Francesca\Desktop\MemeticaMe\MemeticaMe\app\src\main\AndroidManifest.xml
+		INJECTED from C:\Users\Francesca\Desktop\MemeticaMe\MemeticaMe\app\src\main\AndroidManifest.xml
 	android:minSdkVersion
-		ADDED from /Users/alberto/App Moviles/MemeticaMe/app/src/main/AndroidManifest.xml:8:9-35
-		INJECTED from /Users/alberto/App Moviles/MemeticaMe/app/src/main/AndroidManifest.xml
-		INJECTED from /Users/alberto/App Moviles/MemeticaMe/app/src/main/AndroidManifest.xml
+		ADDED from C:\Users\Francesca\Desktop\MemeticaMe\MemeticaMe\app\src\main\AndroidManifest.xml:8:9-35
+		INJECTED from C:\Users\Francesca\Desktop\MemeticaMe\MemeticaMe\app\src\main\AndroidManifest.xml
+		INJECTED from C:\Users\Francesca\Desktop\MemeticaMe\MemeticaMe\app\src\main\AndroidManifest.xml
 uses-permission#android.permission.INTERNET
-ADDED from /Users/alberto/App Moviles/MemeticaMe/app/src/main/AndroidManifest.xml:11:5-67
-MERGED from [com.microsoft.azure.android:azure-storage-android:0.7.0] /Users/alberto/App Moviles/MemeticaMe/app/build/intermediates/exploded-aar/com.microsoft.azure.android/azure-storage-android/0.7.0/AndroidManifest.xml:18:5-67
+ADDED from C:\Users\Francesca\Desktop\MemeticaMe\MemeticaMe\app\src\main\AndroidManifest.xml:11:5-67
+MERGED from [com.microsoft.azure.android:azure-storage-android:0.7.0] C:\Users\Francesca\Desktop\MemeticaMe\MemeticaMe\app\build\intermediates\exploded-aar\com.microsoft.azure.android\azure-storage-android\0.7.0\AndroidManifest.xml:18:5-67
 	android:name
-		ADDED from /Users/alberto/App Moviles/MemeticaMe/app/src/main/AndroidManifest.xml:11:22-64
+		ADDED from C:\Users\Francesca\Desktop\MemeticaMe\MemeticaMe\app\src\main\AndroidManifest.xml:11:22-64
 uses-permission#android.permission.GET_ACCOUNTS
-ADDED from /Users/alberto/App Moviles/MemeticaMe/app/src/main/AndroidManifest.xml:12:5-71
+ADDED from C:\Users\Francesca\Desktop\MemeticaMe\MemeticaMe\app\src\main\AndroidManifest.xml:12:5-71
 	android:name
-		ADDED from /Users/alberto/App Moviles/MemeticaMe/app/src/main/AndroidManifest.xml:12:22-68
+		ADDED from C:\Users\Francesca\Desktop\MemeticaMe\MemeticaMe\app\src\main\AndroidManifest.xml:12:22-68
 uses-permission#android.permission.WAKE_LOCK
-ADDED from /Users/alberto/App Moviles/MemeticaMe/app/src/main/AndroidManifest.xml:13:5-68
+ADDED from C:\Users\Francesca\Desktop\MemeticaMe\MemeticaMe\app\src\main\AndroidManifest.xml:13:5-68
 	android:name
-		ADDED from /Users/alberto/App Moviles/MemeticaMe/app/src/main/AndroidManifest.xml:13:22-65
+		ADDED from C:\Users\Francesca\Desktop\MemeticaMe\MemeticaMe\app\src\main\AndroidManifest.xml:13:22-65
 uses-permission#com.google.android.c2dm.permission.RECEIVE
-ADDED from /Users/alberto/App Moviles/MemeticaMe/app/src/main/AndroidManifest.xml:14:5-82
+ADDED from C:\Users\Francesca\Desktop\MemeticaMe\MemeticaMe\app\src\main\AndroidManifest.xml:14:5-82
 	android:name
-		ADDED from /Users/alberto/App Moviles/MemeticaMe/app/src/main/AndroidManifest.xml:14:22-79
+		ADDED from C:\Users\Francesca\Desktop\MemeticaMe\MemeticaMe\app\src\main\AndroidManifest.xml:14:22-79
 permission#com.mobility42.azurechatr.permission.C2D_MESSAGE
-ADDED from /Users/alberto/App Moviles/MemeticaMe/app/src/main/AndroidManifest.xml:16:5-18:47
+ADDED from C:\Users\Francesca\Desktop\MemeticaMe\MemeticaMe\app\src\main\AndroidManifest.xml:16:5-18:47
 	android:protectionLevel
-		ADDED from /Users/alberto/App Moviles/MemeticaMe/app/src/main/AndroidManifest.xml:18:9-44
+		ADDED from C:\Users\Francesca\Desktop\MemeticaMe\MemeticaMe\app\src\main\AndroidManifest.xml:18:9-44
 	android:name
-		ADDED from /Users/alberto/App Moviles/MemeticaMe/app/src/main/AndroidManifest.xml:17:9-72
+		ADDED from C:\Users\Francesca\Desktop\MemeticaMe\MemeticaMe\app\src\main\AndroidManifest.xml:17:9-72
 uses-permission#com.mobility42.azurechatr.permission.C2D_MESSAGE
-ADDED from /Users/alberto/App Moviles/MemeticaMe/app/src/main/AndroidManifest.xml:20:5-88
+ADDED from C:\Users\Francesca\Desktop\MemeticaMe\MemeticaMe\app\src\main\AndroidManifest.xml:20:5-88
 	android:name
-		ADDED from /Users/alberto/App Moviles/MemeticaMe/app/src/main/AndroidManifest.xml:20:22-85
+		ADDED from C:\Users\Francesca\Desktop\MemeticaMe\MemeticaMe\app\src\main\AndroidManifest.xml:20:22-85
 uses-permission#android.permission.WRITE_EXTERNAL_STORAGE
-ADDED from /Users/alberto/App Moviles/MemeticaMe/app/src/main/AndroidManifest.xml:21:5-81
+ADDED from C:\Users\Francesca\Desktop\MemeticaMe\MemeticaMe\app\src\main\AndroidManifest.xml:21:5-81
 	android:name
-		ADDED from /Users/alberto/App Moviles/MemeticaMe/app/src/main/AndroidManifest.xml:21:22-78
+		ADDED from C:\Users\Francesca\Desktop\MemeticaMe\MemeticaMe\app\src\main\AndroidManifest.xml:21:22-78
 uses-permission#android.permission.READ_PHONE_STATE
-ADDED from /Users/alberto/App Moviles/MemeticaMe/app/src/main/AndroidManifest.xml:22:5-75
+ADDED from C:\Users\Francesca\Desktop\MemeticaMe\MemeticaMe\app\src\main\AndroidManifest.xml:22:5-75
 	android:name
-		ADDED from /Users/alberto/App Moviles/MemeticaMe/app/src/main/AndroidManifest.xml:22:22-72
+		ADDED from C:\Users\Francesca\Desktop\MemeticaMe\MemeticaMe\app\src\main\AndroidManifest.xml:22:22-72
 uses-permission#android.permission.READ_EXTERNAL_STORAGE
-ADDED from /Users/alberto/App Moviles/MemeticaMe/app/src/main/AndroidManifest.xml:23:5-80
+ADDED from C:\Users\Francesca\Desktop\MemeticaMe\MemeticaMe\app\src\main\AndroidManifest.xml:23:5-80
 	android:name
-		ADDED from /Users/alberto/App Moviles/MemeticaMe/app/src/main/AndroidManifest.xml:23:22-77
+		ADDED from C:\Users\Francesca\Desktop\MemeticaMe\MemeticaMe\app\src\main\AndroidManifest.xml:23:22-77
 uses-permission#android.permission.WRITE_CONTACTS
-ADDED from /Users/alberto/App Moviles/MemeticaMe/app/src/main/AndroidManifest.xml:24:5-72
+ADDED from C:\Users\Francesca\Desktop\MemeticaMe\MemeticaMe\app\src\main\AndroidManifest.xml:24:5-72
 	android:name
-		ADDED from /Users/alberto/App Moviles/MemeticaMe/app/src/main/AndroidManifest.xml:24:22-70
+		ADDED from C:\Users\Francesca\Desktop\MemeticaMe\MemeticaMe\app\src\main\AndroidManifest.xml:24:22-70
 uses-permission#android.permission.READ_CONTACTS
-ADDED from /Users/alberto/App Moviles/MemeticaMe/app/src/main/AndroidManifest.xml:25:5-71
+ADDED from C:\Users\Francesca\Desktop\MemeticaMe\MemeticaMe\app\src\main\AndroidManifest.xml:25:5-71
 	android:name
-		ADDED from /Users/alberto/App Moviles/MemeticaMe/app/src/main/AndroidManifest.xml:25:22-69
+		ADDED from C:\Users\Francesca\Desktop\MemeticaMe\MemeticaMe\app\src\main\AndroidManifest.xml:25:22-69
 uses-permission#android.permission.RECORD_AUDIO
-ADDED from /Users/alberto/App Moviles/MemeticaMe/app/src/main/AndroidManifest.xml:26:5-71
+ADDED from C:\Users\Francesca\Desktop\MemeticaMe\MemeticaMe\app\src\main\AndroidManifest.xml:26:5-71
 	android:name
-		ADDED from /Users/alberto/App Moviles/MemeticaMe/app/src/main/AndroidManifest.xml:26:22-68
+		ADDED from C:\Users\Francesca\Desktop\MemeticaMe\MemeticaMe\app\src\main\AndroidManifest.xml:26:22-68
 application
-ADDED from /Users/alberto/App Moviles/MemeticaMe/app/src/main/AndroidManifest.xml:30:5-90:19
-MERGED from [com.android.support:support-v4:23.1.0] /Users/alberto/App Moviles/MemeticaMe/app/build/intermediates/exploded-aar/com.android.support/support-v4/23.1.0/AndroidManifest.xml:22:5-20
-MERGED from [com.google.android.gms:play-services-base:6.5.87] /Users/alberto/App Moviles/MemeticaMe/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-base/6.5.87/AndroidManifest.xml:20:5-24:19
-MERGED from [com.android.support:support-v4:23.1.0] /Users/alberto/App Moviles/MemeticaMe/app/build/intermediates/exploded-aar/com.android.support/support-v4/23.1.0/AndroidManifest.xml:22:5-20
+ADDED from C:\Users\Francesca\Desktop\MemeticaMe\MemeticaMe\app\src\main\AndroidManifest.xml:30:5-90:19
+MERGED from [com.android.support:support-v4:23.1.0] C:\Users\Francesca\Desktop\MemeticaMe\MemeticaMe\app\build\intermediates\exploded-aar\com.android.support\support-v4\23.1.0\AndroidManifest.xml:22:5-20
+MERGED from [com.google.android.gms:play-services-base:6.5.87] C:\Users\Francesca\Desktop\MemeticaMe\MemeticaMe\app\build\intermediates\exploded-aar\com.google.android.gms\play-services-base\6.5.87\AndroidManifest.xml:20:5-24:19
+MERGED from [com.android.support:support-v4:23.1.0] C:\Users\Francesca\Desktop\MemeticaMe\MemeticaMe\app\build\intermediates\exploded-aar\com.android.support\support-v4\23.1.0\AndroidManifest.xml:22:5-20
 	android:label
-		ADDED from /Users/alberto/App Moviles/MemeticaMe/app/src/main/AndroidManifest.xml:33:9-41
+		ADDED from C:\Users\Francesca\Desktop\MemeticaMe\MemeticaMe\app\src\main\AndroidManifest.xml:33:9-41
 	android:allowBackup
-		ADDED from /Users/alberto/App Moviles/MemeticaMe/app/src/main/AndroidManifest.xml:31:9-35
+		ADDED from C:\Users\Francesca\Desktop\MemeticaMe\MemeticaMe\app\src\main\AndroidManifest.xml:31:9-35
 	android:icon
-		ADDED from /Users/alberto/App Moviles/MemeticaMe/app/src/main/AndroidManifest.xml:32:9-45
+		ADDED from C:\Users\Francesca\Desktop\MemeticaMe\MemeticaMe\app\src\main\AndroidManifest.xml:32:9-45
 	android:theme
-		ADDED from /Users/alberto/App Moviles/MemeticaMe/app/src/main/AndroidManifest.xml:34:9-68
+		ADDED from C:\Users\Francesca\Desktop\MemeticaMe\MemeticaMe\app\src\main\AndroidManifest.xml:34:9-68
 activity#com.mobility42.azurechatr.ChatActivity
-ADDED from /Users/alberto/App Moviles/MemeticaMe/app/src/main/AndroidManifest.xml:35:9-39:20
+ADDED from C:\Users\Francesca\Desktop\MemeticaMe\MemeticaMe\app\src\main\AndroidManifest.xml:35:9-39:20
 	android:label
-		ADDED from /Users/alberto/App Moviles/MemeticaMe/app/src/main/AndroidManifest.xml:37:13-45
+		ADDED from C:\Users\Francesca\Desktop\MemeticaMe\MemeticaMe\app\src\main\AndroidManifest.xml:37:13-45
 	android:configChanges
-		ADDED from /Users/alberto/App Moviles/MemeticaMe/app/src/main/AndroidManifest.xml:38:13-59
+		ADDED from C:\Users\Francesca\Desktop\MemeticaMe\MemeticaMe\app\src\main\AndroidManifest.xml:38:13-59
 	android:name
-		ADDED from /Users/alberto/App Moviles/MemeticaMe/app/src/main/AndroidManifest.xml:36:13-41
+		ADDED from C:\Users\Francesca\Desktop\MemeticaMe\MemeticaMe\app\src\main\AndroidManifest.xml:36:13-41
 receiver#com.microsoft.windowsazure.notifications.NotificationsBroadcastReceiver
-ADDED from /Users/alberto/App Moviles/MemeticaMe/app/src/main/AndroidManifest.xml:41:9-48:20
+ADDED from C:\Users\Francesca\Desktop\MemeticaMe\MemeticaMe\app\src\main\AndroidManifest.xml:41:9-48:20
 	android:permission
-		ADDED from /Users/alberto/App Moviles/MemeticaMe/app/src/main/AndroidManifest.xml:43:13-73
+		ADDED from C:\Users\Francesca\Desktop\MemeticaMe\MemeticaMe\app\src\main\AndroidManifest.xml:43:13-73
 	android:name
-		ADDED from /Users/alberto/App Moviles/MemeticaMe/app/src/main/AndroidManifest.xml:42:13-99
+		ADDED from C:\Users\Francesca\Desktop\MemeticaMe\MemeticaMe\app\src\main\AndroidManifest.xml:42:13-99
 intent-filter#com.google.android.c2dm.intent.RECEIVE+com.mobility42.azurechatr
-ADDED from /Users/alberto/App Moviles/MemeticaMe/app/src/main/AndroidManifest.xml:44:13-47:29
+ADDED from C:\Users\Francesca\Desktop\MemeticaMe\MemeticaMe\app\src\main\AndroidManifest.xml:44:13-47:29
 action#com.google.android.c2dm.intent.RECEIVE
-ADDED from /Users/alberto/App Moviles/MemeticaMe/app/src/main/AndroidManifest.xml:45:17-81
+ADDED from C:\Users\Francesca\Desktop\MemeticaMe\MemeticaMe\app\src\main\AndroidManifest.xml:45:17-81
 	android:name
-		ADDED from /Users/alberto/App Moviles/MemeticaMe/app/src/main/AndroidManifest.xml:45:25-78
+		ADDED from C:\Users\Francesca\Desktop\MemeticaMe\MemeticaMe\app\src\main\AndroidManifest.xml:45:25-78
 category#com.mobility42.azurechatr
-ADDED from /Users/alberto/App Moviles/MemeticaMe/app/src/main/AndroidManifest.xml:46:17-70
+ADDED from C:\Users\Francesca\Desktop\MemeticaMe\MemeticaMe\app\src\main\AndroidManifest.xml:46:17-70
 	android:name
-		ADDED from /Users/alberto/App Moviles/MemeticaMe/app/src/main/AndroidManifest.xml:46:27-67
+		ADDED from C:\Users\Francesca\Desktop\MemeticaMe\MemeticaMe\app\src\main\AndroidManifest.xml:46:27-67
 activity#com.mobility42.azurechatr.ListaChatActivity
-ADDED from /Users/alberto/App Moviles/MemeticaMe/app/src/main/AndroidManifest.xml:50:9-59:20
+ADDED from C:\Users\Francesca\Desktop\MemeticaMe\MemeticaMe\app\src\main\AndroidManifest.xml:50:9-59:20
 	android:label
-		ADDED from /Users/alberto/App Moviles/MemeticaMe/app/src/main/AndroidManifest.xml:52:13-62
+		ADDED from C:\Users\Francesca\Desktop\MemeticaMe\MemeticaMe\app\src\main\AndroidManifest.xml:52:13-62
 	android:configChanges
-		ADDED from /Users/alberto/App Moviles/MemeticaMe/app/src/main/AndroidManifest.xml:53:13-59
+		ADDED from C:\Users\Francesca\Desktop\MemeticaMe\MemeticaMe\app\src\main\AndroidManifest.xml:53:13-59
 	android:name
-		ADDED from /Users/alberto/App Moviles/MemeticaMe/app/src/main/AndroidManifest.xml:51:13-46
+		ADDED from C:\Users\Francesca\Desktop\MemeticaMe\MemeticaMe\app\src\main\AndroidManifest.xml:51:13-46
 intent-filter#android.intent.action.MAIN+android.intent.category.LAUNCHER
-ADDED from /Users/alberto/App Moviles/MemeticaMe/app/src/main/AndroidManifest.xml:54:13-58:29
+ADDED from C:\Users\Francesca\Desktop\MemeticaMe\MemeticaMe\app\src\main\AndroidManifest.xml:54:13-58:29
 action#android.intent.action.MAIN
-ADDED from /Users/alberto/App Moviles/MemeticaMe/app/src/main/AndroidManifest.xml:55:17-69
+ADDED from C:\Users\Francesca\Desktop\MemeticaMe\MemeticaMe\app\src\main\AndroidManifest.xml:55:17-69
 	android:name
-		ADDED from /Users/alberto/App Moviles/MemeticaMe/app/src/main/AndroidManifest.xml:55:25-66
+		ADDED from C:\Users\Francesca\Desktop\MemeticaMe\MemeticaMe\app\src\main\AndroidManifest.xml:55:25-66
 category#android.intent.category.LAUNCHER
-ADDED from /Users/alberto/App Moviles/MemeticaMe/app/src/main/AndroidManifest.xml:57:17-77
+ADDED from C:\Users\Francesca\Desktop\MemeticaMe\MemeticaMe\app\src\main\AndroidManifest.xml:57:17-77
 	android:name
-		ADDED from /Users/alberto/App Moviles/MemeticaMe/app/src/main/AndroidManifest.xml:57:27-74
+		ADDED from C:\Users\Francesca\Desktop\MemeticaMe\MemeticaMe\app\src\main\AndroidManifest.xml:57:27-74
 activity#com.mobility42.azurechatr.ListaContactosActivity
-ADDED from /Users/alberto/App Moviles/MemeticaMe/app/src/main/AndroidManifest.xml:60:9-64:20
+ADDED from C:\Users\Francesca\Desktop\MemeticaMe\MemeticaMe\app\src\main\AndroidManifest.xml:60:9-64:20
 	android:label
-		ADDED from /Users/alberto/App Moviles/MemeticaMe/app/src/main/AndroidManifest.xml:62:13-67
+		ADDED from C:\Users\Francesca\Desktop\MemeticaMe\MemeticaMe\app\src\main\AndroidManifest.xml:62:13-67
 	android:configChanges
-		ADDED from /Users/alberto/App Moviles/MemeticaMe/app/src/main/AndroidManifest.xml:63:13-59
+		ADDED from C:\Users\Francesca\Desktop\MemeticaMe\MemeticaMe\app\src\main\AndroidManifest.xml:63:13-59
 	android:name
-		ADDED from /Users/alberto/App Moviles/MemeticaMe/app/src/main/AndroidManifest.xml:61:13-51
+		ADDED from C:\Users\Francesca\Desktop\MemeticaMe\MemeticaMe\app\src\main\AndroidManifest.xml:61:13-51
 activity#com.mobility42.azurechatr.CrearChatActivity
-ADDED from /Users/alberto/App Moviles/MemeticaMe/app/src/main/AndroidManifest.xml:65:9-69:20
+ADDED from C:\Users\Francesca\Desktop\MemeticaMe\MemeticaMe\app\src\main\AndroidManifest.xml:65:9-69:20
 	android:label
-		ADDED from /Users/alberto/App Moviles/MemeticaMe/app/src/main/AndroidManifest.xml:67:13-62
+		ADDED from C:\Users\Francesca\Desktop\MemeticaMe\MemeticaMe\app\src\main\AndroidManifest.xml:67:13-62
 	android:configChanges
-		ADDED from /Users/alberto/App Moviles/MemeticaMe/app/src/main/AndroidManifest.xml:68:13-59
+		ADDED from C:\Users\Francesca\Desktop\MemeticaMe\MemeticaMe\app\src\main\AndroidManifest.xml:68:13-59
 	android:name
-		ADDED from /Users/alberto/App Moviles/MemeticaMe/app/src/main/AndroidManifest.xml:66:13-46
+		ADDED from C:\Users\Francesca\Desktop\MemeticaMe\MemeticaMe\app\src\main\AndroidManifest.xml:66:13-46
 activity#com.mobility42.azurechatr.MemeViewer.MemeViewerActivity
-ADDED from /Users/alberto/App Moviles/MemeticaMe/app/src/main/AndroidManifest.xml:70:9-74:20
+ADDED from C:\Users\Francesca\Desktop\MemeticaMe\MemeticaMe\app\src\main\AndroidManifest.xml:70:9-74:20
 	android:label
-		ADDED from /Users/alberto/App Moviles/MemeticaMe/app/src/main/AndroidManifest.xml:72:13-62
+		ADDED from C:\Users\Francesca\Desktop\MemeticaMe\MemeticaMe\app\src\main\AndroidManifest.xml:72:13-62
 	android:configChanges
-		ADDED from /Users/alberto/App Moviles/MemeticaMe/app/src/main/AndroidManifest.xml:73:13-59
+		ADDED from C:\Users\Francesca\Desktop\MemeticaMe\MemeticaMe\app\src\main\AndroidManifest.xml:73:13-59
 	android:name
-		ADDED from /Users/alberto/App Moviles/MemeticaMe/app/src/main/AndroidManifest.xml:71:13-58
+		ADDED from C:\Users\Francesca\Desktop\MemeticaMe\MemeticaMe\app\src\main\AndroidManifest.xml:71:13-58
 activity#com.mobility42.azurechatr.MemeViewer.MemeCreator
-ADDED from /Users/alberto/App Moviles/MemeticaMe/app/src/main/AndroidManifest.xml:75:9-79:20
+ADDED from C:\Users\Francesca\Desktop\MemeticaMe\MemeticaMe\app\src\main\AndroidManifest.xml:75:9-79:20
 	android:label
-		ADDED from /Users/alberto/App Moviles/MemeticaMe/app/src/main/AndroidManifest.xml:77:13-62
+		ADDED from C:\Users\Francesca\Desktop\MemeticaMe\MemeticaMe\app\src\main\AndroidManifest.xml:77:13-62
 	android:configChanges
-		ADDED from /Users/alberto/App Moviles/MemeticaMe/app/src/main/AndroidManifest.xml:78:13-59
+		ADDED from C:\Users\Francesca\Desktop\MemeticaMe\MemeticaMe\app\src\main\AndroidManifest.xml:78:13-59
 	android:name
-		ADDED from /Users/alberto/App Moviles/MemeticaMe/app/src/main/AndroidManifest.xml:76:13-51
+		ADDED from C:\Users\Francesca\Desktop\MemeticaMe\MemeticaMe\app\src\main\AndroidManifest.xml:76:13-51
 activity#com.mobility42.azurechatr.MediaBrowser
-ADDED from /Users/alberto/App Moviles/MemeticaMe/app/src/main/AndroidManifest.xml:80:9-84:20
+ADDED from C:\Users\Francesca\Desktop\MemeticaMe\MemeticaMe\app\src\main\AndroidManifest.xml:80:9-84:20
 	android:label
-		ADDED from /Users/alberto/App Moviles/MemeticaMe/app/src/main/AndroidManifest.xml:82:13-62
+		ADDED from C:\Users\Francesca\Desktop\MemeticaMe\MemeticaMe\app\src\main\AndroidManifest.xml:82:13-62
 	android:configChanges
-		ADDED from /Users/alberto/App Moviles/MemeticaMe/app/src/main/AndroidManifest.xml:83:13-59
+		ADDED from C:\Users\Francesca\Desktop\MemeticaMe\MemeticaMe\app\src\main\AndroidManifest.xml:83:13-59
 	android:name
-		ADDED from /Users/alberto/App Moviles/MemeticaMe/app/src/main/AndroidManifest.xml:81:13-41
+		ADDED from C:\Users\Francesca\Desktop\MemeticaMe\MemeticaMe\app\src\main\AndroidManifest.xml:81:13-41
 activity#com.mobility42.azurechatr.BlobActivity
-ADDED from /Users/alberto/App Moviles/MemeticaMe/app/src/main/AndroidManifest.xml:85:9-89:20
+ADDED from C:\Users\Francesca\Desktop\MemeticaMe\MemeticaMe\app\src\main\AndroidManifest.xml:85:9-89:20
 	android:label
-		ADDED from /Users/alberto/App Moviles/MemeticaMe/app/src/main/AndroidManifest.xml:87:13-62
+		ADDED from C:\Users\Francesca\Desktop\MemeticaMe\MemeticaMe\app\src\main\AndroidManifest.xml:87:13-62
 	android:configChanges
-		ADDED from /Users/alberto/App Moviles/MemeticaMe/app/src/main/AndroidManifest.xml:88:13-59
+		ADDED from C:\Users\Francesca\Desktop\MemeticaMe\MemeticaMe\app\src\main\AndroidManifest.xml:88:13-59
 	android:name
-		ADDED from /Users/alberto/App Moviles/MemeticaMe/app/src/main/AndroidManifest.xml:86:13-41
+		ADDED from C:\Users\Francesca\Desktop\MemeticaMe\MemeticaMe\app\src\main\AndroidManifest.xml:86:13-41
 meta-data#com.google.android.gms.version
-ADDED from [com.google.android.gms:play-services-base:6.5.87] /Users/alberto/App Moviles/MemeticaMe/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-base/6.5.87/AndroidManifest.xml:21:9-23:69
-	android:value
-		ADDED from [com.google.android.gms:play-services-base:6.5.87] /Users/alberto/App Moviles/MemeticaMe/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-base/6.5.87/AndroidManifest.xml:23:13-66
+ADDED from [com.google.android.gms:play-services-base:6.5.87] C:\Users\Francesca\Desktop\MemeticaMe\MemeticaMe\app\build\intermediates\exploded-aar\com.google.android.gms\play-services-base\6.5.87\AndroidManifest.xml:21:9-23:69
 	android:name
-		ADDED from [com.google.android.gms:play-services-base:6.5.87] /Users/alberto/App Moviles/MemeticaMe/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-base/6.5.87/AndroidManifest.xml:22:13-58
+		ADDED from [com.google.android.gms:play-services-base:6.5.87] C:\Users\Francesca\Desktop\MemeticaMe\MemeticaMe\app\build\intermediates\exploded-aar\com.google.android.gms\play-services-base\6.5.87\AndroidManifest.xml:22:13-58
+	android:value
+		ADDED from [com.google.android.gms:play-services-base:6.5.87] C:\Users\Francesca\Desktop\MemeticaMe\MemeticaMe\app\build\intermediates\exploded-aar\com.google.android.gms\play-services-base\6.5.87\AndroidManifest.xml:23:13-66
