@@ -1,18 +1,21 @@
 package com.mobility42.azurechatr;
-import java.io.File;
-import java.io.FileInputStream;
-import java.io.InputStream;
-import java.util.UUID;
 
 import android.content.Context;
 import android.os.AsyncTask;
-import android.os.Bundle;
 import android.widget.Toast;
 
 import com.microsoft.azure.storage.CloudStorageAccount;
-import com.microsoft.azure.storage.blob.*;
+import com.microsoft.azure.storage.blob.BlobContainerPermissions;
+import com.microsoft.azure.storage.blob.BlobContainerPublicAccessType;
+import com.microsoft.azure.storage.blob.CloudBlobClient;
+import com.microsoft.azure.storage.blob.CloudBlobContainer;
+import com.microsoft.azure.storage.blob.CloudBlockBlob;
 
-public class PictureBlob extends AsyncTask<String, Void, Void> {
+import java.io.File;
+import java.io.FileInputStream;
+import java.util.UUID;
+
+public class AudioBlob extends AsyncTask<String, Void, Void> {
 
     public static final String storageConnectionString = "DefaultEndpointsProtocol=http;" +
             "AccountName=memeticamestorage;"+"AccountKey=q6Bt7iiqVbxUcGjPUSrqq4eNiT6AY6hORPlND9qbM1qbJz4SW1wPWuRKZA4lgQX/mD5Cdfihm/vUwWHLj1Q6/A==";
@@ -24,16 +27,17 @@ public class PictureBlob extends AsyncTask<String, Void, Void> {
     int option;
     public boolean finished = false;
     String idchat;
+    public String blobname;
 
-    public PictureBlob(File f,int option,Context context,String idchat)
+    public AudioBlob(File f, Context context, String idchat)
     {
-        this.option = option;
         this.context =context;
         this.f = f;
         this.idchat=idchat;
     }
     @Override
     protected void onPostExecute(Void v) {
+
         finished =true;
     }
     @Override
@@ -49,10 +53,8 @@ public class PictureBlob extends AsyncTask<String, Void, Void> {
              blobClient = account.createCloudBlobClient();
 
 
-            if(option==0)//Upload photo
-            {
-                uploadPhoto();
-            }
+
+                uploadAudio();
             publishProgress();
 
 
@@ -64,10 +66,10 @@ public class PictureBlob extends AsyncTask<String, Void, Void> {
         return null;
     }
 
-    void uploadPhoto()
+    void uploadAudio()
     {
         try {
-            CloudBlobContainer container = blobClient.getContainerReference("photos"+idchat);
+            CloudBlobContainer container = blobClient.getContainerReference("audio"+idchat);
 
             // Create the container if it does not exist
             container.createIfNotExists();
@@ -85,10 +87,11 @@ public class PictureBlob extends AsyncTask<String, Void, Void> {
 
             // Upload 3 blobs
             // Get a reference to a blob in the container
-
+            blobname ="Audio"
+                    + UUID.randomUUID().toString().replace("-", "")+ ".3gp";
             CloudBlockBlob blob = container
-                    .getBlockBlobReference("IMG_"
-                            + UUID.randomUUID().toString().replace("-", "")+ ".jpg");
+                    .getBlockBlobReference(blobname);
+
             blob.upload(new FileInputStream(f), f.length());
         }catch(Exception e)
         {

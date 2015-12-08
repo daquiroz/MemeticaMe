@@ -112,6 +112,7 @@ public class ChatActivity extends Activity {
 		try
 		{
 			idchat = getIntent().getExtras().getString("idchat");
+
 		}
 		catch(Exception excepcion)
 		{
@@ -264,6 +265,7 @@ public class ChatActivity extends Activity {
 	public void  browseMedia(View view)
 	{
 		Intent intent = new Intent(ChatActivity.this,MediaBrowser.class);
+		intent.putExtra("idchat",idchat);
 		startActivity(intent);
 	}
 
@@ -279,14 +281,16 @@ public class ChatActivity extends Activity {
 			Intent intent = new Intent(ChatActivity.this,BlobActivity.class);
 			intent.putExtra("Option","0");
 			intent.putExtra("idchat", idchat);
+
 			startActivity(intent);
 
 		}else if (name.equals("recordButton"))
 		{
 
-			Intent intent = new Intent(ChatActivity.this,BlobActivity.class);
+			Intent intent = new Intent(ChatActivity.this,Recorder.class);
 			intent.putExtra("Option", "1");
-			intent.putExtra("idchat", idchat);
+
+			intent.putExtra("idchat",idchat);
 
 			startActivity(intent);
 
@@ -294,6 +298,7 @@ public class ChatActivity extends Activity {
 		{
 			Intent intent = new Intent(ChatActivity.this,BlobActivity.class);
 			intent.putExtra("Option", "2");
+
 			intent.putExtra("idchat", idchat);
 
 			startActivity(intent);

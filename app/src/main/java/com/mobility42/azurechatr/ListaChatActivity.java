@@ -44,11 +44,11 @@ public class ListaChatActivity extends Activity {
         setContentView(R.layout.activity_lista_chat);
 
         db = new DB();
-       /* db.miId = "56992773617";
+        db.miId = "56992773617";
         db.name = "Fran";
-*/
+/*
         db.miId = "56967690082";
-        db.name = "Tito";
+        db.name = "Tito";*/
         ImageButton btn = (ImageButton)findViewById(R.id.btCrearChat);
         btn.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -62,6 +62,14 @@ public class ListaChatActivity extends Activity {
             @Override
             public void onClick(View v) {
                 startActivity(new Intent(ListaChatActivity.this, ListaContactosActivity.class));
+            }
+        });
+
+        ImageButton btnCanales = (ImageButton)findViewById(R.id.btCanales);
+        btnCanales.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                startActivity(new Intent(ListaChatActivity.this, ListaCanales.class));
             }
         });
 

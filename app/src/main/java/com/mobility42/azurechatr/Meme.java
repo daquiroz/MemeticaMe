@@ -7,7 +7,13 @@ public class Meme {
 
 
 
+    public String getImagePath() {
+        return imagePath;
+    }
 
+    public void setImagePath(String imagePath) {
+        this.imagePath = imagePath;
+    }
     public String getRanking() {
         return ranking;
     }
@@ -40,12 +46,26 @@ public class Meme {
         this.categoria = categoria;
     }
 
-    public Meme(String url, String ranking, String etiquetas, String categoria) {
-        this.url = url;
-        this.ranking = ranking;
-        this.etiquetas = etiquetas;
-        this.categoria = categoria;
+    public String getIdcanal() {
+        return idcanal;
     }
+
+    public void setIdcanal(String idcanal) {
+        this.idcanal = idcanal;
+    }
+
+    public void setRanking(String ranking) {
+        this.ranking = ranking;
+    }
+
+    public String getNombrecanal() {
+        return nombrecanal;
+    }
+
+    public void setNombrecanal(String nombrecanal) {
+        this.nombrecanal = nombrecanal;
+    }
+
 
     @com.google.gson.annotations.SerializedName("url")
     private String url;
@@ -53,9 +73,42 @@ public class Meme {
     @com.google.gson.annotations.SerializedName("ranking")
     private String ranking;
 
+    @com.google.gson.annotations.SerializedName("imagepath")
+    private String imagePath;
+
     @com.google.gson.annotations.SerializedName("etiquetas")
     private String etiquetas;
 
     @com.google.gson.annotations.SerializedName("categoria")
     private String categoria;
+
+    public String getId() {
+        return id;
+    }
+
+    public void setId(String id) {
+        this.id = id;
+    }
+
+    @com.google.gson.annotations.SerializedName("id")
+    private String id;
+
+
+    public Meme(String url, String ranking, String etiquetas, String categoria, String idcanal, String nombrecanal, String id) {
+        this.url = url;
+        this.ranking = ranking;
+        this.etiquetas = etiquetas;
+        this.categoria = categoria;
+        this.idcanal = idcanal;
+        this.nombrecanal = nombrecanal;
+        this.id = id;
+    }
+
+    @com.google.gson.annotations.SerializedName("idcanal")
+    private String idcanal;
+
+    @com.google.gson.annotations.SerializedName("nombrecanal")
+    private String nombrecanal;
+
+
 }

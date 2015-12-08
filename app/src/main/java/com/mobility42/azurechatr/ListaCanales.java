@@ -28,14 +28,13 @@ import java.util.Random;
 /**
  * Created by Dani on 07-12-15.
  */
-public class CanalActivity extends Activity{
+public class ListaCanales extends Activity{
 
-
-    MemeChannelAdapter memeadapter;
-    ListView listviewmemes;
+    CanalAdapter memeadapter;
+    ListView lisviewcanales;
     private ArrayList<Meme> listaMemes;
-      public String miId = DB.miId;
-      public DB db;
+    public String miId = DB.miId;
+    public DB db;
     String idcanal;
 
     private String AZUREMOBILESERVICES_URI = "https://memeticameapp.azure-mobile.net/";
@@ -44,26 +43,18 @@ public class CanalActivity extends Activity{
     private String AZUREPUSHNOTIFHUB_CNXSTRING = "Endpoint=sb://memeticameapphub-ns.servicebus.windows.net/;SharedAccessKeyName=DefaultFullSharedAccessSignature;SharedAccessKey=1oxnmbuBGmEEREVPqqIhwV1ATMWMsFu2tquHaR8lPEQ=";
     private MobileServiceClient mClient;
     private MobileServiceTable<Meme> memesTable;
+    private List<String> idCanalesExistentes;
 
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.canal_meme);
+        setContentView(R.layout.lista_canales_meme);
 
         Uri uri = ContactsContract.CommonDataKinds.Phone.CONTENT_URI;
 
         db = new DB();
 
-
-        try
-        {
-            idcanal = getIntent().getExtras().getString("idcanal");
-        }
-        catch(Exception excepcion)
-        {
-            idcanal = null;
-        }
 
 
         try {
@@ -78,26 +69,17 @@ public class CanalActivity extends Activity{
             memesTable = mClient.getTable(Meme.class);
 
             listaMemes = new ArrayList<Meme>();
+            idCanalesExistentes = new ArrayList<String>();
+
 
             llenarTablaMemes();
-            //listaFinal = new ArrayList<Contact>();
-
-            //mTextNewChat = (EditText) findViewById(R.id.textNewChat);
-
-            // Create an adapter to bind the items with the view
-//            mAdapter = new ChatItemAdapter(this,lista);
-//            listViewChat = (ListView) findViewById(R.id.listViewChat);
-//            listViewChat.setAdapter(mAdapter);
-
-            // Load the items from the Mobile Service //
-
-            //refreshItemsFromTable();
 
 
-            memeadapter = new MemeChannelAdapter(this, listaMemes);
 
-            listviewmemes = (ListView) findViewById(R.id.listviewMemes);
-            listviewmemes.setAdapter(memeadapter);
+            memeadapter = new CanalAdapter(this, listaMemes);
+
+            lisviewcanales = (ListView) findViewById(R.id.listaCanales);
+            lisviewcanales.setAdapter(memeadapter);
 
 
         } catch (MalformedURLException e) {
@@ -105,7 +87,16 @@ public class CanalActivity extends Activity{
         }
 
 
-        listviewmemes.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+        ImageButton btCrearCanal = (ImageButton)findViewById(R.id.btAgregarCanal);
+        btCrearCanal.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                startActivity(new Intent(ListaCanales.this, CrearCanalActivity.class));
+            }
+        });
+
+
+        lisviewcanales.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
             public void onItemClick(AdapterView<?> parent, View view, int position,
                                     long id) {
@@ -141,11 +132,21 @@ public class CanalActivity extends Activity{
                     listaMemes.clear();
 
                     for (Meme item : result) {
-                        if (item.getIdcanal().equals(idcanal))
+                        boolean idyaagregado = false;
+                        for (String id : idCanalesExistentes)
+                        {
+                            if (id.equals(item.getIdcanal()))
+                            {
+                                idyaagregado = true;
+                            }
+                        }
+                        if (idyaagregado == false)
                         {
                             Meme c = new Meme(item.getUrl(), item.getRanking(), item.getEtiquetas(), item.getCategoria(), item.getIdcanal(), item.getNombrecanal(), item.getId());
                             listaMemes.add(c);
+                            idCanalesExistentes.add(c.getIdcanal());
                         }
+
                     }
 
                     //listaFinal = CompararListas(listaContactosCelular, listaContactosAzure);

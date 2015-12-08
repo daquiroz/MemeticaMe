@@ -13,19 +13,16 @@
         android:layout_height="48dp"
         android:id="@+id/relativeLayout1"
         android:background="#6290DA">
-
         <ImageButton
-            android:src="@drawable/plus"
-            android:layout_width="48dp"
+            android:src="@drawable/back"
+            android:layout_width="40dp"
             android:layout_height="48dp"
-            android:id="@+id/btCrearChat"
-            android:layout_alignParentRight="true"
-            android:tint="#ffffffff"
-            android:scaleType="fitCenter"
+            android:id="@+id/back"
             android:background="@drawable/menubutton"
-            android:layout_marginRight="40dp"
-            android:paddingTop="12dp"
-            android:paddingBottom="12dp" />
+            android:padding="12dp"
+            android:paddingTop="10dp"
+            android:paddingBottom="10dp"
+            android:scaleType="fitCenter" />
 
         <ImageButton
             android:id="@+id/menu"
@@ -40,37 +37,10 @@
             android:paddingBottom="12dp"
             android:paddingRight="8dp"
             android:paddingLeft="8dp" />
-
-        <ImageButton
-            android:src="@drawable/user"
-            android:layout_width="48dp"
-            android:layout_height="48dp"
-            android:id="@+id/btVerContactos"
-            android:layout_alignParentRight="true"
-            android:tint="#ffffffff"
-            android:scaleType="fitCenter"
-            android:background="@drawable/menubutton"
-            android:layout_marginRight="84dp"
-            android:paddingTop="12dp"
-            android:paddingBottom="12dp" />
-
-        <ImageButton
-            android:src="@drawable/mind_map"
-            android:layout_width="48dp"
-            android:layout_height="48dp"
-            android:id="@+id/btCanales"
-            android:layout_alignParentRight="true"
-            android:tint="#ffffffff"
-            android:scaleType="fitCenter"
-            android:background="@drawable/menubutton"
-            android:layout_marginRight="132dp"
-            android:paddingTop="12dp"
-            android:paddingBottom="12dp"
-            android:longClickable="false" />
-
     </RelativeLayout>
     <ListView
-        android:id="@+id/listviewcontact"
+        android:id="@+id/listacategorias"
+        android:layout_above="@+id/forms_centralfragments_chat_chat_editLayout"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:layout_alignParentTop="true"
@@ -81,6 +51,38 @@
         android:layout_marginTop="48dp"
         android:paddingTop="10dp"
         android:paddingBottom="10dp"
-        android:choiceMode="singleChoice" />
+        android:choiceMode="multipleChoice" />
+    <LinearLayout
+        android:id="@+id/forms_centralfragments_chat_chat_editLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginBottom="10dp"
+        android:layout_alignParentBottom="true"
+        android:stackFromBottom="true"
+        android:transcriptMode="alwaysScroll"
+        android:orientation="horizontal">
+
+        <EditText
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/nombreCanal"
+            android:layout_weight="1"
+            android:text="Nombre Canal" />
+
+        <ImageButton
+            android:id="@+id/btCrearCanalOK"
+            android:layout_width="48dp"
+            android:layout_height="48dp"
+            android:textColor="#FFFFFF"
+            android:src="@drawable/checkmark"
+            android:onClick="addItem"
+            android:background="@drawable/button"
+            android:tint="#ffffffff"
+            android:padding="12dp"
+            android:scaleType="fitCenter" />
+    </LinearLayout>
 
 </RelativeLayout>
