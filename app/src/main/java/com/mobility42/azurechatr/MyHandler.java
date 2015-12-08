@@ -41,7 +41,7 @@ public class MyHandler extends NotificationsHandler {
 				ctx.getSystemService(Context.NOTIFICATION_SERVICE);
 
 		PendingIntent contentIntent = PendingIntent.getActivity(ctx, 0,
-				new Intent(ctx, ChatActivity.class), 0);
+				new Intent(ctx, ListaChatActivity.class), 0);
 
 		NotificationCompat.Builder mBuilder =
 				new NotificationCompat.Builder(ctx)
