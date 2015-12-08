@@ -8,6 +8,7 @@ android {
         applicationId "com.mobility42.azurechatr"
         minSdkVersion 15
         targetSdkVersion 19
+        multiDexEnabled true
     }
 
     buildTypes {
