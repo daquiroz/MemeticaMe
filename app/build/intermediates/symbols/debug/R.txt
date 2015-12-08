@@ -184,11 +184,12 @@ int layout crear_chat 0x7f030009
 int layout feed_chat 0x7f03000a
 int layout feed_meme 0x7f03000b
 int layout feed_meme_channel 0x7f03000c
-int layout lista_contactos 0x7f03000d
-int layout meme_view 0x7f03000e
-int layout photoblob_layout 0x7f03000f
-int layout recordblob_layout 0x7f030010
-int layout row_list_chat 0x7f030011
+int layout lista_canales_meme 0x7f03000d
+int layout lista_contactos 0x7f03000e
+int layout meme_view 0x7f03000f
+int layout photoblob_layout 0x7f030010
+int layout recordblob_layout 0x7f030011
+int layout row_list_chat 0x7f030012
 int menu activity_main 0x7f0a0000
 int menu menu_crear_chat 0x7f0a0001
 int menu menu_lista_chat 0x7f0a0002

@@ -232,11 +232,12 @@ containing a value of this type.
         public static final int feed_chat=0x7f03000a;
         public static final int feed_meme=0x7f03000b;
         public static final int feed_meme_channel=0x7f03000c;
-        public static final int lista_contactos=0x7f03000d;
-        public static final int meme_view=0x7f03000e;
-        public static final int photoblob_layout=0x7f03000f;
-        public static final int recordblob_layout=0x7f030010;
-        public static final int row_list_chat=0x7f030011;
+        public static final int lista_canales_meme=0x7f03000d;
+        public static final int lista_contactos=0x7f03000e;
+        public static final int meme_view=0x7f03000f;
+        public static final int photoblob_layout=0x7f030010;
+        public static final int recordblob_layout=0x7f030011;
+        public static final int row_list_chat=0x7f030012;
     }
     public static final class menu {
         public static final int activity_main=0x7f0a0000;

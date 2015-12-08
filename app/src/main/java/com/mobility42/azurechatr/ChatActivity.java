@@ -176,7 +176,7 @@ public class ChatActivity extends Activity {
 				Toast.makeText(this,path,Toast.LENGTH_LONG).show();
 				final ChatItem item = new ChatItem();
 
-				item.setText("Imagen enviada:");
+				item.setText("Imagen:");
 				// This is temporary until we add authentication to the Android version
 				item.setUserName(miId);
 
@@ -192,6 +192,8 @@ public class ChatActivity extends Activity {
 				fc.setTimeStamp(formatter.format(item.getTimeStamp()));
 				fc.setStatus("waiting");
 				lista.add(fc);
+				listViewChat.setSelection(mAdapter.getCount() - 1);
+
 			}
 		}
 	}
