@@ -1,13 +1,8 @@
 package com.mobility42.azurechatr;
 
 import android.app.Activity;
-import android.content.ContentResolver;
-import android.content.CursorLoader;
 import android.content.Intent;
-import android.database.Cursor;
-import android.net.Uri;
 import android.os.Bundle;
-import android.provider.ContactsContract;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ImageButton;
@@ -20,10 +15,8 @@ import com.microsoft.windowsazure.mobileservices.MobileServiceTable;
 import com.microsoft.windowsazure.mobileservices.ServiceFilterResponse;
 import com.microsoft.windowsazure.mobileservices.TableOperationCallback;
 import com.microsoft.windowsazure.mobileservices.TableQueryCallback;
-import com.mobility42.azurechatr.*;
 
 import java.net.MalformedURLException;
-import java.text.SimpleDateFormat;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Random;
@@ -98,6 +91,22 @@ public class CanalActivity extends Activity{
 
 
 
+        }   else if (modocanal.equals("Subir")){
+            try
+            {
+                categoria = getIntent().getExtras().getString("categoria");
+                nombrecanal = getIntent().getExtras().getString("nombrecanal");
+
+
+            }
+            catch(Exception excepcion)
+            {
+                categoria =  "0000";
+                nombrecanal =  "0000";
+            }
+
+
+
         }
         try
         {
@@ -147,6 +156,19 @@ public class CanalActivity extends Activity{
             //createAndShowDialog(new Exception("There was an error creating the Mobile Service. Verify the URL"), "Error");
         }
 
+        ImageButton btMeme = (ImageButton)findViewById(R.id.btAgregarMeme);
+
+        btMeme.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent i = new Intent(CanalActivity.this, SubirMemeCanal.class);
+                i.putExtra("modocanal", "Subir");
+                i.putExtra("idcanal", idcanal);
+                i.putExtra("nombrecanal",nombrecanal);
+                i.putExtra("categoria",categoria);
+                startActivityForResult(i,9);
+            }
+        });
 
         listviewmemes.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
@@ -186,7 +208,6 @@ public class CanalActivity extends Activity{
         nuevo.setImagePath(path);
 
         listaMemes.add(nuevo);
-        listviewmemes.setSelection(memeadapter.getCount() - 1);
         memesTable.insert(nuevo, new TableOperationCallback<Meme>() {
 
             public void onCompleted(Meme entity, Exception exception, ServiceFilterResponse response) {
@@ -199,10 +220,49 @@ public class CanalActivity extends Activity{
             }
         });
 
+        listviewmemes.setSelection(memeadapter.getCount() - 1);
+
+
 
 
 
         Toast.makeText(this,"path2:" + path ,Toast.LENGTH_LONG).show();
+    }
+
+    @Override
+    protected void onActivityResult(int requestCode, int resultCode, Intent data) {
+
+        if (requestCode == 9) {
+            if(resultCode == RESULT_OK){
+                String path =data.getStringExtra("path");
+                String etiquetas =data.getStringExtra("etiquetas");
+                Toast.makeText(this,path,Toast.LENGTH_LONG).show();
+
+                Random r = new Random();
+
+                String url = "hola";
+                Meme nuevo = new Meme(url,"0",etiquetas,categoria,idcanal,nombrecanal, String.valueOf(r.nextInt()));
+
+                nuevo.setImagePath(path);
+
+                listaMemes.add(nuevo);
+                memesTable.insert(nuevo, new TableOperationCallback<Meme>() {
+
+                    public void onCompleted(Meme entity, Exception exception, ServiceFilterResponse response) {
+
+                        if (exception == null) {
+                            memeadapter.notifyDataSetChanged();
+
+                        }
+
+                    }
+                });
+
+
+                listviewmemes.setSelection(memeadapter.getCount() - 1);
+
+            }
+        }
     }
 
     private synchronized void llenarTablaMemes() {

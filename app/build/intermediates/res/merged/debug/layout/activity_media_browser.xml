@@ -34,4 +34,4 @@ tools:context="com.mobility42.azurechatr.MediaBrowser"
         android:id="@+id/txtMediaBrowser"
         android:layout_gravity="center_horizontal" />
 
-</LinearLayout><!-- From: file:/Users/Dani/Desktop/AppsAndroid/MemeticaMe/app/src/main/res/layout/activity_media_browser.xml -->
+</LinearLayout><!-- From: file:/Users/alberto/App%20Moviles/MemeticaMe/app/src/main/res/layout/activity_media_browser.xml -->

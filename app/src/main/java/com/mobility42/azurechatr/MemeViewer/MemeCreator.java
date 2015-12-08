@@ -222,6 +222,13 @@ public class MemeCreator extends Activity {
                 canal.putExtra("categoria", categoria);
                 canal.putExtra("path", path);
                 startActivity(canal);
+            } else  if(modocanal.equals("Subir")) {
+                String path = imgPath.getPath();
+                Intent setData = new Intent();
+                setData.putExtra("path", path);
+                setData.putExtra("etiquetas", etiquetas);
+                setResult(RESULT_OK, setData);
+                finish();
             }
         }
 

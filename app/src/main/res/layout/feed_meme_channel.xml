@@ -184,16 +184,4 @@
         android:layout_alignParentRight="true"
         android:layout_marginTop="15dp"
         android:layout_marginRight="7dp" />
-    <TextView
-        android:id="@+id/notRead"
-        android:layout_width="20dp"
-        android:layout_height="20dp"
-        android:text="0"
-        android:textColor="#FFFFFF"
-        android:tint="#ffffffff"
-        android:layout_alignParentRight="true"
-        android:layout_marginRight="10dp"
-        android:gravity="center"
-        android:layout_alignParentTop="false"
-        android:layout_marginTop="35dp" />
 </RelativeLayout>

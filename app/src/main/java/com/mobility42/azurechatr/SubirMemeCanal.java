@@ -1,36 +1,20 @@
 package com.mobility42.azurechatr;
 
 import android.app.Activity;
-import android.content.ContentResolver;
-import android.content.CursorLoader;
 import android.content.Intent;
-import android.database.Cursor;
-import android.net.Uri;
 import android.os.Bundle;
-import android.provider.ContactsContract;
 import android.view.View;
-import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.EditText;
 import android.widget.ImageButton;
 import android.widget.ListView;
-import android.widget.TextView;
 import android.widget.Toast;
 
 import com.microsoft.windowsazure.mobileservices.MobileServiceClient;
 import com.microsoft.windowsazure.mobileservices.MobileServiceTable;
-import com.microsoft.windowsazure.mobileservices.ServiceFilterResponse;
-import com.microsoft.windowsazure.mobileservices.TableOperationCallback;
-import com.microsoft.windowsazure.mobileservices.TableQueryCallback;
-import com.mobility42.azurechatr.*;
 import com.mobility42.azurechatr.MemeViewer.MemeViewerActivity;
 
-import java.net.MalformedURLException;
-import java.text.SimpleDateFormat;
-import java.util.ArrayList;
-import java.util.Date;
 import java.util.List;
-import java.util.Random;
 
 
 /**
@@ -132,8 +116,12 @@ public class SubirMemeCanal extends Activity{
         if (requestCode == 9) {
             if(resultCode == RESULT_OK){
                 String path =data.getStringExtra("path");
-                Toast.makeText(this,path,Toast.LENGTH_LONG).show();
-                final ChatItem item = new ChatItem();
+                String etiquetas =data.getStringExtra("etiquetas");
+                Intent setData = new Intent();
+                setData.putExtra("path", path);
+                setData.putExtra("etiquetas", etiquetas);
+                setResult(RESULT_OK, setData);
+                finish();
 
                 // This is temporary until we add authentication to the Android version
 

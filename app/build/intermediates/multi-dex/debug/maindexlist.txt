@@ -105,6 +105,7 @@ com/mobility42/azurechatr/CanalActivity$1.class
 com/mobility42/azurechatr/ListaChatActivity$2.class
 com/mobility42/azurechatr/Recorder$RecordButton.class
 com/mobility42/azurechatr/MediaBrowser$ImageAdapter.class
+com/mobility42/azurechatr/CanalActivity$4.class
 com/microsoft/azure/storage/blob/BlobOutputStream.class
 android/support/v4/media/session/PlaybackStateCompat$Actions.class
 android/support/v4/view/ViewCompat.class
@@ -193,6 +194,7 @@ android/support/v4/view/ViewCompat$HCViewCompatImpl.class
 android/support/annotation/StringRes.class
 com/google/android/gms/analytics/ag.class
 android/support/annotation/StyleRes.class
+com/mobility42/azurechatr/CanalActivity$5.class
 android/support/v4/app/Fragment.class
 android/support/annotation/XmlRes.class
 com/mobility42/azurechatr/Recorder$1.class

@@ -1,10 +1,7 @@
 package com.mobility42.azurechatr;
 
 import android.app.Activity;
-import android.content.ContentResolver;
-import android.content.CursorLoader;
 import android.content.Intent;
-import android.database.Cursor;
 import android.net.Uri;
 import android.os.Bundle;
 import android.provider.ContactsContract;
@@ -12,18 +9,15 @@ import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ImageButton;
 import android.widget.ListView;
-import android.widget.Toast;
 
 import com.microsoft.windowsazure.mobileservices.MobileServiceClient;
 import com.microsoft.windowsazure.mobileservices.MobileServiceTable;
 import com.microsoft.windowsazure.mobileservices.ServiceFilterResponse;
 import com.microsoft.windowsazure.mobileservices.TableQueryCallback;
-import com.mobility42.azurechatr.*;
 
 import java.net.MalformedURLException;
 import java.util.ArrayList;
 import java.util.List;
-import java.util.Random;
 
 /**
  * Created by Dani on 07-12-15.
@@ -109,8 +103,9 @@ public class ListaCanales extends Activity{
 
                 Intent intent = new Intent(ListaCanales.this, CanalActivity.class);
                  intent.putExtra("idcanal", item.getIdcanal());
-                intent.putExtra("modocanal", "nocreador");
-
+                intent.putExtra("modocanal", "Subir");
+                intent.putExtra("categoria",item.getCategoria());
+                intent.putExtra("nombrecanal",item.getNombrecanal());
                 startActivity(intent);
 
                 //Toast.makeText(getBaseContext(), i, Toast.LENGTH_SHORT).show();

@@ -25,7 +25,7 @@
             android:src="@drawable/plus"
             android:layout_width="48dp"
             android:layout_height="48dp"
-            android:id="@+id/btAgregarContacto"
+            android:id="@+id/btAgregarMeme"
             android:layout_alignParentRight="true"
             android:tint="#ffffffff"
             android:padding="7dp"
@@ -79,4 +79,4 @@
         android:paddingBottom="10dp"
         android:choiceMode="singleChoice" />
 
-</RelativeLayout><!-- From: file:/Users/Dani/Desktop/AppsAndroid/MemeticaMe/app/src/main/res/layout/canal_meme.xml -->
+</RelativeLayout><!-- From: file:/Users/alberto/App%20Moviles/MemeticaMe/app/src/main/res/layout/canal_meme.xml -->

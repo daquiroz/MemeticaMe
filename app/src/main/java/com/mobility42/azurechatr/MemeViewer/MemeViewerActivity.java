@@ -138,8 +138,10 @@ public class MemeViewerActivity extends Activity {
         } else if (requestCode == 9) {
             if(resultCode == RESULT_OK){
                 String path =data.getStringExtra("path");
+                String etiquetas =data.getStringExtra("etiquetas");
                 Intent setData = new Intent();
                 setData.putExtra("path", path);
+                setData.putExtra("etiquetas", etiquetas);
                 setResult(RESULT_OK, setData);
                 finish();
             }

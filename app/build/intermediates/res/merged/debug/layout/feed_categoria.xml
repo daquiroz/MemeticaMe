@@ -9,4 +9,4 @@
         android:textAppearance="?android:attr/textAppearanceMedium"
         android:text="Medium Text"
         android:id="@+id/textoCategoria" />
-</LinearLayout><!-- From: file:/Users/Dani/Desktop/AppsAndroid/MemeticaMe/app/src/main/res/layout/feed_categoria.xml -->
+</LinearLayout><!-- From: file:/Users/alberto/App%20Moviles/MemeticaMe/app/src/main/res/layout/feed_categoria.xml -->

@@ -4,4 +4,4 @@
     <item android:id="@+id/action_settings" android:title="@string/action_settings"
         android:orderInCategory="100" android:showAsAction="never" />
 </menu>
-<!-- From: file:/Users/Dani/Desktop/AppsAndroid/MemeticaMe/app/src/main/res/menu/menu_lista_chat.xml -->
+<!-- From: file:/Users/alberto/App%20Moviles/MemeticaMe/app/src/main/res/menu/menu_lista_chat.xml -->
