@@ -7,10 +7,8 @@ import android.content.ContentValues;
 import android.content.DialogInterface;
 import android.content.Intent;
 import android.graphics.Bitmap;
-import android.graphics.Canvas;
 import android.graphics.Color;
 import android.graphics.Typeface;
-import android.net.Uri;
 import android.os.Bundle;
 import android.os.Environment;
 import android.provider.MediaStore;
@@ -26,9 +24,7 @@ import android.widget.EditText;
 import android.widget.ImageButton;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
-import android.widget.RelativeLayout;
 import android.widget.Spinner;
-import android.widget.TextView;
 import android.widget.Toast;
 
 import com.mobility42.azurechatr.CanalActivity;
@@ -39,7 +35,6 @@ import java.io.FileOutputStream;
 import java.text.DateFormat;
 import java.text.SimpleDateFormat;
 import java.util.Date;
-import java.util.UUID;
 
 public class MemeCreator extends Activity implements View.OnClickListener {
 
@@ -276,21 +271,9 @@ public class MemeCreator extends Activity implements View.OnClickListener {
             finish();
         }
         else if(modo.equals("Canal")){
-<<<<<<< HEAD
-            upper_text.clearFocus();
-            upper_text.setEnabled(false);
-            upper_text.setCursorVisible(false);
-            upper_text.setKeyListener(null);
-            upper_text.setBackgroundColor(Color.TRANSPARENT);
-            lower_text.clearFocus();
-            lower_text.setEnabled(false);
-            lower_text.setCursorVisible(false);
-            lower_text.setKeyListener(null);
-            lower_text.setBackgroundColor(Color.TRANSPARENT);
-            addImageToGallery();
+
 
             if(modocanal.equals("Creador")) {
-                String path = imgPath.getPath();
                 Intent canal = new Intent(this, CanalActivity.class);
                 canal.putExtra("etiquetas", etiquetas);
                 canal.putExtra("nombrecanal", nombrecanal);
@@ -300,21 +283,13 @@ public class MemeCreator extends Activity implements View.OnClickListener {
                 canal.putExtra("path", path);
                 startActivity(canal);
             } else  if(modocanal.equals("Subir")) {
-                String path = imgPath.getPath();
                 Intent setData = new Intent();
                 setData.putExtra("path", path);
                 setData.putExtra("etiquetas", etiquetas);
                 setResult(RESULT_OK, setData);
                 finish();
             }
-=======
 
-            Intent canal = new Intent(this, MemeCreator.class);
-            canal.putExtra("etiquetas", etiquetas);
-            canal.putExtra("idcanal", idcanal);
-            canal.putExtra("path", path);
-            startActivity(canal);
->>>>>>> master
         }
     }
 

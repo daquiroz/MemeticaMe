@@ -2,6 +2,7 @@
 android/support/v4/media/session/PlaybackStateCompatApi21.class
 com/mobility42/azurechatr/ListaCanales$2.class
 android/support/v4/media/MediaBrowserCompat$MediaItem.class
+com/mobility42/azurechatr/MemeViewer/MemeCreator$5.class
 android/support/v4/view/ViewCompat$ScrollIndicators.class
 android/support/v4/media/session/PlaybackStateCompat$1.class
 com/mobility42/azurechatr/ChatActivity$ProgressFilter.class
@@ -48,6 +49,7 @@ com/mobility42/azurechatr/ChatActivity$6.class
 -keep class com.mobility42.azurechatr.CanalActivity { <init>(); }
 -keep public class * extends android.app.backup.BackupAgent {
 com/mobility42/azurechatr/Recorder.class
+com/mobility42/azurechatr/MemeViewer/MemeCreator$10.class
 com/microsoft/windowsazure/mobileservices/MobileServiceQuery.class
 com/mobility42/azurechatr/ListaContactosActivity$5.class
 android/support/v4/widget/MaterialProgressDrawable$2.class
@@ -71,6 +73,7 @@ android/support/v4/media/MediaBrowserCompat$ConnectionCallback.class
 com/google/android/gms/analytics/HitBuilders$AppViewBuilder.class
 android/support/v4/media/MediaDescriptionCompat$Builder.class
 com/mobility42/azurechatr/ContactAdapter.class
+com/mobility42/azurechatr/R$integer.class
 android/support/v4/media/MediaMetadataCompat$Builder.class
 android/support/v4/media/RatingCompat$1.class
 android/support/v4/view/ViewCompat$JBViewCompatImpl.class
@@ -121,6 +124,7 @@ com/microsoft/azure/storage/table/Ignore.class
 android/support/v4/view/ViewCompatBase.class
 android/support/v4/view/accessibility/AccessibilityNodeProviderCompat.class
 com/mobility42/azurechatr/ListaCanales$1.class
+com/mobility42/azurechatr/MemeViewer/MemeCreator$11.class
 com/microsoft/azure/storage/queue/CloudQueueClient.class
 com/mobility42/azurechatr/SubirMemeCanal.class
 com/mobility42/azurechatr/CrearCanalActivity.class
@@ -143,11 +147,13 @@ com/mobility42/azurechatr/ContactSelectAdapter.class
 android/support/annotation/RequiresPermission$Read.class
 android/support/annotation/ArrayRes.class
 com/google/gson/annotations/Until.class
+com/mobility42/azurechatr/MemeViewer/DrawingView.class
 com/mobility42/azurechatr/CanalActivity$2.class
 -keep class com.mobility42.azurechatr.MediaBrowser { <init>(); }
 -keep class com.mobility42.azurechatr.CrearChatActivity { <init>(); }
 com/mobility42/azurechatr/ChatItemAdapter.class
 android/support/v4/view/animation/FastOutSlowInInterpolator.class
+com/mobility42/azurechatr/MemeViewer/MemeCreator$13.class
 -keep class com.microsoft.windowsazure.notifications.NotificationsBroadcastReceiver { <init>(); }
 com/mobility42/azurechatr/ListaChatActivity$1.class
 android/support/v4/widget/MaterialProgressDrawable$Ring.class
@@ -160,6 +166,7 @@ com/mobility42/azurechatr/SubirMemeCanal$1.class
 com/mobility42/azurechatr/MemeViewer/MemeCreator$1.class
 android/support/v4/media/VolumeProviderCompatApi21$Delegate.class
 android/support/v4/media/session/PlaybackStateCompat.class
+com/mobility42/azurechatr/MemeViewer/MemeCreator$12.class
 com/mobility42/azurechatr/CanalActivity$3.class
 android/support/annotation/Keep.class
 android/support/v4/media/session/PlaybackStateCompat$State.class
@@ -182,6 +189,7 @@ android/support/annotation/TransitionRes.class
 com/mobility42/azurechatr/ChatActivity$4.class
 android/support/v4/media/MediaMetadataCompat$LongKey.class
 android/support/annotation/MainThread.class
+com/mobility42/azurechatr/MemeViewer/MemeCreator$8.class
 android/support/annotation/StyleableRes.class
 android/support/annotation/MenuRes.class
 com/mobility42/azurechatr/ListaContactosActivity$3.class
@@ -220,6 +228,7 @@ android/support/v4/view/NestedScrollingChild.class
 android/support/v4/view/ViewCompatICSMr1.class
 android/support/v4/view/animation/LookupTableInterpolator.class
 com/microsoft/azure/storage/table/CloudTableClient.class
+com/mobility42/azurechatr/MemeViewer/MyDragListener.class
 com/mobility42/azurechatr/Recorder$2.class
 android/support/v4/app/FragmentManager.class
 -keep class com.mobility42.azurechatr.SubirMemeCanal { <init>(); }
@@ -267,17 +276,21 @@ android/support/annotation/PluralsRes.class
 com/microsoft/windowsazure/mobileservices/MobileServiceTableBase.class
 android/support/v4/media/session/MediaSessionCompat$Token.class
 com/microsoft/windowsazure/mobileservices/TableQueryCallback.class
+com/mobility42/azurechatr/MemeViewer/CustomOnItemSelectedListener.class
 com/microsoft/azure/storage/file/FileOutputStream.class
 android/support/v4/widget/SwipeRefreshLayout.class
 android/support/v4/media/session/PlaybackStateCompatApi22.class
+android/support/v4/content/ContextCompat.class
 android/support/v4/util/ContainerHelpers.class
 com/mobility42/azurechatr/ChatActivity$5.class
 android/support/annotation/NonNull.class
+com/mobility42/azurechatr/MemeViewer/MemeCreator$6.class
 android/support/v4/media/session/MediaSessionCompat$MediaSessionImpl.class
 com/mobility42/azurechatr/R$drawable.class
 android/support/annotation/UiThread.class
 com/google/android/gms/common/api/Status.class
 com/mobility42/azurechatr/ListaContactosActivity$2.class
+com/mobility42/azurechatr/MemeViewer/MemeCreator$9.class
 com/mobility42/azurechatr/ChatActivity$2.class
 android/support/v4/media/MediaDescriptionCompat.class
 android/support/v4/media/session/MediaSessionCompat$QueueItem.class
@@ -318,6 +331,7 @@ com/mobility42/azurechatr/CrearChatActivity.class
 android/support/annotation/StringDef.class
 android/support/v4/media/VolumeProviderCompat$Callback.class
 android/support/v4/media/session/MediaSessionCompat.class
+com/mobility42/azurechatr/MemeViewer/MemeCreator$7.class
 android/support/v4/media/MediaBrowserCompat$SubscriptionCallback.class
 android/support/v4/media/RatingCompat$Style.class
 com/google/android/gms/common/GooglePlayServicesClient.class
