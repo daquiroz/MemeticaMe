@@ -159,6 +159,7 @@ com/mobility42/azurechatr/SubirMemeCanal$1.class
 com/mobility42/azurechatr/MemeViewer/MemeCreator$1.class
 android/support/v4/media/VolumeProviderCompatApi21$Delegate.class
 android/support/v4/media/session/PlaybackStateCompat.class
+com/mobility42/azurechatr/CanalActivity$3.class
 android/support/annotation/Keep.class
 android/support/v4/media/session/PlaybackStateCompat$State.class
 com/google/android/gms/common/ConnectionResult.class

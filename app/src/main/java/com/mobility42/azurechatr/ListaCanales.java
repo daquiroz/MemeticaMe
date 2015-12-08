@@ -107,11 +107,13 @@ public class ListaCanales extends Activity{
                 //METODO QUE DADO UN CONTACTO BUSCA EL ID DEL CHAT QUE TENEMOS EN COMUN. EN CASO DE NO EXISTIR CREA UNO.
                 //String idchat = retornarIdChat2(item);
 
-                //Intent intent = new Intent(ListaContactosActivity.this, ChatActivity.class);
-                // intent.putExtra("idchat", idchat);
-                // startActivity(intent);
+                Intent intent = new Intent(ListaCanales.this, CanalActivity.class);
+                 intent.putExtra("idcanal", item.getIdcanal());
+                intent.putExtra("modocanal", "nocreador");
 
-                //Toast.makeText(getBaseContext(), idchat, Toast.LENGTH_SHORT).show();
+                startActivity(intent);
+
+                //Toast.makeText(getBaseContext(), i, Toast.LENGTH_SHORT).show();
 
             }
         });
