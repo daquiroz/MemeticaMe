@@ -70,7 +70,7 @@ public class MemeChannelAdapter extends BaseAdapter {
 
 		row.setTag(currentItem);
 
-		final ImageView meme = (ImageView) row.findViewById(R.id.meme);
+		final ImageView meme = (ImageView) row.findViewById(R.id.meme_photo);
 		final TextView categoria = (TextView) row.findViewById(R.id.categoria);
 
 		final TextView ranking = (TextView) row.findViewById(R.id.ranking);

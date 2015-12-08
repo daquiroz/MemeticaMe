@@ -25,7 +25,7 @@
             android:src="@drawable/plus"
             android:layout_width="48dp"
             android:layout_height="48dp"
-            android:id="@+id/btAgregarContacto"
+            android:id="@+id/btAgregarMeme"
             android:layout_alignParentRight="true"
             android:tint="#ffffffff"
             android:padding="7dp"
@@ -36,14 +36,15 @@
             android:textAppearance="?android:attr/textAppearanceMedium"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:id="@+id/name"
+            android:id="@+id/nameCanal"
             android:layout_marginLeft="78dp"
             android:minLines="1"
             android:maxLines="2"
             android:ellipsize="end"
             android:textColor="#ffffffff"
             android:layout_marginRight="128dp"
-            android:layout_centerVertical="true" />
+            android:layout_centerVertical="true"
+            android:text="Nombre Canal" />
         <ImageButton
             android:id="@+id/menu"
             android:background="@drawable/menubutton"

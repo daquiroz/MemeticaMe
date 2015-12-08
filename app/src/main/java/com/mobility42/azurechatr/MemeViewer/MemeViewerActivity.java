@@ -24,10 +24,13 @@ public class MemeViewerActivity extends Activity {
     private ArrayList<FeedMeme> feedmeme_list = new ArrayList<>();
     private ListView meme_listview;
     private String idchat;
-    private String modo;
+    private String modocanal;
     private String idcanal;
+    private String modo;
+    private String nombrecanal;
     private String categoria;
     private String etiquetas;
+
 
 
     @Override
@@ -38,6 +41,7 @@ public class MemeViewerActivity extends Activity {
         try
         {
             modo = getIntent().getExtras().getString("modo");
+            modocanal = getIntent().getExtras().getString("modocanal");
         }
         catch(Exception excepcion)
         {
@@ -58,12 +62,16 @@ public class MemeViewerActivity extends Activity {
         else if(modo.equals("Canal")) {
             try {
 
+                modocanal = getIntent().getExtras().getString("modocanal");
                 idcanal = getIntent().getExtras().getString("idcanal");
+                nombrecanal = getIntent().getExtras().getString("nombrecanal");
                 categoria = getIntent().getExtras().getString("categoria");
                 etiquetas = getIntent().getExtras().getString("etiquetas");
 
+
             } catch (Exception excepcion) {
 
+                modocanal = "000000";
                 categoria = "000000";
                 etiquetas = "000000";
                 idcanal = "000000";
@@ -90,10 +98,30 @@ public class MemeViewerActivity extends Activity {
         MemeViewerActivity.cosa_w = imageView.getWidth();
         MemeViewerActivity.cosa = imageView.getDrawable();
 
-        Intent i = new Intent(this, MemeCreator.class);
-        i.putExtra("idchat", idchat);
-        i.putExtra("modo", "Normal");
-        startActivityForResult(i, 10);
+        if(modo.equals("Normal")) {
+            Intent i = new Intent(this, MemeCreator.class);
+            i.putExtra("idchat", idchat);
+            i.putExtra("modo", modo);
+            startActivityForResult(i, 10);
+        } else if(modocanal.equals("Subir")) {
+            Intent i = new Intent(this, MemeCreator.class);
+            i.putExtra("nombrecanal", nombrecanal);
+            i.putExtra("categoria", categoria);
+            i.putExtra("idcanal", idcanal);
+            i.putExtra("etiquetas", etiquetas);
+            i.putExtra("modo", "Canal");
+            i.putExtra("modocanal",modocanal);
+            startActivityForResult(i, 9);
+        } else if(modocanal.equals("Creador")) {
+            Intent i = new Intent(this, MemeCreator.class);
+            i.putExtra("nombrecanal", nombrecanal);
+            i.putExtra("categoria", categoria);
+            i.putExtra("idcanal", idcanal);
+            i.putExtra("etiquetas", etiquetas);
+            i.putExtra("modo", "Canal");
+            i.putExtra("modocanal",modocanal);
+            startActivity(i);
+        }
     }
 
     @Override
@@ -104,6 +132,16 @@ public class MemeViewerActivity extends Activity {
                 String path =data.getStringExtra("path");
                 Intent setData = new Intent();
                 setData.putExtra("path", path);
+                setResult(RESULT_OK, setData);
+                finish();
+            }
+        } else if (requestCode == 9) {
+            if(resultCode == RESULT_OK){
+                String path =data.getStringExtra("path");
+                String etiquetas =data.getStringExtra("etiquetas");
+                Intent setData = new Intent();
+                setData.putExtra("path", path);
+                setData.putExtra("etiquetas", etiquetas);
                 setResult(RESULT_OK, setData);
                 finish();
             }

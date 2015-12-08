@@ -116,6 +116,8 @@ public class CrearCanalActivity extends Activity{
                 intent.putExtra("nombrecanal", nombrecanal);
                 intent.putExtra("categoria", categoria);
                 intent.putExtra("idcanal", idcanal);
+                intent.putExtra("modocanal", "Creador");
+
                 startActivity(intent);
 
             }

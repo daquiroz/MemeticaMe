@@ -7,10 +7,8 @@ import android.content.ContentValues;
 import android.content.DialogInterface;
 import android.content.Intent;
 import android.graphics.Bitmap;
-import android.graphics.Canvas;
 import android.graphics.Color;
 import android.graphics.Typeface;
-import android.net.Uri;
 import android.os.Bundle;
 import android.os.Environment;
 import android.provider.MediaStore;
@@ -26,11 +24,10 @@ import android.widget.EditText;
 import android.widget.ImageButton;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
-import android.widget.RelativeLayout;
 import android.widget.Spinner;
-import android.widget.TextView;
 import android.widget.Toast;
 
+import com.mobility42.azurechatr.CanalActivity;
 import com.mobility42.azurechatr.R;
 
 import java.io.File;
@@ -38,7 +35,6 @@ import java.io.FileOutputStream;
 import java.text.DateFormat;
 import java.text.SimpleDateFormat;
 import java.util.Date;
-import java.util.UUID;
 
 public class MemeCreator extends Activity implements View.OnClickListener {
 
@@ -50,8 +46,10 @@ public class MemeCreator extends Activity implements View.OnClickListener {
 
     private Button done_btn;
     private String idchat;
+    private String modocanal;
     private String idcanal;
     private String modo;
+    private String nombrecanal;
     private String categoria;
     private String etiquetas;
     File imgPath;
@@ -89,13 +87,15 @@ public class MemeCreator extends Activity implements View.OnClickListener {
         }
         else if(modo.equals("Canal")) {
             try {
-
+                modocanal = getIntent().getExtras().getString("modocanal");
                 idcanal = getIntent().getExtras().getString("idcanal");
+                nombrecanal = getIntent().getExtras().getString("nombrecanal");
                 categoria = getIntent().getExtras().getString("categoria");
                 etiquetas = getIntent().getExtras().getString("etiquetas");
 
             } catch (Exception excepcion) {
 
+                modocanal = "000000";
                 categoria = "000000";
                 etiquetas = "000000";
                 idcanal = "000000";
@@ -272,11 +272,24 @@ public class MemeCreator extends Activity implements View.OnClickListener {
         }
         else if(modo.equals("Canal")){
 
-            Intent canal = new Intent(this, MemeCreator.class);
-            canal.putExtra("etiquetas", etiquetas);
-            canal.putExtra("idcanal", idcanal);
-            canal.putExtra("path", path);
-            startActivity(canal);
+
+            if(modocanal.equals("Creador")) {
+                Intent canal = new Intent(this, CanalActivity.class);
+                canal.putExtra("etiquetas", etiquetas);
+                canal.putExtra("nombrecanal", nombrecanal);
+                canal.putExtra("idcanal", idcanal);
+                canal.putExtra("modocanal", modocanal);
+                canal.putExtra("categoria", categoria);
+                canal.putExtra("path", path);
+                startActivity(canal);
+            } else  if(modocanal.equals("Subir")) {
+                Intent setData = new Intent();
+                setData.putExtra("path", path);
+                setData.putExtra("etiquetas", etiquetas);
+                setResult(RESULT_OK, setData);
+                finish();
+            }
+
         }
     }
 

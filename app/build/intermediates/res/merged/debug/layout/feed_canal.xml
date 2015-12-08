@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="74.76dp"
+    android:descendantFocusability="blocksDescendants"
+    android:id="@+id/feedChat">
+    <TextView
+        android:textAppearance="?android:attr/textAppearanceSmall"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/id" />
+    <TextView
+        android:textAppearance="?android:attr/textAppearanceSmall"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/receiver" />
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:minWidth="25px"
+        android:minHeight="25px"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/linearLayout1">
+        <TextView
+            android:text="Nombre Canal"
+            android:id="@+id/nombreCanal"
+            android:textSize="17dp"
+            android:textStyle="bold"
+            android:textColor="#ff000000"
+            android:singleLine="true"
+            android:layout_width="209dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="10dp"
+            android:layout_marginTop="7dp" />
+        <TextView
+            android:text="categoría canal"
+            android:id="@+id/categoriacanal"
+            android:textSize="16dp"
+            android:textStyle="normal"
+            android:textColor="#999999"
+            android:textIsSelectable="false"
+            android:lines="2"
+            android:ellipsize="end"
+            android:layout_width="237dp"
+            android:layout_height="24dp"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="48dp" />
+    </LinearLayout>
+    <TextView
+        android:id="@+id/time"
+        android:textStyle="normal"
+        android:textColor="#999999"
+        android:gravity="right"
+        android:textAllCaps="true"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentRight="true"
+        android:layout_marginTop="15dp"
+        android:layout_marginRight="7dp" />
+</RelativeLayout><!-- From: file:/Users/alberto/App%20Moviles/MemeticaMe/app/src/main/res/layout/feed_canal.xml -->

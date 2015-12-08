@@ -1,32 +1,20 @@
 package com.mobility42.azurechatr;
 
 import android.app.Activity;
-import android.content.ContentResolver;
-import android.content.CursorLoader;
 import android.content.Intent;
-import android.database.Cursor;
-import android.net.Uri;
 import android.os.Bundle;
-import android.provider.ContactsContract;
 import android.view.View;
-import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.EditText;
 import android.widget.ImageButton;
 import android.widget.ListView;
-import android.widget.TextView;
 import android.widget.Toast;
 
 import com.microsoft.windowsazure.mobileservices.MobileServiceClient;
 import com.microsoft.windowsazure.mobileservices.MobileServiceTable;
-import com.microsoft.windowsazure.mobileservices.ServiceFilterResponse;
-import com.microsoft.windowsazure.mobileservices.TableQueryCallback;
-import com.mobility42.azurechatr.*;
+import com.mobility42.azurechatr.MemeViewer.MemeViewerActivity;
 
-import java.net.MalformedURLException;
-import java.util.ArrayList;
 import java.util.List;
-import java.util.Random;
 
 
 /**
@@ -41,6 +29,8 @@ public class SubirMemeCanal extends Activity{
     public String miId = DB.miId;
     public DB db;
     String idcanal;
+    String modo;
+    String modocanal;
     String nombrecanal;
     String categoria;
     String etiquetas;
@@ -64,9 +54,13 @@ public class SubirMemeCanal extends Activity{
 
         try
         {
+            modo = getIntent().getExtras().getString("modo");
+
             idcanal = getIntent().getExtras().getString("idcanal");
             nombrecanal = getIntent().getExtras().getString("nombrecanal");
             categoria = getIntent().getExtras().getString("categoria");
+            modocanal = getIntent().getExtras().getString("modocanal");
+
             Toast.makeText(getApplicationContext(),
                     idcanal + " " +nombrecanal + " "+categoria, Toast.LENGTH_LONG)
                     .show();
@@ -85,13 +79,27 @@ public class SubirMemeCanal extends Activity{
                 etiquetas = Etiquetas.getText().toString();
 
                 //HAY QUE CAMBIAR A QUE ACTIVITY TE MANDA
-                Intent intent = new Intent(SubirMemeCanal.this, ListaCanales.class);
-                intent.putExtra("nombrecanal", nombrecanal);
-                intent.putExtra("categoria", categoria);
-                intent.putExtra("idcanal", idcanal);
-                intent.putExtra("etiquetas", etiquetas);
-                startActivity(intent);
 
+                if(modocanal.equals("Creador")) {
+                    Intent intent = new Intent(SubirMemeCanal.this, MemeViewerActivity.class);
+                    intent.putExtra("nombrecanal", nombrecanal);
+                    intent.putExtra("categoria", categoria);
+                    intent.putExtra("idcanal", idcanal);
+                    intent.putExtra("etiquetas", etiquetas);
+                    intent.putExtra("modo", "Canal");
+                    intent.putExtra("modocanal",modocanal);
+                    startActivity(intent);
+
+                }else if(modocanal.equals("Subir")){
+                    Intent intent = new Intent(SubirMemeCanal.this, MemeViewerActivity.class);
+                    intent.putExtra("nombrecanal", nombrecanal);
+                    intent.putExtra("categoria", categoria);
+                    intent.putExtra("idcanal", idcanal);
+                    intent.putExtra("etiquetas", etiquetas);
+                    intent.putExtra("modo", "Canal");
+                    intent.putExtra("modocanal",modocanal);
+                    startActivityForResult(intent, 9);
+                }
             }
         });
 
@@ -102,7 +110,25 @@ public class SubirMemeCanal extends Activity{
 
     }
 
+    @Override
+    protected void onActivityResult(int requestCode, int resultCode, Intent data) {
 
+        if (requestCode == 9) {
+            if(resultCode == RESULT_OK){
+                String path =data.getStringExtra("path");
+                String etiquetas =data.getStringExtra("etiquetas");
+                Intent setData = new Intent();
+                setData.putExtra("path", path);
+                setData.putExtra("etiquetas", etiquetas);
+                setResult(RESULT_OK, setData);
+                finish();
+
+                // This is temporary until we add authentication to the Android version
+
+
+            }
+        }
+    }
 
 
 
