@@ -82,8 +82,6 @@ public class Meme {
     @com.google.gson.annotations.SerializedName("categoria")
     private String categoria;
 
-<<<<<<< HEAD
-=======
     public String getId() {
         return id;
     }
@@ -111,6 +109,6 @@ public class Meme {
 
     @com.google.gson.annotations.SerializedName("nombrecanal")
     private String nombrecanal;
->>>>>>> Daniela
+
 
 }

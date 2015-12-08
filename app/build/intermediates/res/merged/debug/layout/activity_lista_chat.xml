@@ -13,16 +13,6 @@
         android:layout_height="48dp"
         android:id="@+id/relativeLayout1"
         android:background="#6290DA">
-<<<<<<< HEAD
-=======
-        <ImageButton
-            android:src="@drawable/back"
-            android:layout_width="78dp"
-            android:layout_height="48dp"
-            android:id="@+id/back"
-            android:background="@drawable/menubutton"
-            android:paddingRight="38dp" />
->>>>>>> FelipeBranch
 
         <ImageButton
             android:src="@drawable/plus"
@@ -31,31 +21,12 @@
             android:id="@+id/btCrearChat"
             android:layout_alignParentRight="true"
             android:tint="#ffffffff"
-<<<<<<< HEAD
             android:scaleType="fitCenter"
             android:background="@drawable/menubutton"
             android:layout_marginRight="40dp"
             android:paddingTop="12dp"
             android:paddingBottom="12dp" />
 
-=======
-            android:padding="7dp"
-            android:scaleType="fitCenter"
-            android:background="@drawable/menubutton"
-            android:layout_marginRight="40dp" />
-        <TextView
-            android:textAppearance="?android:attr/textAppearanceMedium"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:id="@+id/name"
-            android:layout_marginLeft="78dp"
-            android:minLines="1"
-            android:maxLines="2"
-            android:ellipsize="end"
-            android:textColor="#ffffffff"
-            android:layout_marginRight="128dp"
-            android:layout_centerVertical="true" />
->>>>>>> FelipeBranch
         <ImageButton
             android:id="@+id/menu"
             android:background="@drawable/menubutton"
@@ -77,20 +48,11 @@
             android:id="@+id/btVerContactos"
             android:layout_alignParentRight="true"
             android:tint="#ffffffff"
-<<<<<<< HEAD
             android:scaleType="fitCenter"
             android:background="@drawable/menubutton"
             android:layout_marginRight="84dp"
             android:paddingTop="12dp"
             android:paddingBottom="12dp" />
-<<<<<<< HEAD
-=======
-            android:padding="7dp"
-            android:scaleType="fitCenter"
-            android:background="@drawable/menubutton"
-            android:layout_marginRight="84dp" />
->>>>>>> FelipeBranch
-=======
 
         <ImageButton
             android:src="@drawable/mind_map"
@@ -106,7 +68,6 @@
             android:paddingBottom="12dp"
             android:longClickable="false" />
 
->>>>>>> Daniela
     </RelativeLayout>
     <ListView
         android:id="@+id/listviewcontact"
@@ -122,12 +83,4 @@
         android:paddingBottom="10dp"
         android:choiceMode="singleChoice" />
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-</RelativeLayout><!-- From: file:/Users/alberto/App%20Moviles/MemeticaMe/app/src/main/res/layout/activity_lista_chat.xml -->
-=======
-</RelativeLayout><!-- From: file:/Users/Felipe/Desktop/MemeticaMe/app/src/main/res/layout/activity_lista_chat.xml -->
->>>>>>> FelipeBranch
-=======
 </RelativeLayout><!-- From: file:/Users/Dani/Desktop/AppsAndroid/MemeticaMe/app/src/main/res/layout/activity_lista_chat.xml -->
->>>>>>> Daniela

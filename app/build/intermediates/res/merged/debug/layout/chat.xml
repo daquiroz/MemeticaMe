@@ -15,7 +15,6 @@
         android:background="#6290DA">
         <ImageButton
             android:src="@drawable/back"
-<<<<<<< HEAD
             android:layout_width="40dp"
             android:layout_height="48dp"
             android:id="@+id/back"
@@ -24,13 +23,6 @@
             android:padding="12dp"
             android:paddingLeft="10dp"
             android:scaleType="fitCenter" />
-=======
-            android:layout_width="78dp"
-            android:layout_height="48dp"
-            android:id="@+id/back"
-            android:background="@drawable/menubutton"
-            android:paddingRight="38dp" />
->>>>>>> FelipeBranch
         <ImageView
             android:src="@drawable/user"
             android:layout_width="48dp"
@@ -38,35 +30,22 @@
             android:id="@+id/imageView2"
             android:layout_marginLeft="30dp"
             android:scaleType="centerInside"
-<<<<<<< HEAD
             android:tint="#ffffffff"
             android:paddingTop="12dp"
             android:paddingBottom="12dp" />
         <ImageButton
             android:src="@drawable/dog"
-=======
-            android:tint="#ffffffff" />
-        <ImageButton
-            android:src="@drawable/ic_favoritos"
->>>>>>> FelipeBranch
             android:layout_width="48dp"
             android:layout_height="48dp"
             android:id="@+id/meme"
             android:layout_alignParentRight="true"
             android:tint="#ffffffff"
-<<<<<<< HEAD
             android:padding="10dp"
             android:scaleType="fitCenter"
             android:background="@drawable/menubutton"
             android:layout_marginRight="40dp"
             android:paddingTop="12dp"
             android:paddingBottom="12dp" />
-=======
-            android:padding="7dp"
-            android:scaleType="fitCenter"
-            android:background="@drawable/menubutton"
-            android:layout_marginRight="40dp" />
->>>>>>> FelipeBranch
         <TextView
             android:textAppearance="?android:attr/textAppearanceMedium"
             android:layout_width="match_parent"
@@ -150,13 +129,9 @@
             android:src="@drawable/send"
             android:onClick="addItem"
             android:background="@drawable/button"
-<<<<<<< HEAD
             android:tint="#ffffffff"
             android:padding="12dp"
             android:scaleType="fitCenter" />
-=======
-            android:tint="#ffffffff" />
->>>>>>> FelipeBranch
     </LinearLayout>
     <ImageView
         android:src="@null"
@@ -267,12 +242,4 @@
         </LinearLayout>
     </LinearLayout>
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-</RelativeLayout><!-- From: file:/Users/alberto/App%20Moviles/MemeticaMe/app/src/main/res/layout/chat.xml -->
-=======
-</RelativeLayout><!-- From: file:/Users/Felipe/Desktop/MemeticaMe/app/src/main/res/layout/chat.xml -->
->>>>>>> FelipeBranch
-=======
 </RelativeLayout><!-- From: file:/Users/Dani/Desktop/AppsAndroid/MemeticaMe/app/src/main/res/layout/chat.xml -->
->>>>>>> Daniela

@@ -280,11 +280,8 @@ public class ChatActivity extends Activity {
 		{
 			Intent intent = new Intent(ChatActivity.this,BlobActivity.class);
 			intent.putExtra("Option","0");
-<<<<<<< HEAD
 			intent.putExtra("idchat", idchat);
-=======
-			intent.putExtra("idchat",idchat);
->>>>>>> FelipeBranch
+
 			startActivity(intent);
 
 		}else if (name.equals("recordButton"))
@@ -292,24 +289,18 @@ public class ChatActivity extends Activity {
 
 			Intent intent = new Intent(ChatActivity.this,Recorder.class);
 			intent.putExtra("Option", "1");
-<<<<<<< HEAD
-			intent.putExtra("idchat", idchat);
 
-=======
 			intent.putExtra("idchat",idchat);
->>>>>>> FelipeBranch
+
 			startActivity(intent);
 
 		}else
 		{
 			Intent intent = new Intent(ChatActivity.this,BlobActivity.class);
 			intent.putExtra("Option", "2");
-<<<<<<< HEAD
+
 			intent.putExtra("idchat", idchat);
 
-=======
-			intent.putExtra("idchat",idchat);
->>>>>>> FelipeBranch
 			startActivity(intent);
 
 		}

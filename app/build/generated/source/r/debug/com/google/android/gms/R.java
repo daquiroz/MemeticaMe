@@ -53,17 +53,10 @@ public final class R {
 		public static final int common_signin_btn_text_normal_light = 0x7f020020;
 		public static final int common_signin_btn_text_pressed_dark = 0x7f020021;
 		public static final int common_signin_btn_text_pressed_light = 0x7f020022;
-<<<<<<< HEAD
 		public static final int ic_plusone_medium_off_client = 0x7f02002f;
 		public static final int ic_plusone_small_off_client = 0x7f020030;
 		public static final int ic_plusone_standard_off_client = 0x7f020031;
 		public static final int ic_plusone_tall_off_client = 0x7f020032;
-=======
-		public static final int ic_plusone_medium_off_client = 0x7f02002b;
-		public static final int ic_plusone_small_off_client = 0x7f02002c;
-		public static final int ic_plusone_standard_off_client = 0x7f02002d;
-		public static final int ic_plusone_tall_off_client = 0x7f02002e;
->>>>>>> FelipeBranch
 	}
 	public static final class id {
 		public static final int adjust_height = 0x7f0b0000;

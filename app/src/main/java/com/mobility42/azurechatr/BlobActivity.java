@@ -21,11 +21,8 @@ public class BlobActivity extends Activity {
     private int PICK_IMAGE_REQUEST = 1;
     File filesDir;
     int Option;
-<<<<<<< HEAD
-    String idchat;
-=======
     String idchat = "";
->>>>>>> FelipeBranch
+
 
 
     @Override
@@ -33,14 +30,11 @@ public class BlobActivity extends Activity {
         super.onCreate(savedInstanceState);
         filesDir = this.getCacheDir();
         Option =Integer.parseInt(getIntent().getStringExtra("Option"));
-<<<<<<< HEAD
-        idchat = getIntent().getStringExtra("idchat");
-=======
+
         idchat =getIntent().getStringExtra("idchat");
         Toast.makeText(this, "id adquirido!!!! --->" + idchat, Toast.LENGTH_SHORT).show();
 
 
->>>>>>> FelipeBranch
         if (Option == 0)
         {
             setContentView(R.layout.photoblob_layout);

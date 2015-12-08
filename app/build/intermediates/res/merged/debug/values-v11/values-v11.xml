@@ -1,14 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-<<<<<<< HEAD
-<<<<<<< HEAD
-    <!-- From: file:/Users/alberto/App%20Moviles/MemeticaMe/app/src/main/res/values-v11/styles.xml -->
-=======
-    <!-- From: file:/Users/Felipe/Desktop/MemeticaMe/app/src/main/res/values-v11/styles.xml -->
->>>>>>> FelipeBranch
-=======
     <!-- From: file:/Users/Dani/Desktop/AppsAndroid/MemeticaMe/app/src/main/res/values-v11/styles.xml -->
->>>>>>> Daniela
     <eat-comment/>
     <style name="AppBaseTheme" parent="android:Theme.Holo.Light">
         <!-- API 11 theme customizations can go here. -->
