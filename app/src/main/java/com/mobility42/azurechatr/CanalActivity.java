@@ -12,15 +12,18 @@ import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ImageButton;
 import android.widget.ListView;
+import android.widget.TextView;
 import android.widget.Toast;
 
 import com.microsoft.windowsazure.mobileservices.MobileServiceClient;
 import com.microsoft.windowsazure.mobileservices.MobileServiceTable;
 import com.microsoft.windowsazure.mobileservices.ServiceFilterResponse;
+import com.microsoft.windowsazure.mobileservices.TableOperationCallback;
 import com.microsoft.windowsazure.mobileservices.TableQueryCallback;
 import com.mobility42.azurechatr.*;
 
 import java.net.MalformedURLException;
+import java.text.SimpleDateFormat;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Random;
@@ -37,6 +40,13 @@ public class CanalActivity extends Activity{
       public String miId = DB.miId;
       public DB db;
     String idcanal;
+    String categoria;
+    String path;
+    String nombrecanal;
+    String etiquetas;
+    String modocanal;
+
+
 
     private String AZUREMOBILESERVICES_URI = "https://memeticameapp.azure-mobile.net/";
     private String AZUREMOBILESERVICES_APPKEY = "GTjbnmDzTewswxMxsTzKSVpFjvYrbS22";
@@ -51,11 +61,44 @@ public class CanalActivity extends Activity{
         super.onCreate(savedInstanceState);
         setContentView(R.layout.canal_meme);
 
-        Uri uri = ContactsContract.CommonDataKinds.Phone.CONTENT_URI;
-
         db = new DB();
 
+        try
+        {
+            modocanal = getIntent().getExtras().getString("modocanal");
+        }
+        catch(Exception excepcion)
+        {
+            modocanal = " ";
+        }
+        if(modocanal.equals("Creador")){
+            try
+            {
+                etiquetas = getIntent().getExtras().getString("etiquetas");
+                categoria = getIntent().getExtras().getString("categoria");
+                nombrecanal = getIntent().getExtras().getString("nombrecanal");
+                path= getIntent().getExtras().getString("path");
 
+                TextView nc = (TextView) findViewById(R.id.nameCanal);
+                nc.setText(nombrecanal);
+
+                Toast.makeText(this, path, Toast.LENGTH_LONG).show();
+                //Toast.makeText(getBaseContext(), idchat, Toast.LENGTH_SHORT).show();
+
+
+            }
+            catch(Exception excepcion)
+            {
+                etiquetas = "0000";
+                categoria =  "0000";
+                nombrecanal =  "0000";
+                path=  "0000";
+                idcanal = null;
+            }
+
+
+
+        }
         try
         {
             idcanal = getIntent().getExtras().getString("idcanal");
@@ -125,9 +168,41 @@ public class CanalActivity extends Activity{
             }
         });
 
+        if(modocanal.equals("Creador")) {
+
+            addMeme();
+        }
+
+
+    }
+
+    private void addMeme(){
+
+        Random r = new Random();
+
+        String url = "hola";
+        Meme nuevo = new Meme(url,"0",etiquetas,categoria,idcanal,nombrecanal, String.valueOf(r.nextInt()));
+
+        nuevo.setImagePath(path);
+
+        listaMemes.add(nuevo);
+        listviewmemes.setSelection(memeadapter.getCount() - 1);
+        memesTable.insert(nuevo, new TableOperationCallback<Meme>() {
+
+            public void onCompleted(Meme entity, Exception exception, ServiceFilterResponse response) {
+
+                if (exception == null) {
+                    memeadapter.notifyDataSetChanged();
+
+                }
+
+            }
+        });
 
 
 
+
+        Toast.makeText(this,"path2:" + path ,Toast.LENGTH_LONG).show();
     }
 
     private synchronized void llenarTablaMemes() {
@@ -144,13 +219,14 @@ public class CanalActivity extends Activity{
                         if (item.getIdcanal().equals(idcanal))
                         {
                             Meme c = new Meme(item.getUrl(), item.getRanking(), item.getEtiquetas(), item.getCategoria(), item.getIdcanal(), item.getNombrecanal(), item.getId());
+                            c.setImagePath(item.getImagePath());
                             listaMemes.add(c);
                         }
                     }
 
                     //listaFinal = CompararListas(listaContactosCelular, listaContactosAzure);
-                    //contactadapter.notifyDataSetChanged();
-                    //listviewcontactos.setAdapter(contactadapter);
+                    memeadapter.notifyDataSetChanged();
+                    listviewmemes.setAdapter(memeadapter);
 
 
                 } else {

@@ -21,6 +21,7 @@ import android.widget.ImageView;
 import android.widget.RelativeLayout;
 import android.widget.TextView;
 
+import com.mobility42.azurechatr.CanalActivity;
 import com.mobility42.azurechatr.R;
 
 import java.io.File;
@@ -40,8 +41,10 @@ public class MemeCreator extends Activity {
     private TextView lower_text;
     private Button done_btn;
     private String idchat;
+    private String modocanal;
     private String idcanal;
     private String modo;
+    private String nombrecanal;
     private String categoria;
     private String etiquetas;
     File imgPath;
@@ -72,13 +75,15 @@ public class MemeCreator extends Activity {
         }
         else if(modo.equals("Canal")) {
             try {
-
+                modocanal = getIntent().getExtras().getString("modocanal");
                 idcanal = getIntent().getExtras().getString("idcanal");
+                nombrecanal = getIntent().getExtras().getString("nombrecanal");
                 categoria = getIntent().getExtras().getString("categoria");
-                etiquetas = getIntent().getExtras().getString("categoria");
+                etiquetas = getIntent().getExtras().getString("etiquetas");
 
             } catch (Exception excepcion) {
 
+                modocanal = "000000";
                 categoria = "000000";
                 etiquetas = "000000";
                 idcanal = "000000";
@@ -206,12 +211,18 @@ public class MemeCreator extends Activity {
             lower_text.setKeyListener(null);
             lower_text.setBackgroundColor(Color.TRANSPARENT);
             addImageToGallery();
-            String path = imgPath.getPath();
-            Intent canal = new Intent(this, MemeCreator.class);
-            canal.putExtra("etiquetas", etiquetas);
-            canal.putExtra("idcanal", idcanal);
-            canal.putExtra("path", path);
-            startActivity(canal);
+
+            if(modocanal.equals("Creador")) {
+                String path = imgPath.getPath();
+                Intent canal = new Intent(this, CanalActivity.class);
+                canal.putExtra("etiquetas", etiquetas);
+                canal.putExtra("nombrecanal", nombrecanal);
+                canal.putExtra("idcanal", idcanal);
+                canal.putExtra("modocanal", modocanal);
+                canal.putExtra("categoria", categoria);
+                canal.putExtra("path", path);
+                startActivity(canal);
+            }
         }
 
     }
