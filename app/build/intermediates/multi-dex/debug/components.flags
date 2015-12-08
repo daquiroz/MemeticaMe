@@ -1,0 +1,82 @@
+-injars /Users/Dani/Desktop/AppsAndroid/MemeticaMe/app/build/intermediates/multi-dex/debug/allclasses.jar
+-outjars /Users/Dani/Desktop/AppsAndroid/MemeticaMe/app/build/intermediates/multi-dex/debug/componentClasses.jar
+
+-libraryjars /Users/Dani/Library/Android/sdk/build-tools/23.0.1/lib/shrinkedAndroid.jar
+
+-forceprocessing
+-dontoptimize
+-dontobfuscate
+-dontpreverify
+-dontwarn
+-printconfiguration /Users/Dani/Desktop/AppsAndroid/MemeticaMe/app/build/intermediates/multi-dex/debug/components.flags
+
+
+-keep class null {
+    <init>();
+    void attachBaseContext(android.content.Context);
+}
+
+-keep class com.mobility42.azurechatr.ChatActivity {
+    <init>();
+}
+
+-keep class com.microsoft.windowsazure.notifications.NotificationsBroadcastReceiver {
+    <init>();
+}
+
+-keep class com.mobility42.azurechatr.ListaChatActivity {
+    <init>();
+}
+
+-keep class com.mobility42.azurechatr.ListaContactosActivity {
+    <init>();
+}
+
+-keep class com.mobility42.azurechatr.ListaCanales {
+    <init>();
+}
+
+-keep class com.mobility42.azurechatr.CrearCanalActivity {
+    <init>();
+}
+
+-keep class com.mobility42.azurechatr.CanalActivity {
+    <init>();
+}
+
+-keep class com.mobility42.azurechatr.CrearChatActivity {
+    <init>();
+}
+
+-keep class com.mobility42.azurechatr.SubirMemeCanal {
+    <init>();
+}
+
+-keep class com.mobility42.azurechatr.MemeViewer.MemeViewerActivity {
+    <init>();
+}
+
+-keep class com.mobility42.azurechatr.MemeViewer.MemeCreator {
+    <init>();
+}
+
+-keep class com.mobility42.azurechatr.MediaBrowser {
+    <init>();
+}
+
+-keep class com.mobility42.azurechatr.BlobActivity {
+    <init>();
+}
+
+-keep class com.mobility42.azurechatr.Recorder {
+    <init>();
+}
+
+-keep public class * extends android.app.backup.BackupAgent {
+    <init>();
+}
+
+-keep public class * extends java.lang.annotation.Annotation {
+    <fields>;
+    <methods>;
+}
