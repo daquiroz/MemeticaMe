@@ -25,7 +25,11 @@
         android:clickable="true"
         android:onClick="createMeme" />
 <<<<<<< HEAD
+<<<<<<< HEAD
 </LinearLayout><!-- From: file:/Users/alberto/App%20Moviles/MemeticaMe/app/src/main/res/layout/feed_meme.xml -->
 =======
 </LinearLayout><!-- From: file:/Users/Felipe/Desktop/MemeticaMe/app/src/main/res/layout/feed_meme.xml -->
 >>>>>>> FelipeBranch
+=======
+</LinearLayout><!-- From: file:/Users/Dani/Desktop/AppsAndroid/MemeticaMe/app/src/main/res/layout/feed_meme.xml -->
+>>>>>>> Daniela

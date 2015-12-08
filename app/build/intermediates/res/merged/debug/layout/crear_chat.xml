@@ -93,6 +93,7 @@
             android:scaleType="fitCenter" />
     </LinearLayout>
 
+<<<<<<< HEAD
 </RelativeLayout><!-- From: file:/Users/alberto/App%20Moviles/MemeticaMe/app/src/main/res/layout/crear_chat.xml -->
 =======
             android:tint="#ffffffff" />
@@ -100,3 +101,6 @@
 
 </RelativeLayout><!-- From: file:/Users/Felipe/Desktop/MemeticaMe/app/src/main/res/layout/crear_chat.xml -->
 >>>>>>> FelipeBranch
+=======
+</RelativeLayout><!-- From: file:/Users/Dani/Desktop/AppsAndroid/MemeticaMe/app/src/main/res/layout/crear_chat.xml -->
+>>>>>>> Daniela

@@ -40,6 +40,7 @@
             android:paddingBottom="12dp"
             android:paddingRight="8dp"
             android:paddingLeft="8dp" />
+
         <ImageButton
             android:src="@drawable/user"
             android:layout_width="48dp"
@@ -52,6 +53,21 @@
             android:layout_marginRight="84dp"
             android:paddingTop="12dp"
             android:paddingBottom="12dp" />
+
+        <ImageButton
+            android:src="@drawable/mind_map"
+            android:layout_width="48dp"
+            android:layout_height="48dp"
+            android:id="@+id/btCanales"
+            android:layout_alignParentRight="true"
+            android:tint="#ffffffff"
+            android:scaleType="fitCenter"
+            android:background="@drawable/menubutton"
+            android:layout_marginRight="132dp"
+            android:paddingTop="12dp"
+            android:paddingBottom="12dp"
+            android:longClickable="false" />
+
     </RelativeLayout>
     <ListView
         android:id="@+id/listviewcontact"

@@ -74,26 +74,28 @@ int drawable maskselect 0x7f020036
 int drawable meme 0x7f020037
 int drawable menu 0x7f020038
 int drawable menubutton 0x7f020039
-int drawable pause 0x7f02003a
-int drawable photo 0x7f02003b
-int drawable photopressed 0x7f02003c
-int drawable photoselector 0x7f02003d
-int drawable play 0x7f02003e
-int drawable plus 0x7f02003f
-int drawable rec 0x7f020040
-int drawable record 0x7f020041
-int drawable recordpressed 0x7f020042
-int drawable recordselector 0x7f020043
-int drawable refresh 0x7f020044
-int drawable search 0x7f020045
-int drawable send 0x7f020046
-int drawable splash 0x7f020047
-int drawable star 0x7f020048
-int drawable star_filled 0x7f020049
-int drawable stop 0x7f02004a
-int drawable user 0x7f02004b
-int drawable users 0x7f02004c
+int drawable mind_map 0x7f02003a
+int drawable pause 0x7f02003b
+int drawable photo 0x7f02003c
+int drawable photopressed 0x7f02003d
+int drawable photoselector 0x7f02003e
+int drawable play 0x7f02003f
+int drawable plus 0x7f020040
+int drawable rec 0x7f020041
+int drawable record 0x7f020042
+int drawable recordpressed 0x7f020043
+int drawable recordselector 0x7f020044
+int drawable refresh 0x7f020045
+int drawable search 0x7f020046
+int drawable send 0x7f020047
+int drawable splash 0x7f020048
+int drawable star 0x7f020049
+int drawable star_filled 0x7f02004a
+int drawable stop 0x7f02004b
+int drawable user 0x7f02004c
+int drawable users 0x7f02004d
 int id LinearLayout1 0x7f0b0003
+<<<<<<< HEAD
 int id action_settings 0x7f0b004d
 int id adjust_height 0x7f0b0000
 int id adjust_width 0x7f0b0001
@@ -186,10 +188,41 @@ int id etiquetas 0x7f0b0048
 int id feedChat 0x7f0b002f
 int id feedmeme_leftmeme 0x7f0b003c
 int id feedmeme_rightmeme 0x7f0b003d
+=======
+int id action_settings 0x7f0b0058
+int id adjust_height 0x7f0b0000
+int id adjust_width 0x7f0b0001
+int id agregarEtiquetas 0x7f0b0055
+int id attachment 0x7f0b0025
+int id back 0x7f0b001e
+int id btAgregarCanal 0x7f0b004e
+int id btAgregarContacto 0x7f0b001b
+int id btAgregarImagen 0x7f0b0054
+int id btCanales 0x7f0b000d
+int id btCrearCanalOK 0x7f0b0036
+int id btCrearChat 0x7f0b000a
+int id btCrearChatOk 0x7f0b0038
+int id btPhotos 0x7f0b0052
+int id btVerContactos 0x7f0b000c
+int id btVolverChat 0x7f0b001a
+int id bubble 0x7f0b0016
+int id buttonAddChat 0x7f0b0007
+int id categoria 0x7f0b004c
+int id categoriacanal 0x7f0b003c
+int id checkcontacto 0x7f0b002e
+int id clip 0x7f0b0021
+int id download 0x7f0b0049
+int id editText 0x7f0b0037
+int id etiquetas 0x7f0b004d
+int id feedChat 0x7f0b002f
+int id feedmeme_leftmeme 0x7f0b0041
+int id feedmeme_rightmeme 0x7f0b0042
+>>>>>>> Daniela
 int id file 0x7f0b0026
 int id fileButton 0x7f0b0027
 int id forms_centralfragments_chat_chat_editLayout 0x7f0b0023
 int id foto 0x7f0b0032
+<<<<<<< HEAD
 >>>>>>> origin/master
 int id gallery 0x7f0b000d
 int id id 0x7f0b0036
@@ -203,10 +236,28 @@ int id imageViewChat 0x7f0b0017
 int id imagemaskframe 0x7f0b0030
 int id linearLayout1 0x7f0b0038
 int id listViewChat 0x7f0b0022
+=======
+int id gallery 0x7f0b000e
+int id id 0x7f0b0039
+int id image 0x7f0b0031
+int id image1 0x7f0b000f
+int id imageMediaBrowser 0x7f0b002c
+int id imageView 0x7f0b0053
+int id imageView2 0x7f0b001f
+int id imageView4 0x7f0b004a
+int id imagemaskframe 0x7f0b0030
+int id linearLayout1 0x7f0b003b
+int id linearlayout6 0x7f0b004f
+int id listViewChat 0x7f0b0022
+int id listaCanales 0x7f0b0050
+int id listacategorias 0x7f0b0034
+int id listoMeme 0x7f0b0056
+>>>>>>> Daniela
 int id listviewMemes 0x7f0b001d
 int id listviewcontact 0x7f0b0008
 int id loadingProgressBar 0x7f0b0005
 int id meme 0x7f0b0020
+<<<<<<< HEAD
 int id memeView_list 0x7f0b0049
 int id meme_layout 0x7f0b000f
 int id meme_photo 0x7f0b003e
@@ -306,6 +357,45 @@ int id txtMediaBrowser 0x7f0b0011
 int id time 0x7f0b0019
 int id touch 0x7f0b0024
 >>>>>>> origin/master
+=======
+int id memeView_list 0x7f0b0051
+int id meme_layout 0x7f0b0010
+int id meme_photo 0x7f0b0043
+int id memecreator_button 0x7f0b0014
+int id memecreator_image 0x7f0b0011
+int id memecreator_lowerText 0x7f0b0013
+int id memecreator_upperText 0x7f0b0012
+int id menu 0x7f0b000b
+int id menu_refresh 0x7f0b0057
+int id message 0x7f0b0040
+int id name 0x7f0b001c
+int id nombreCanal 0x7f0b0035
+int id nombrechat 0x7f0b003f
+int id nombrecontacto 0x7f0b0033
+int id none 0x7f0b0002
+int id notRead 0x7f0b003d
+int id picture 0x7f0b002a
+int id pictureButton 0x7f0b002b
+int id ranking 0x7f0b004b
+int id receiver 0x7f0b003a
+int id record 0x7f0b0028
+int id recordButton 0x7f0b0029
+int id relativeLayout1 0x7f0b0009
+int id star1 0x7f0b0044
+int id star2 0x7f0b0045
+int id star3 0x7f0b0046
+int id star4 0x7f0b0047
+int id star5 0x7f0b0048
+int id status 0x7f0b0018
+int id textChatItem 0x7f0b0017
+int id textNewChat 0x7f0b0006
+int id textUsername 0x7f0b0015
+int id textView2 0x7f0b002d
+int id textViewTitle 0x7f0b0004
+int id textoCategoria 0x7f0b003e
+int id time 0x7f0b0019
+int id touch 0x7f0b0024
+>>>>>>> Daniela
 int integer google_play_services_version 0x7f090000
 int layout activity_chat 0x7f030000
 int layout activity_lista_chat 0x7f030001
@@ -321,6 +411,7 @@ int layout bubble 0x7f030005
 int layout chat 0x7f030006
 int layout contact_select_item 0x7f030007
 int layout contacts_list_item 0x7f030008
+<<<<<<< HEAD
 int layout crear_chat 0x7f030009
 int layout feed_chat 0x7f03000a
 int layout feed_meme 0x7f03000b
@@ -343,6 +434,22 @@ int layout photoblob_layout 0x7f030010
 int layout recordblob_layout 0x7f030011
 int layout row_list_chat 0x7f030012
 >>>>>>> origin/master
+=======
+int layout crear_canal 0x7f030009
+int layout crear_chat 0x7f03000a
+int layout feed_canal 0x7f03000b
+int layout feed_categoria 0x7f03000c
+int layout feed_chat 0x7f03000d
+int layout feed_meme 0x7f03000e
+int layout feed_meme_channel 0x7f03000f
+int layout lista_canales_meme 0x7f030010
+int layout lista_contactos 0x7f030011
+int layout meme_view 0x7f030012
+int layout photoblob_layout 0x7f030013
+int layout recordblob_layout 0x7f030014
+int layout row_list_chat 0x7f030015
+int layout subir_meme_canal 0x7f030016
+>>>>>>> Daniela
 int menu activity_main 0x7f0a0000
 int menu menu_crear_chat 0x7f0a0001
 int menu menu_lista_chat 0x7f0a0002

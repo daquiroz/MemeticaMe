@@ -17,7 +17,11 @@
         android:drawable="@drawable/common_signin_btn_icon_normal_light" />
 </selector>
 <<<<<<< HEAD
+<<<<<<< HEAD
 <!-- From: file:/Users/alberto/App%20Moviles/MemeticaMe/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-base/6.5.87/res/drawable/common_signin_btn_icon_light.xml -->
 =======
 <!-- From: file:/Users/Felipe/Desktop/MemeticaMe/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-base/6.5.87/res/drawable/common_signin_btn_icon_light.xml -->
 >>>>>>> FelipeBranch
+=======
+<!-- From: file:/Users/Dani/Desktop/AppsAndroid/MemeticaMe/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-base/6.5.87/res/drawable/common_signin_btn_icon_light.xml -->
+>>>>>>> Daniela

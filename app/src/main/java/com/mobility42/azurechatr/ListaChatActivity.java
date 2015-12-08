@@ -65,6 +65,14 @@ public class ListaChatActivity extends Activity {
             }
         });
 
+        ImageButton btnCanales = (ImageButton)findViewById(R.id.btCanales);
+        btnCanales.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                startActivity(new Intent(ListaChatActivity.this, ListaCanales.class));
+            }
+        });
+
         context = getApplicationContext();
 
         db = new DB();

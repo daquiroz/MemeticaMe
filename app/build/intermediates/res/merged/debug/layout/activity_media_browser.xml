@@ -28,6 +28,7 @@ tools:context="com.mobility42.azurechatr.MediaBrowser"
         android:layout_gravity="center" />
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 </LinearLayout><!-- From: file:/Users/alberto/App%20Moviles/MemeticaMe/app/src/main/res/layout/activity_media_browser.xml -->
 =======
     <TextView
@@ -39,3 +40,6 @@ tools:context="com.mobility42.azurechatr.MediaBrowser"
 
 </LinearLayout><!-- From: file:/Users/Felipe/Desktop/MemeticaMe/app/src/main/res/layout/activity_media_browser.xml -->
 >>>>>>> FelipeBranch
+=======
+</LinearLayout><!-- From: file:/Users/Dani/Desktop/AppsAndroid/MemeticaMe/app/src/main/res/layout/activity_media_browser.xml -->
+>>>>>>> Daniela
