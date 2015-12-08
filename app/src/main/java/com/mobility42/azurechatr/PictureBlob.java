@@ -23,12 +23,14 @@ public class PictureBlob extends AsyncTask<String, Void, Void> {
     Context context;
     int option;
     public boolean finished = false;
+    String idchat;
 
-    public PictureBlob(File f,int option,Context context)
+    public PictureBlob(File f,int option,Context context,String idchat)
     {
         this.option = option;
         this.context =context;
         this.f = f;
+        this.idchat=idchat;
     }
     @Override
     protected void onPostExecute(Void v) {
@@ -65,7 +67,7 @@ public class PictureBlob extends AsyncTask<String, Void, Void> {
     void uploadPhoto()
     {
         try {
-            CloudBlobContainer container = blobClient.getContainerReference("photos");
+            CloudBlobContainer container = blobClient.getContainerReference("photos"+idchat);
 
             // Create the container if it does not exist
             container.createIfNotExists();

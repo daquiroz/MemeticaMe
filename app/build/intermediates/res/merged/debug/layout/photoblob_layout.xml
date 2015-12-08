@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools" android:layout_width="match_parent"
+    android:layout_height="match_parent" android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    tools:context="com.mobility42.azurechatr.BlobActivity">
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Go to Photos"
+        android:onClick="openPhotoGallery"
+        android:id="@+id/btPhotos"
+        android:layout_centerVertical="true"
+        android:layout_centerHorizontal="true" />
+    <ImageView
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:id="@+id/imageView"
+        android:layout_above="@+id/btPhotos"
+        android:layout_centerHorizontal="true" />
+
+</RelativeLayout>
+<!-- From: file:/Users/Felipe/Desktop/MemeticaMe/app/src/main/res/layout/photoblob_layout.xml -->

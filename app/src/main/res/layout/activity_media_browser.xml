@@ -27,4 +27,11 @@ tools:context="com.mobility42.azurechatr.MediaBrowser"
         android:layout_weight="0.11"
         android:layout_gravity="center" />
 
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="No se encontraron fotos"
+        android:id="@+id/txtMediaBrowser"
+        android:layout_gravity="center_horizontal" />
+
 </LinearLayout>
