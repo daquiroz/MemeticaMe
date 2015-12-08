@@ -46,7 +46,9 @@ public class ListaChatActivity extends Activity {
         db = new DB();
         db.miId = "56992773617";
         db.name = "Fran";
-
+/*
+        db.miId = "56967690082";
+        db.name = "Tito";*/
         ImageButton btn = (ImageButton)findViewById(R.id.btCrearChat);
         btn.setOnClickListener(new View.OnClickListener() {
             @Override

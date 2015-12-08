@@ -16,6 +16,7 @@ import android.widget.ImageButton;
 import android.widget.LinearLayout;
 import android.widget.ListView;
 import android.widget.ProgressBar;
+import android.widget.Toast;
 
 import com.google.android.gms.gcm.GoogleCloudMessaging;
 import com.microsoft.windowsazure.messaging.NotificationHub;
@@ -37,7 +38,6 @@ import java.text.SimpleDateFormat;
 import java.util.ArrayList;
 import java.util.Date;
 import java.util.List;
-import java.util.Random;
 
 public class ChatActivity extends Activity {
 
@@ -112,6 +112,7 @@ public class ChatActivity extends Activity {
 		try
 		{
 			idchat = getIntent().getExtras().getString("idchat");
+
 		}
 		catch(Exception excepcion)
 		{
@@ -126,7 +127,8 @@ public class ChatActivity extends Activity {
 					this).withFilter(new ProgressFilter()));
 
 			// Get the Mobile Service Table instance to use
-			setmChatTable(getmClient().getTable(ChatItem.class));
+			setmChatTable(getmClient().getTable(ChatItem.class))
+			;
 
 			lista = new ArrayList<FeedChat>();
 
@@ -157,13 +159,62 @@ public class ChatActivity extends Activity {
 			@Override
 			public void onClick(View v) {
 
-				Intent intent = new Intent(ChatActivity.this, MemeViewerActivity.class);
-				intent.putExtra("idchat", idchat);
-				startActivity(intent);
+
+				Intent i = new Intent(ChatActivity.this, MemeViewerActivity.class);
+				i.putExtra("idchat", idchat);
+				i.putExtra("modo", "Normal");
+				startActivityForResult(i, 10);
 
 			}
 		});
 
+	}
+	@Override
+	protected void onActivityResult(int requestCode, int resultCode, Intent data) {
+
+		if (requestCode == 10) {
+			if(resultCode == RESULT_OK){
+				String path =data.getStringExtra("path");
+				Toast.makeText(this,path,Toast.LENGTH_LONG).show();
+				final ChatItem item = new ChatItem();
+
+				// This is temporary until we add authentication to the Android version
+				item.setUserName(miId);
+
+				item.setText("IMAGE-1234,"+"https://memeticamestorage.blob.core.windows.net/photos-165097224/IMG_d0dafe0c0eff42349e1f11a50e49443f.jpg");
+
+				item.setStatus("waiting");
+				item.setImagePath(path);
+
+				item.setmIdChat(idchat);
+
+				Date currentDate = new Date(System.currentTimeMillis());
+				item.setTimeStamp(currentDate);
+				FeedChat fc = new FeedChat(item.getText(),item.getUserName(),item.getId(),true);
+				SimpleDateFormat formatter=new SimpleDateFormat("HH:mm");
+				fc.setImagePath(path);
+				fc.setTimeStamp(formatter.format(item.getTimeStamp()));
+				fc.setStatus("waiting");
+				lista.add(fc);
+				listViewChat.setSelection(mAdapter.getCount() - 1);
+				getmChatTable().insert(item, new TableOperationCallback<ChatItem>() {
+
+					public void onCompleted(ChatItem entity, Exception exception, ServiceFilterResponse response) {
+
+						if (exception == null) {
+							mAdapter.updateToSending();
+							mAdapter.notifyDataSetChanged();
+							item.setStatus("sending");
+							updateItem(item);
+						} else {
+							createAndShowDialog(exception, "Error");
+						}
+
+					}
+				});
+
+			}
+		}
 	}
 
 
@@ -214,6 +265,7 @@ public class ChatActivity extends Activity {
 	public void  browseMedia(View view)
 	{
 		Intent intent = new Intent(ChatActivity.this,MediaBrowser.class);
+		intent.putExtra("idchat",idchat);
 		startActivity(intent);
 	}
 
@@ -229,14 +281,16 @@ public class ChatActivity extends Activity {
 			Intent intent = new Intent(ChatActivity.this,BlobActivity.class);
 			intent.putExtra("Option","0");
 			intent.putExtra("idchat", idchat);
+
 			startActivity(intent);
 
 		}else if (name.equals("recordButton"))
 		{
 
-			Intent intent = new Intent(ChatActivity.this,BlobActivity.class);
+			Intent intent = new Intent(ChatActivity.this,Recorder.class);
 			intent.putExtra("Option", "1");
-			intent.putExtra("idchat", idchat);
+
+			intent.putExtra("idchat",idchat);
 
 			startActivity(intent);
 
@@ -244,6 +298,7 @@ public class ChatActivity extends Activity {
 		{
 			Intent intent = new Intent(ChatActivity.this,BlobActivity.class);
 			intent.putExtra("Option", "2");
+
 			intent.putExtra("idchat", idchat);
 
 			startActivity(intent);
@@ -307,7 +362,7 @@ public class ChatActivity extends Activity {
 	private void refreshItemsFromTable() {
 
 		// Get all the chat items and add them in the adapter
-		getmChatTable().execute(new TableQueryCallback<ChatItem>() {
+		getmChatTable().where().top(1000).execute(new TableQueryCallback<ChatItem>() {
 
 			public void onCompleted(List<ChatItem> result, int count, Exception exception, ServiceFilterResponse response) {
 				if (exception == null) {
@@ -320,7 +375,7 @@ public class ChatActivity extends Activity {
 						SimpleDateFormat formatter = new SimpleDateFormat("HH:mm");
 
 						String time = formatter.format(item.getTimeStamp());
-
+						fc.setImagePath(item.getImagePath());
 						fc.setTimeStamp(time);
 						fc.setStatus(item.getStatus());
 						if (!item.getUserName().equals(miId)) {

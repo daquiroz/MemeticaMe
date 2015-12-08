@@ -24,7 +24,9 @@
             android:adjustViewBounds="true"
             android:clickable="true" />
 
-        <EditText
+        <com.mobility42.azurechatr.MemeViewer.OutlineTextView
+            android:shadowColor="#000"
+            android:shadowRadius="6.0"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:id="@+id/memecreator_upperText"
@@ -35,7 +37,9 @@
             android:textSize="30dp"
             android:textStyle="bold" />
 
-        <EditText
+        <com.mobility42.azurechatr.MemeViewer.OutlineTextView
+            android:shadowColor="#000"
+            android:shadowRadius="3.0"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:id="@+id/memecreator_lowerText"

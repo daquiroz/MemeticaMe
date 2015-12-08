@@ -13,6 +13,9 @@ public class ChatItem {
 	@com.google.gson.annotations.SerializedName("text")
 	private String mText;
 
+	@com.google.gson.annotations.SerializedName("imagepath")
+	private String imagePath;
+
 	/**
 	 * Item Id
 	 */
@@ -162,5 +165,14 @@ public class ChatItem {
 
 	public void setmIdChat(String mIdChat) {
 		this.mIdChat = mIdChat;
+	}
+
+
+	public String getImagePath() {
+		return imagePath;
+	}
+
+	public void setImagePath(String imagePath) {
+		this.imagePath = imagePath;
 	}
 }

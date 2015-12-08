@@ -7,7 +7,13 @@ public class Meme {
 
 
 
+    public String getImagePath() {
+        return imagePath;
+    }
 
+    public void setImagePath(String imagePath) {
+        this.imagePath = imagePath;
+    }
     public String getRanking() {
         return ranking;
     }
@@ -67,6 +73,9 @@ public class Meme {
     @com.google.gson.annotations.SerializedName("ranking")
     private String ranking;
 
+    @com.google.gson.annotations.SerializedName("imagepath")
+    private String imagePath;
+
     @com.google.gson.annotations.SerializedName("etiquetas")
     private String etiquetas;
 
@@ -100,5 +109,6 @@ public class Meme {
 
     @com.google.gson.annotations.SerializedName("nombrecanal")
     private String nombrecanal;
+
 
 }

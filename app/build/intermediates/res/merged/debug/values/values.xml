@@ -69,6 +69,7 @@
     <string name="title_activity_crear_chat">CrearChatActivity</string>
     <string name="title_activity_lista_chat">ListaChatActivity</string>
     <string name="title_activity_lista_contactos">ListaContactosActivity</string>
+    <string name="title_activity_recorder">Recorder</string>
     <!-- From: file:/Users/Dani/Desktop/AppsAndroid/MemeticaMe/app/src/main/res/values/styles.xml -->
     <eat-comment/>
     <style name="AppBaseTheme" parent="android:Theme.Light">
