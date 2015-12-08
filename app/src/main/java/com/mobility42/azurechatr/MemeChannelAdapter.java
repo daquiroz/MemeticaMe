@@ -3,13 +3,21 @@ package com.mobility42.azurechatr;
 import android.annotation.TargetApi;
 import android.app.Activity;
 import android.content.Context;
+import android.graphics.Bitmap;
+import android.graphics.BitmapFactory;
 import android.os.Build;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.BaseAdapter;
+import android.widget.ImageView;
 import android.widget.TextView;
 
+import com.koushikdutta.urlimageviewhelper.UrlImageViewHelper;
+
+import java.io.File;
+import java.net.HttpURLConnection;
+import java.net.URL;
 import java.util.ArrayList;
 
 /**
@@ -61,11 +69,33 @@ public class MemeChannelAdapter extends BaseAdapter {
 		}
 
 		row.setTag(currentItem);
+
+		final ImageView meme = (ImageView) row.findViewById(R.id.meme);
 		final TextView categoria = (TextView) row.findViewById(R.id.categoria);
 
 		final TextView ranking = (TextView) row.findViewById(R.id.ranking);
 
 		final TextView etiquetas = (TextView) row.findViewById(R.id.etiquetas);
+
+		if(exists(currentItem.getUrl()))
+		{
+			UrlImageViewHelper.setUrlDrawable(meme, currentItem.getUrl(), R.drawable.photo);
+
+		}
+		else {
+			File imgFile = new File(currentItem.getImagePath());
+
+			if (imgFile.exists()) {
+
+				Bitmap myBitmap = BitmapFactory.decodeFile(imgFile.getAbsolutePath());
+
+
+				meme.setImageBitmap(myBitmap);
+				meme.setVisibility(View.VISIBLE);
+
+
+			}
+		}
 
 		categoria.setText(currentItem.getCategoria());
 
@@ -73,6 +103,22 @@ public class MemeChannelAdapter extends BaseAdapter {
 
 		etiquetas.setText(currentItem.getEtiquetas());
 		return row;
+	}
+
+	public static boolean exists(String URLName){
+		try {
+			HttpURLConnection.setFollowRedirects(false);
+			// note : you may also need
+			//        HttpURLConnection.setInstanceFollowRedirects(false)
+			HttpURLConnection con =
+					(HttpURLConnection) new URL(URLName).openConnection();
+			con.setRequestMethod("HEAD");
+			return (con.getResponseCode() == HttpURLConnection.HTTP_OK);
+		}
+		catch (Exception e) {
+			e.printStackTrace();
+			return false;
+		}
 	}
 
 }

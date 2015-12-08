@@ -3,6 +3,8 @@ package com.mobility42.azurechatr;
 import android.annotation.TargetApi;
 import android.app.Activity;
 import android.content.Context;
+import android.graphics.Bitmap;
+import android.graphics.BitmapFactory;
 import android.graphics.Color;
 import android.graphics.PorterDuff;
 import android.os.Build;
@@ -16,6 +18,9 @@ import android.widget.LinearLayout;
 import android.widget.RelativeLayout;
 import android.widget.TextView;
 
+import com.koushikdutta.urlimageviewhelper.UrlImageViewHelper;
+
+import java.io.File;
 import java.util.ArrayList;
 
 /**
@@ -73,6 +78,10 @@ public class ChatItemAdapter extends BaseAdapter {
 
 		final TextView time = (TextView) row.findViewById(R.id.time);
 
+		ImageView myImage = (ImageView) row.findViewById(R.id.imageViewChat);
+		myImage.setVisibility(View.GONE);
+
+
 		time.setText(currentItem.getTimeStamp());
 
 		userName.setText(currentItem.getUserName());
@@ -85,6 +94,14 @@ public class ChatItemAdapter extends BaseAdapter {
 
 		if(!currentItem.isTheDeviceUser())
 		{
+			String message = currentItem.getText();
+			String[] parts = message.split(",");
+
+			if(parts[0].equals("IMAGE-1234")){
+				text.setVisibility(View.GONE);
+				UrlImageViewHelper.setUrlDrawable(myImage,parts[1], R.drawable.photo);
+				myImage.setVisibility(View.VISIBLE);
+			}
 			ImageView status = (ImageView)row.findViewById(R.id.status);
 			status.setVisibility(status.GONE);
 			((LinearLayout)row).setGravity(Gravity.LEFT);
@@ -101,8 +118,24 @@ public class ChatItemAdapter extends BaseAdapter {
 		}
 		else
 		{
+			if(currentItem.getImagePath()!=null) {
+				File imgFile = new File(currentItem.getImagePath());
+
+				if (imgFile.exists()) {
+
+					Bitmap myBitmap = BitmapFactory.decodeFile(imgFile.getAbsolutePath());
+
+
+					myImage.setImageBitmap(myBitmap);
+					myImage.setVisibility(View.VISIBLE);
+					text.setVisibility(View.GONE);
+
+
+				}
+			}
 			ImageView status = (ImageView)row.findViewById(R.id.status);
 			status.setVisibility(status.VISIBLE);
+
 			if (currentItem.getStatus().equals("waiting")) {
 				status.setImageResource(R.drawable.clock);
 				status.setColorFilter(Color.WHITE, PorterDuff.Mode.SRC_ATOP);
