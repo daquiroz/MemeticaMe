@@ -18,6 +18,8 @@ import android.widget.LinearLayout;
 import android.widget.RelativeLayout;
 import android.widget.TextView;
 
+import com.koushikdutta.urlimageviewhelper.UrlImageViewHelper;
+
 import java.io.File;
 import java.util.ArrayList;
 
@@ -92,6 +94,14 @@ public class ChatItemAdapter extends BaseAdapter {
 
 		if(!currentItem.isTheDeviceUser())
 		{
+			String message = currentItem.getText();
+			String[] parts = message.split(",");
+
+			if(parts[0].equals("IMAGE-1234")){
+				text.setVisibility(View.GONE);
+				UrlImageViewHelper.setUrlDrawable(myImage,parts[1], R.drawable.photo);
+				myImage.setVisibility(View.VISIBLE);
+			}
 			ImageView status = (ImageView)row.findViewById(R.id.status);
 			status.setVisibility(status.GONE);
 			((LinearLayout)row).setGravity(Gravity.LEFT);
@@ -118,6 +128,8 @@ public class ChatItemAdapter extends BaseAdapter {
 
 					myImage.setImageBitmap(myBitmap);
 					myImage.setVisibility(View.VISIBLE);
+					text.setVisibility(View.GONE);
+
 
 				}
 			}
