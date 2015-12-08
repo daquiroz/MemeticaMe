@@ -60,9 +60,7 @@
         android:layout_alignParentRight="true"
         android:layout_marginTop="15dp"
         android:layout_marginRight="7dp" />
-<<<<<<< HEAD
-</RelativeLayout>
-=======
+
     <TextView
         android:id="@+id/notRead"
         android:layout_width="20dp"
@@ -75,9 +73,4 @@
         android:gravity="center"
         android:layout_alignParentTop="false"
         android:layout_marginTop="35dp" />
-<<<<<<< Updated upstream:app/src/main/res/layout/feed_canal.xml
 </RelativeLayout>
-=======
-</RelativeLayout><!-- From: file:/Users/Felipe/Desktop/MemeticaMe/app/src/main/res/layout/feed_chat.xml -->
->>>>>>> Stashed changes:app/build/intermediates/res/merged/debug/layout/feed_chat.xml
->>>>>>> origin/master
