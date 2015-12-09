@@ -223,6 +223,7 @@ com/google/android/gms/internal/ha$1.class
 android/support/v4/view/ScrollingView.class
 com/mobility42/azurechatr/ListaCanales.class
 android/support/v4/content/PermissionChecker$PermissionResult.class
+com/mobility42/azurechatr/CanalActivity$6.class
 android/support/v4/view/ViewCompatJellybeanMr1.class
 android/support/v4/view/NestedScrollingChild.class
 android/support/v4/view/ViewCompatICSMr1.class

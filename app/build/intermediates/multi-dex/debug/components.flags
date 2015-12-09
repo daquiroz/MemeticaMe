@@ -1,14 +1,14 @@
--injars '/Users/alberto/App Moviles/MemeticaMe/app/build/intermediates/multi-dex/debug/allclasses.jar'
--outjars '/Users/alberto/App Moviles/MemeticaMe/app/build/intermediates/multi-dex/debug/componentClasses.jar'
+-injars /Users/Dani/Desktop/AppsAndroid/MemeticaMe/app/build/intermediates/multi-dex/debug/allclasses.jar
+-outjars /Users/Dani/Desktop/AppsAndroid/MemeticaMe/app/build/intermediates/multi-dex/debug/componentClasses.jar
 
--libraryjars /Users/alberto/Library/Android/sdk/build-tools/23.0.1/lib/shrinkedAndroid.jar
+-libraryjars /Users/Dani/Library/Android/sdk/build-tools/23.0.1/lib/shrinkedAndroid.jar
 
 -forceprocessing
 -dontoptimize
 -dontobfuscate
 -dontpreverify
 -dontwarn
--printconfiguration '/Users/alberto/App Moviles/MemeticaMe/app/build/intermediates/multi-dex/debug/components.flags'
+-printconfiguration /Users/Dani/Desktop/AppsAndroid/MemeticaMe/app/build/intermediates/multi-dex/debug/components.flags
 
 
 -keep class null {

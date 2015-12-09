@@ -2,4 +2,4 @@
 
     <item android:id="@+id/menu_refresh" android:orderInCategory="101" android:showAsAction="always" android:title="@string/menu_refresh"></item>
 
-</menu><!-- From: file:/Users/alberto/App%20Moviles/MemeticaMe/app/src/main/res/menu/activity_main.xml -->
+</menu><!-- From: file:/Users/Dani/Desktop/AppsAndroid/MemeticaMe/app/src/main/res/menu/activity_main.xml -->

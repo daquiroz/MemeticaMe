@@ -30,7 +30,9 @@ public class CanalActivity extends Activity{
     MemeChannelAdapter memeadapter;
     ListView listviewmemes;
     private ArrayList<Meme> listaMemes;
-      public String miId = DB.miId;
+    ArrayList<Meme> listaGuardada;
+
+    public String miId = DB.miId;
       public DB db;
     String idcanal;
     String categoria;
@@ -38,7 +40,7 @@ public class CanalActivity extends Activity{
     String nombrecanal;
     String etiquetas;
     String modocanal;
-
+    public boolean busco = false;
 
 
     private String AZUREMOBILESERVICES_URI = "https://memeticameapp.azure-mobile.net/";
@@ -47,7 +49,6 @@ public class CanalActivity extends Activity{
     private String AZUREPUSHNOTIFHUB_CNXSTRING = "Endpoint=sb://memeticameapphub-ns.servicebus.windows.net/;SharedAccessKeyName=DefaultFullSharedAccessSignature;SharedAccessKey=1oxnmbuBGmEEREVPqqIhwV1ATMWMsFu2tquHaR8lPEQ=";
     private MobileServiceClient mClient;
     private MobileServiceTable<Meme> memesTable;
-
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -151,10 +152,59 @@ public class CanalActivity extends Activity{
             listviewmemes = (ListView) findViewById(R.id.listviewMemes);
             listviewmemes.setAdapter(memeadapter);
 
-
         } catch (MalformedURLException e) {
             //createAndShowDialog(new Exception("There was an error creating the Mobile Service. Verify the URL"), "Error");
         }
+
+        ImageButton btBuscar = (ImageButton)findViewById(R.id.btBuscar);
+
+
+        btBuscar.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+
+                //llenarTablaMemes();
+
+                if (busco == false) {
+                    listaGuardada = new ArrayList<Meme>();
+                    listaGuardada.addAll(listaMemes);
+                }
+                else
+                {
+                    listaMemes.addAll(listaGuardada);
+                }
+
+
+                TextView busca = (TextView) findViewById(R.id.campoBusqueda);
+                String textoB = busca.getText().toString();
+
+                List<Meme> listaMemesBuscar = new ArrayList<Meme>();
+
+                for (Meme meme : listaMemes)
+                {
+                    if (meme.getEtiquetas().contains(textoB) )
+                    {
+                        listaMemesBuscar.add(meme);
+                    }
+                }
+
+                busco = true;
+
+
+                listaMemes.clear();
+
+
+                listaMemes.addAll(listaMemesBuscar);
+
+                memeadapter.notifyDataSetChanged();
+
+
+
+
+                //busca.setText(nombrecanal);
+
+            }
+        });
 
         ImageButton btMeme = (ImageButton)findViewById(R.id.btAgregarMeme);
 

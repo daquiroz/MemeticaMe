@@ -60,4 +60,18 @@
         android:layout_alignParentRight="true"
         android:layout_marginTop="15dp"
         android:layout_marginRight="7dp" />
-</RelativeLayout><!-- From: file:/Users/alberto/App%20Moviles/MemeticaMe/app/src/main/res/layout/feed_canal.xml -->
+
+    <TextView
+        android:id="@+id/notRead"
+        android:layout_width="20dp"
+        android:layout_height="20dp"
+        android:text="0"
+        android:textColor="#FFFFFF"
+        android:tint="#ffffffff"
+        android:layout_alignParentRight="true"
+        android:layout_marginRight="10dp"
+        android:gravity="center"
+        android:layout_alignParentTop="false"
+        android:layout_marginTop="35dp" />
+</RelativeLayout>
+<!-- From: file:/Users/Dani/Desktop/AppsAndroid/MemeticaMe/app/src/main/res/layout/feed_canal.xml -->

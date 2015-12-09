@@ -19,7 +19,8 @@
             android:layout_height="48dp"
             android:id="@+id/btVolverChat"
             android:background="@drawable/menubutton"
-            android:paddingRight="38dp" />
+            android:paddingRight="38dp"
+            android:scaleType="fitCenter" />
 
         <ImageButton
             android:src="@drawable/plus"
@@ -63,7 +64,30 @@
     <LinearLayout
         android:orientation="vertical"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"></LinearLayout>
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="48dp">
+
+            <EditText
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/campoBusqueda"
+                android:layout_weight="12.47" />
+
+            <ImageButton
+                android:layout_width="48dp"
+                android:layout_height="48dp"
+                android:id="@+id/btBuscar"
+                android:src="@drawable/search"
+                android:scaleType="fitCenter"
+                android:tint="#6290DA"
+                android:backgroundTint="#ffffff" />
+        </LinearLayout>
+    </LinearLayout>
 
     <ListView
         android:id="@+id/listviewMemes"
@@ -74,7 +98,7 @@
         android:clipToPadding="false"
         android:listSelector="#00000000"
         android:divider="@null"
-        android:layout_marginTop="48dp"
+        android:layout_marginTop="88dp"
         android:paddingTop="10dp"
         android:paddingBottom="10dp"
         android:choiceMode="singleChoice" />
